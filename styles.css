@@ -1,0 +1,65 @@
+/* Custom overrides when Tailwind utilities are missing or not applied as expected */
+
+/* Hero image wrapper: crops horizontally to make the visual less wide */
+.hero-media {
+  width: 100%;
+  max-width: 25rem; /* slightly smaller base width */
+  height: 20rem;    /* slightly smaller base height */
+  overflow: hidden;
+}
+.hero-media .media-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       /* crop sides */
+  object-position: center; /* center focus */
+  display: block;
+}
+@media (min-width: 768px) { /* md */
+  .hero-media { max-width: 29rem; height: 22rem; }
+}
+@media (min-width: 1024px) { /* lg */
+  .hero-media { max-width: 31rem; height: 24rem; }
+}
+@media (min-width: 1280px) { /* xl */
+  .hero-media { max-width: 33rem; height: 26rem; }
+}
+@media (min-width: 1536px) { /* 2xl */
+  .hero-media { max-width: 35rem; height: 28rem; }
+}
+
+/* Tan CTA button used in About section */
+.btn-tan {
+  background-color: #bfa07a; /* warm tan */
+}
+.btn-tan:hover {
+  background-color: #a98962;
+}
+
+/* About image size (slightly smaller than the grid column) */
+.about-media {
+  max-width: 26rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 768px) { /* md */
+  .about-media { max-width: 28rem; }
+}
+@media (min-width: 1024px) { /* lg */
+  .about-media { max-width: 30rem; }
+}
+@media (min-width: 1280px) { /* xl */
+  .about-media { max-width: 32rem; }
+}
+
+/* Ensure bullet badges are perfect circles */
+.bullet-badge {
+  width: 2rem;          /* 32px */
+  height: 2rem;         /* 32px */
+  aspect-ratio: 1 / 1;  /* guard against any scaling */
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;       /* avoid vertical stretching from line-height */
+}
+
