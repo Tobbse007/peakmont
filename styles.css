@@ -132,6 +132,16 @@ html, body { overflow-x: hidden; }
              ctaBreath 5s ease-in-out 2.12s infinite alternate;
 }
 
+/* Footer button: only breathing on hover */
+.footer-cta-breath { 
+  will-change: transform; 
+  transform-origin: center; 
+  transition: transform 0.3s ease;
+}
+.footer-cta-breath:hover {
+  animation: ctaBreath 2s ease-in-out infinite alternate;
+}
+
 /* CTA section background: garage door drop effect */
 @keyframes ctaBackgroundDrop {
   0% { height: 0; }
