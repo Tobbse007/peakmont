@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kontakt — Peakmont</title>
+  <meta name="description" content="Kontakt zu Peakmont. Schreiben Sie uns oder vereinbaren Sie ein Gespräch." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400;600&display=swap" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Montserrat', 'ui-sans-serif', 'system-ui'] },
+          colors: { peak: { bg: '#0A0E1A', bg2: '#080C18', primary: '#3B82F6', accent: '#60A5FA' } },
+          dropShadow: { glow: '0 0 40px rgba(59,130,246,0.35)' }
+        }
+      }
+    }
+  </script>
+  <style>
+    .hero-bg {
+      position: relative;
+      background:
+        radial-gradient(1200px 560px at 50% -6%, rgba(118,147,255,0.12), transparent 62%),
+        radial-gradient(900px 520px at 85% 18%, rgba(64,99,189,0.12), transparent 60%),
+        radial-gradient(900px 520px at 15% 24%, rgba(64,99,189,0.10), transparent 60%),
+        radial-gradient(1400px 800px at 50% 115%, rgba(0,0,0,0.35), transparent 60%),
+        linear-gradient(180deg, #0A0E1A 0%, #0A1120 45%, #080C18 100%);
+    }
+    .noise::after { content: ""; position: absolute; inset: 0; pointer-events: none; mix-blend-mode: overlay; background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="140" height="140" viewBox="0 0 140 140"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23n)" opacity="0.025"/></svg>'); }
+  </style>
+</head>
+<body class="font-sans text-slate-100 bg-peak-bg selection:bg-blue-500/30 selection:text-white overflow-x-hidden">
+  <div class="relative hero-bg noise">
+    <header class="relative z-20">
+      <nav class="mx-auto max-w-7xl px-6 py-5">
+        <div class="grid grid-cols-3 items-center">
+          <a href="index.html" class="flex items-center gap-3">
+            <span class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-blue-500/15 ring-1 ring-inset ring-blue-400/25 drop-shadow-glow">
+              <svg viewBox="0 0 24 24" class="h-5 w-5 text-blue-300" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 4h7a5 5 0 1 1 0 10H9v6H6V4z" /></svg>
+            </span>
+            <span class="text-lg font-semibold tracking-tight">Peakmont</span>
+          </a>
+          <ul class="hidden md:flex items-center justify-center gap-8 text-sm font-medium text-slate-200/90">
+            <li><a class="hover:text-white transition-colors" href="index.html">Home</a></li>
+            <li><a class="hover:text-white transition-colors" href="leistungen.html">Leistungen</a></li>
+            <li><a class="hover:text-white transition-colors" href="ueber-mich.html">Über mich</a></li>
+            <li><a class="text-white" href="kontakt.html">Kontakt</a></li>
+          </ul>
+          <div class="flex items-center justify-end">
+            <a href="gespraech.html" class="group inline-flex items-center gap-2.5 rounded-full bg-blue-500/12 px-5 py-2.5 text-sm font-medium text-blue-100 drop-shadow-glow ring-1 ring-inset ring-blue-400/20 backdrop-blur-sm transform-gpu transition-all duration-300 hover:scale-[1.02] hover:bg-blue-500/25 hover:text-white hover:ring-blue-300/60 hover:shadow-lg hover:shadow-blue-400/30">
+              <span>Gespräch vereinbaren</span>
+              <svg class="h-4 w-4 transition-all duration-300 group-hover:translate-x-1 group-hover:scale-110" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7" /></svg>
+            </a>
+          </div>
+        </div>
+      </nav>
+      <div class="h-px w-full bg-white/10"></div>
+    </header>
+
+    <!-- Centered Hero -->
+    <section class="relative">
+      <div class="mx-auto max-w-7xl px-6">
+        <div class="min-h-[70vh] flex items-center justify-center text-center py-16">
+          <div>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">Kontakt</h1>
+            <p class="mt-4 text-lg md:text-xl text-slate-300 max-w-3xl mx-auto">Schreiben Sie eine E‑Mail an <a class="underline decoration-blue-400/60 hover:text-white" href="mailto:hello@peakmont.de">hello@peakmont.de</a> oder vereinbaren Sie direkt ein Gespräch.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <section class="bg-slate-100 text-slate-900 border-t border-slate-200/60" aria-labelledby="footer-title">
+    <div class="mx-auto max-w-7xl px-6 pt-20 pb-6 md:pt-24 md:pb-6">
+      <div class="grid gap-14 lg:grid-cols-5 lg:gap-20">
+        <div class="lg:col-span-2">
+          <a href="index.html" class="inline-flex items-center gap-4 mb-7 group">
+            <span class="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 shadow-sm group-hover:bg-blue-700 transition-colors">
+              <svg viewBox="0 0 24 24" class="h-7 w-7 text-white" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 4h7a5 5 0 1 1 0 10H9v6H6V4z"/></svg>
+            </span>
+            <span class="text-2xl md:text-3xl font-bold tracking-tight text-slate-900">Peakmont</span>
+          </a>
+          <p class="text-slate-600 leading-relaxed mb-8 max-w-sm text-base md:text-lg">Performance‑Marketing für messbare Ergebnisse und nachhaltiges Wachstum.</p>
+          <a href="gespraech.html" class="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-xl bg-gradient-to-r from-blue-600 via-blue-600 to-sky-500 px-6 text-white text-base md:text-lg font-semibold shadow-md shadow-blue-900/30 ring-1 ring-blue-300/20 transition-all duration-300 ease-out hover:scale-105 hover:from-blue-600 hover:via-blue-500 hover:to-sky-400 hover:ring-blue-200/40">
+            <span class="relative z-10 inline-flex items-center gap-2">Gespräch vereinbaren<svg viewBox="0 0 24 24" class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+          </a>
+        </div>
+        <div class="lg:col-span-3 grid gap-10 sm:grid-cols-3">
+          <div>
+            <h3 class="font-semibold text-slate-900 mb-5 text-lg md:text-xl">Leistungen</h3>
+            <ul class="space-y-3">
+              <li><a class="text-slate-600 hover:text-slate-900 transition-colors" href="leistungen.html">Performance Marketing</a></li>
+              <li><a class="text-slate-600 hover:text-slate-900 transition-colors" href="leistungen.html">Social Media</a></li>
+              <li><a class="text-slate-600 hover:text-slate-900 transition-colors" href="leistungen.html">Automation</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold text-slate-900 mb-5 text-lg md:text-xl">Menü</h3>
+            <ul class="space-y-3">
+              <li><a class="text-slate-600 hover:text-slate-900 transition-colors" href="index.html">Home</a></li>
+              <li><a class="text-slate-600 hover:text-slate-900 transition-colors" href="leistungen.html">Leistungen</a></li>
+              <li><a class="text-slate-600 hover:text-slate-900 transition-colors" href="ueber-mich.html">Über mich</a></li>
+              <li><a class="text-slate-600 hover:text-slate-900 transition-colors" href="kontakt.html">Kontakt</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold text-slate-900 mb-5 text-lg md:text-xl">Kontakt</h3>
+            <ul class="space-y-3">
+              <li><a class="text-slate-600 hover:text-slate-900 transition-colors" href="mailto:hello@peakmont.de">hello@peakmont.de</a></li>
+              <li><a class="text-slate-600 hover:text-slate-900 transition-colors" href="#impressum">Impressum</a></li>
+              <li><a class="text-slate-600 hover:text-slate-900 transition-colors" href="#datenschutz">Datenschutz</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="mt-10 pt-4 border-t border-slate-200 text-center pb-0">
+        <p class="text-slate-500 text-sm md:text-base">© 2025 Peakmont. Alle Rechte vorbehalten.</p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

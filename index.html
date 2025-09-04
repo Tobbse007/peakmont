@@ -11,6 +11,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <!-- Icons: Material Symbols Outlined -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400;600&display=swap" />
 
   <!-- Tailwind CSS (CDN) -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -54,7 +56,7 @@
     }
   </style>
 </head>
-<body class="font-sans text-slate-100 bg-peak-bg selection:bg-blue-500/30 selection:text-white">
+<body class="font-sans text-slate-100 bg-peak-bg selection:bg-blue-500/30 selection:text-white overflow-x-hidden">
   <!-- Top section (Navbar + Hero share same background) -->
   <div class="relative hero-bg noise">
     <!-- NAVBAR -->
@@ -62,7 +64,7 @@
       <nav class="mx-auto max-w-7xl px-6 py-5">
         <div class="grid grid-cols-3 items-center">
           <!-- Left: Logo + Name -->
-          <a href="#" class="flex items-center gap-3">
+          <a href="index.html" class="flex items-center gap-3 opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu navbar-logo" data-reveal data-delay="0">
             <span class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-blue-500/15 ring-1 ring-inset ring-blue-400/25 drop-shadow-glow">
               <!-- Simple custom P logo -->
               <svg viewBox="0 0 24 24" class="h-5 w-5 text-blue-300" fill="none" stroke="currentColor" stroke-width="2">
@@ -74,25 +76,26 @@
 
           <!-- Center: Menu -->
           <ul class="hidden md:flex items-center justify-center gap-8 text-sm font-medium text-slate-200/90">
-            <li><a class="hover:text-white transition-colors" href="#">Home</a></li>
-            <li><a class="hover:text-white transition-colors" href="#leistungen">Leistungen</a></li>
-            <li><a class="hover:text-white transition-colors" href="#ueber-uns">Über uns</a></li>
-            <li><a class="hover:text-white transition-colors" href="#kontakt">Kontakt</a></li>
+            <li class="opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu navbar-item" data-reveal data-delay="80"><a class="hover:text-white transition-colors" href="index.html">Home</a></li>
+            <li class="opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu navbar-item" data-reveal data-delay="140"><a class="hover:text-white transition-colors" href="leistungen.html">Leistungen</a></li>
+            <li class="opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu navbar-item" data-reveal data-delay="200"><a class="hover:text-white transition-colors" href="ueber-mich.html">Über mich</a></li>
+            <li class="opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu navbar-item" data-reveal data-delay="260"><a class="hover:text-white transition-colors" href="kontakt.html">Kontakt</a></li>
           </ul>
 
           <!-- Right: CTA with subtle divider line -->
           <div class="flex items-center justify-end">
-            <a href="#gespraech" class="inline-flex items-center gap-2 rounded-full bg-blue-500/10 ring-1 ring-inset ring-blue-400/30 px-4 py-2 text-sm font-semibold text-blue-200 hover:bg-blue-500/20 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-0 focus-visible:ring-blue-400">
-              Gespräch vereinbaren
-              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <a href="gespraech.html" class="group inline-flex items-center gap-2.5 rounded-full bg-blue-500/12 px-5 py-2.5 text-sm font-medium text-blue-100 drop-shadow-glow ring-1 ring-inset ring-blue-400/20 backdrop-blur-sm transform-gpu transition-all duration-300 hover:scale-[1.02] hover:bg-blue-500/25 hover:text-white hover:ring-blue-300/60 hover:shadow-lg hover:shadow-blue-400/30 hover:drop-shadow-[0_0_20px_rgba(59,130,246,0.5)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300/60 opacity-0 translate-y-2 blur-sm duration-700 ease-out will-change-transform navbar-cta" data-reveal data-delay="320">
+              <span class="relative z-10 transition-transform duration-300">Gespräch vereinbaren</span>
+              <svg class="relative z-10 h-4 w-4 transition-all duration-300 group-hover:translate-x-1 group-hover:scale-110" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M5 12h14M13 5l7 7-7 7" />
               </svg>
+              <div class="absolute inset-0 rounded-full bg-gradient-to-r from-blue-400/0 via-blue-300/20 to-blue-400/0 opacity-0 transition-opacity duration-300 group-hover:opacity-100 blur-sm" aria-hidden="true"></div>
             </a>
           </div>
         </div>
       </nav>
       <!-- fine hairline separator under navbar -->
-      <div class="h-px w-full bg-white/10"></div>
+  <div class="h-px w-full bg-white/10 origin-center scale-x-0 opacity-0 transition-transform duration-700 ease-out will-change-transform" data-reveal data-delay="380"></div>
     </header>
 
     <!-- HERO -->
@@ -101,22 +104,34 @@
         <div class="grid gap-12 lg:gap-16 items-center lg:grid-cols-12">
           <!-- Left: Text -->
           <div class="lg:col-span-5 relative z-10">
-            <span class="inline-flex items-center gap-2 rounded-full bg-white/5 ring-1 ring-inset ring-white/10 px-3 py-1 text-[11px] uppercase tracking-wide text-blue-200/90 mb-5">
+            <span class="inline-flex items-center gap-2 rounded-full bg-white/5 ring-1 ring-inset ring-white/10 px-3 py-1 text-[11px] uppercase tracking-wide text-blue-200/90 mb-5 opacity-0 -translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu hero-badge" data-reveal data-delay="0">
               <span class="h-1.5 w-1.5 rounded-full bg-blue-400/80"></span>
-              Performance Marketing
+              Wachstum mit System
             </span>
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
-              Performance‑Ads,<br class="hidden md:block"> die Umsätze steigern.
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu hero-title" data-reveal data-delay="80">
+              Planbares Wachstum durch<br class="hidden md:block">
+              <span id="service-rotate" class="inline-block whitespace-nowrap underline decoration-white decoration-2 underline-offset-4" aria-live="polite">Performance Marketing</span>
             </h1>
-            <p class="mt-6 text-lg text-slate-300 max-w-2xl">
-              Wir helfen Unternehmen, planbar neue Kunden zu gewinnen – mit messbaren Kampagnen auf Meta, TikTok und Snapchat.
+            <p class="mt-6 text-lg text-slate-300 max-w-2xl opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu hero-desc" data-reveal data-delay="160">
+              Planbar neue Kunden. Messbare Kampagnen auf Meta, TikTok und Snapchat.
             </p>
             <div class="mt-8">
-              <a href="#gespraech" class="inline-flex items-center gap-2 rounded-full bg-blue-500 text-white px-6 py-3 font-semibold shadow-lg shadow-blue-900/40 hover:bg-blue-600 transition-colors">
-                Gespräch vereinbaren
-                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M5 12h14M13 5l7 7-7 7" />
-                </svg>
+              <a href="gespraech.html" class="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-blue-600 via-blue-600 to-sky-500 px-6 py-3 text-white font-semibold shadow-md ring-1 ring-blue-300/20 transform-gpu transition-all duration-300 ease-out hover:scale-[1.02] hover:from-blue-600 hover:via-blue-500 hover:to-sky-400 hover:ring-blue-200/40 opacity-0 translate-y-2 blur-sm duration-700 ease-out will-change-transform hero-cta" data-reveal data-delay="240">
+                <span class="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true">
+                  <span class="absolute inset-0 bg-[radial-gradient(120px_60px_at_10%_50%,rgba(255,255,255,0.18),transparent_60%),radial-gradient(120px_60px_at_90%_50%,rgba(255,255,255,0.14),transparent_60%)]"></span>
+                </span>
+                <span class="relative z-10 inline-flex items-center gap-2">
+                  Gespräch vereinbaren
+                  <svg class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M13 5l7 7-7 7" />
+                  </svg>
+                </span>
+                <div class="absolute inset-0 flex h-full w-full justify-center [transform:skewX(-20deg)_translateX(-140%)] transition-transform duration-700 ease-out group-hover:duration-[1200ms] group-hover:[transform:skewX(-20deg)_translateX(140%)]" aria-hidden="true">
+                  <div class="relative h-full w-12 bg-gradient-to-r from-white/0 via-white/70 to-white/0 blur-sm mix-blend-screen"></div>
+                </div>
+                <div class="absolute inset-0 flex h-full w-full justify-center [transform:skewX(-20deg)_translateX(-160%)] transition-transform duration-1000 ease-out group-hover:duration-[1500ms] group-hover:[transform:skewX(-20deg)_translateX(160%)]" aria-hidden="true">
+                  <div class="relative h-full w-24 bg-gradient-to-r from-white/0 via-white/25 to-white/0 blur-md mix-blend-screen"></div>
+                </div>
               </a>
             </div>
             <!-- Social proof under CTA (left column) -->
@@ -125,7 +140,7 @@
                 <span class="h-1.5 w-1.5 rounded-full bg-blue-400/80"></span>
                 Unternehmen, die uns vertrauen:
               </p>
-              <div class="flex items-center justify-start gap-x-8 md:gap-x-10 flex-wrap md:flex-nowrap">
+              <div class="flex items-center justify-start gap-x-8 md:gap-x-10 flex-wrap md:flex-nowrap opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu" data-reveal data-delay="320">
                 <a href="https://gravitas-invest.de/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center transition-opacity hover:opacity-90" title="Gravitas Invest – Website öffnen">
                   <img src="Bilder/Gravitas-Invest-Logo-Side.png" alt="Gravitas Invest" class="h-16 md:h-20 object-contain brightness-110 contrast-110" />
                 </a>
@@ -136,7 +151,7 @@
             </div>
           </div>
 
-          <!-- Right: Image (no video) -->
+  <div class="relative flex justify-center lg:justify-end overflow-hidden lg:col-span-7 min-w-0 z-0 opacity-0 translate-y-4 [transform:scale(0.98)] blur-sm transition-all duration-700 ease-out will-change-transform hero-image" data-reveal data-delay="180">
       <div class="relative flex justify-center lg:justify-end overflow-hidden lg:col-span-7 min-w-0 z-0">
             <div class="absolute -top-8 right-0 h-36 w-36 rounded-full bg-blue-500/30 blur-3xl"></div>
             <div class="hero-media rounded-3xl ring-1 ring-white/10 shadow-2xl shadow-blue-900/30">
@@ -158,16 +173,17 @@
 
 
   <!-- Leistungen Übersicht (größer, wie Referenzkarte) -->
-  <section class="bg-white text-slate-900" aria-labelledby="leistungen-title">
+  <section id="leistungen" class="bg-white text-slate-900" aria-labelledby="leistungen-title">
     <div class="mx-auto max-w-7xl px-6 py-24 md:py-32">
       <div class="max-w-3xl mx-auto text-center">
-        <h2 id="leistungen-title" class="text-3xl md:text-4xl font-extrabold tracking-tight">Leistungen, die Ergebnisse liefern</h2>
-        <p class="mt-4 text-lg text-slate-600">Unser Angebot: Performance Marketing, Social Media Management sowie Automation & Strategie – für messbare Umsatzwirkung.</p>
+        <span class="inline-block mb-4 px-5 py-1.5 rounded-full bg-slate-100 text-slate-400 font-semibold text-base opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out" data-reveal data-delay="0">Leistungen</span>
+        <h2 id="leistungen-title" class="text-3xl md:text-4xl font-extrabold tracking-tight opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out" data-reveal data-delay="80">Leistungen, die Ergebnisse liefern</h2>
+        <p class="mt-4 text-lg text-slate-600 opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out" data-reveal data-delay="160">Unser Angebot: Performance Marketing, Social Media Management sowie Automation & Strategie – für messbare Umsatzwirkung.</p>
       </div>
 
       <div class="mt-14 grid gap-10 md:gap-10 md:grid-cols-3">
         <!-- Performance Marketing -->
-        <div class="group flex flex-col items-center text-center rounded-3xl bg-slate-50 ring-1 ring-slate-200 p-10 min-h-80 hover:ring-slate-300 hover:shadow-lg transition-all">
+  <div class="group flex flex-col items-center text-center rounded-3xl bg-slate-50 ring-1 ring-slate-200 p-10 min-h-80 hover:ring-slate-300 hover:shadow-lg transition-all opacity-0 -translate-y-4 blur-sm duration-700 ease-out transform-gpu will-change-transform" data-reveal data-delay="80">
           <span class="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-50 text-blue-600 ring-1 ring-blue-100">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-7 w-7">
               <path d="M3 3v18h18"/>
@@ -190,13 +206,13 @@
               <span>Optimierung & Skalierung: Budgets, Bidding, Zielgruppen</span>
             </li>
           </ul>
-      <a href="#leistungen" class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-blue-600 hover:text-blue-700">Mehr erfahren
+  <a href="leistungen.html" class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-blue-600 hover:text-blue-700">Mehr erfahren
             <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
           </a>
         </div>
 
         <!-- Social Media Management -->
-        <div class="group flex flex-col items-center text-center rounded-3xl bg-slate-50 ring-1 ring-slate-200 p-10 min-h-80 hover:ring-slate-300 hover:shadow-lg transition-all">
+  <div class="group flex flex-col items-center text-center rounded-3xl bg-slate-50 ring-1 ring-slate-200 p-10 min-h-80 hover:ring-slate-300 hover:shadow-lg transition-all opacity-0 translate-y-4 blur-sm duration-700 ease-out transform-gpu will-change-transform" data-reveal data-delay="180">
           <span class="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-50 text-blue-600 ring-1 ring-blue-100">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-7 w-7">
               <rect x="3" y="4" width="18" height="16" rx="2"/>
@@ -219,13 +235,13 @@
               <span>Reporting & Learnings zur Content‑Optimierung</span>
             </li>
           </ul>
-      <a href="#leistungen" class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-blue-600 hover:text-blue-700">Mehr erfahren
+  <a href="leistungen.html" class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-blue-600 hover:text-blue-700">Mehr erfahren
             <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
           </a>
         </div>
 
         <!-- Automation & Strategie -->
-        <div class="group flex flex-col items-center text-center rounded-3xl bg-slate-50 ring-1 ring-slate-200 p-10 min-h-80 hover:ring-slate-300 hover:shadow-lg transition-all">
+  <div class="group flex flex-col items-center text-center rounded-3xl bg-slate-50 ring-1 ring-slate-200 p-10 min-h-80 hover:ring-slate-300 hover:shadow-lg transition-all opacity-0 translate-y-2 blur-sm [transform:scale(0.98)] duration-700 ease-out transform-gpu will-change-transform" data-reveal data-delay="280">
           <span class="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-50 text-blue-600 ring-1 ring-blue-100">
             <svg viewBox="0 0 24 24" class="h-7 w-7" fill="currentColor" aria-hidden="true">
               <path fill-rule="evenodd" d="M16 12a4 4 0 11-8 0 4 4 0 018 0zm-1.5 0a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"/>
@@ -248,15 +264,24 @@
               <span>Tracking, Attribution & Funnel‑Strategie</span>
             </li>
           </ul>
-      <a href="#leistungen" class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-blue-600 hover:text-blue-700">Mehr erfahren
+  <a href="leistungen.html" class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-blue-600 hover:text-blue-700">Mehr erfahren
             <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
           </a>
         </div>
       </div>
 
-      <div class="mt-14 text-center">
-        <a href="#leistungen" class="inline-flex items-center gap-2 rounded-full bg-blue-600 text-white px-5 py-2.5 font-semibold shadow hover:bg-blue-700">Zur Leistungen‑Seite
-          <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+    <div class="mt-14 text-center opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out" data-reveal data-delay="340">
+  <a href="leistungen.html" class="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-blue-600 via-blue-600 to-sky-500 px-5 py-2.5 text-white font-semibold shadow-md ring-1 ring-blue-300/20 antialiased transform-gpu transition-all duration-300 ease-out [will-change:transform] hover:scale-[1.01] hover:from-blue-600 hover:via-blue-500 hover:to-sky-400 hover:ring-blue-200/40">Zur Leistungen‑Seite
+          <span class="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true">
+            <span class="absolute inset-0 bg-[radial-gradient(100px_50px_at_10%_50%,rgba(255,255,255,0.18),transparent_60%),radial-gradient(100px_50px_at_90%_50%,rgba(255,255,255,0.14),transparent_60%)]"></span>
+          </span>
+          <svg viewBox="0 0 24 24" class="relative z-10 h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          <div class="absolute inset-0 flex h-full w-full justify-center [transform:skewX(-20deg)_translateX(-140%)] transition-transform duration-700 ease-out group-hover:duration-[1200ms] group-hover:[transform:skewX(-20deg)_translateX(140%)]" aria-hidden="true">
+            <div class="relative h-full w-12 bg-gradient-to-r from-white/0 via-white/70 to-white/0 blur-sm mix-blend-screen"></div>
+          </div>
+          <div class="absolute inset-0 flex h-full w-full justify-center [transform:skewX(-20deg)_translateX(-160%)] transition-transform duration-1000 ease-out group-hover:duration-[1500ms] group-hover:[transform:skewX(-20deg)_translateX(160%)]" aria-hidden="true">
+            <div class="relative h-full w-24 bg-gradient-to-r from-white/0 via-white/25 to-white/0 blur-md mix-blend-screen"></div>
+          </div>
         </a>
       </div>
     </div>
@@ -267,14 +292,15 @@
     <div class="mx-auto max-w-7xl px-6 py-24 md:py-32">
       <!-- Section title like in the reference -->
       <div class="max-w-4xl mx-auto text-center mb-12 md:mb-16">
-        <h2 id="about-title" class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight">Über Niklas Ganz und Peakmont</h2>
-        <p class="mt-4 text-lg text-slate-700">Wir helfen ambitionierten Unternehmen mit Performance‑Ads, Social Content und Automationen zu planbarem Wachstum – messbar, pragmatisch und ohne Agentur‑Blabla.</p>
+        <span class="inline-block mb-4 px-5 py-1.5 rounded-full bg-slate-200 text-slate-500 font-semibold text-base opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu" data-reveal data-delay="0">Über uns</span>
+        <h2 id="about-title" class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu" data-reveal data-delay="80">Über Niklas Ganz und Peakmont</h2>
+        <p class="mt-4 text-lg text-slate-700 opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu" data-reveal data-delay="160">Wir helfen ambitionierten Unternehmen mit Performance‑Ads, Social Content und Automationen zu planbarem Wachstum – messbar, pragmatisch und ohne Agentur‑Blabla.</p>
       </div>
 
       <div class="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
         <!-- Left: Image -->
         <div>
-          <div class="about-media relative rounded-3xl overflow-hidden ring-1 ring-slate-300/60 shadow-xl bg-white">
+          <div class="about-media relative rounded-3xl overflow-hidden ring-1 ring-slate-300/60 shadow-xl bg-white opacity-0 translate-y-2 blur-sm [transform:scale(0.98)] transition-all duration-700 ease-out will-change-transform transform-gpu" data-reveal data-delay="240">
             <img
               src="Bilder/BörseninitiativeSaarPortraits22.05.25©A.Lombardozzi-21.jpg"
               alt="Niklas Ganz – Gründer von Peakmont"
@@ -285,11 +311,11 @@
 
         <!-- Right: Text content -->
         <div>
-          <h3 class="text-3xl md:text-4xl font-extrabold tracking-tight">Wofür wir stehen</h3>
-          <p class="mt-4 text-lg text-slate-700">Ich bin Niklas Ganz, Gründer von Peakmont. Gemeinsam mit meinem Netzwerk setzen wir Performance‑Marketing, Social Media und Automation so ein, dass aus Reichweite Umsatz wird.</p>
+          <h3 class="text-3xl md:text-4xl font-extrabold tracking-tight opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu" data-reveal data-delay="320">Wofür wir stehen</h3>
+          <p class="mt-4 text-lg text-slate-700 opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu" data-reveal data-delay="380">Ich bin Niklas Ganz, Gründer von Peakmont. Gemeinsam mit meinem Netzwerk setzen wir Performance‑Marketing, Social Media und Automation so ein, dass aus Reichweite Umsatz wird.</p>
 
           <ul class="mt-8 space-y-5">
-            <li class="flex items-start gap-4">
+            <li class="flex items-start gap-4 opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu" data-reveal data-delay="440">
               <span class="mt-0.5 bullet-badge bg-white ring-1 ring-slate-300 text-slate-600">
                 <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
               </span>
@@ -298,7 +324,7 @@
                 <p class="text-slate-600">Kampagnen auf Meta, TikTok und Snapchat mit klarem Zielbild, sauberem Tracking und konsequenter Optimierung.</p>
               </div>
             </li>
-            <li class="flex items-start gap-4">
+            <li class="flex items-start gap-4 opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu" data-reveal data-delay="500">
               <span class="mt-0.5 bullet-badge bg-white ring-1 ring-slate-300 text-slate-600">
                 <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
               </span>
@@ -307,7 +333,7 @@
                 <p class="text-slate-600">Redaktionspläne, Produktion und Community‑Management – Content, der Marke aufbaut und Sales unterstützt.</p>
               </div>
             </li>
-            <li class="flex items-start gap-4">
+            <li class="flex items-start gap-4 opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu" data-reveal data-delay="560">
               <span class="mt-0.5 bullet-badge bg-white ring-1 ring-slate-300 text-slate-600">
                 <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
               </span>
@@ -316,7 +342,7 @@
                 <p class="text-slate-600">CRM‑Workflows, Lead‑Nurturing und Daten‑Syncs, die Anfragen automatisch qualifizieren und nachfassen.</p>
               </div>
             </li>
-            <li class="flex items-start gap-4">
+            <li class="flex items-start gap-4 opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu" data-reveal data-delay="620">
               <span class="mt-0.5 bullet-badge bg-white ring-1 ring-slate-300 text-slate-600">
                 <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
               </span>
@@ -327,11 +353,21 @@
             </li>
           </ul>
 
-          <p class="mt-8 text-slate-700">Peakmont verbindet Strategie und Umsetzung – schlank, fokussiert und auf Ergebnis getrimmt.</p>
+          <p class="mt-8 text-slate-700 opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu" data-reveal data-delay="680">Peakmont verbindet Strategie und Umsetzung – schlank, fokussiert und auf Ergebnis getrimmt.</p>
           <div class="mt-6">
-            <a href="#gespraech" class="inline-flex items-center gap-2 rounded-md bg-blue-600 text-white px-6 py-3 font-semibold hover:bg-blue-700">
-              Jetzt ein Strategiegespräch vereinbaren
-              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            <a href="gespraech.html" class="group relative inline-flex items-center justify-center overflow-hidden rounded-md bg-gradient-to-r from-blue-600 via-blue-600 to-sky-500 px-6 py-3 text-white font-semibold shadow-md ring-1 ring-blue-300/20 transform-gpu transition-all duration-300 ease-out hover:scale-[1.02] hover:from-blue-600 hover:via-blue-500 hover:to-sky-400 hover:ring-blue-200/40 opacity-0 translate-y-2 blur-sm duration-700 will-change-transform" data-reveal data-delay="740">
+              <span class="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true">
+                <span class="absolute inset-0 bg-[radial-gradient(120px_60px_at_10%_50%,rgba(255,255,255,0.18),transparent_60%),radial-gradient(120px_60px_at_90%_50%,rgba(255,255,255,0.14),transparent_60%)]"></span>
+              </span>
+              <span class="relative z-10 inline-flex items-center gap-2">Jetzt ein Strategiegespräch vereinbaren
+                <svg viewBox="0 0 24 24" class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-0.5" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+              </span>
+              <div class="absolute inset-0 flex h-full w-full justify-center [transform:skewX(-20deg)_translateX(-140%)] transition-transform duration-700 ease-out group-hover:duration-[1200ms] group-hover:[transform:skewX(-20deg)_translateX(140%)]" aria-hidden="true">
+                <div class="relative h-full w-12 bg-gradient-to-r from-white/0 via-white/70 to-white/0 blur-sm mix-blend-screen"></div>
+              </div>
+              <div class="absolute inset-0 flex h-full w-full justify-center [transform:skewX(-20deg)_translateX(-160%)] transition-transform duration-1000 ease-out group-hover:duration-[1500ms] group-hover:[transform:skewX(-20deg)_translateX(160%)]" aria-hidden="true">
+                <div class="relative h-full w-24 bg-gradient-to-r from-white/0 via-white/25 to-white/0 blur-md mix-blend-screen"></div>
+              </div>
             </a>
           </div>
         </div>
@@ -343,76 +379,85 @@
   <!-- Zitat (unter Über uns, gleicher Hintergrund) -->
   <section class="bg-slate-100 text-slate-900" aria-labelledby="niklas-quote-title">
     <div class="mx-auto max-w-6xl px-6 py-20 md:py-28 text-center">
-      <div class="mx-auto mb-8 h-20 w-20 md:h-24 md:w-24 rounded-full ring-2 ring-white/70 shadow-md overflow-hidden">
+      <div class="mx-auto mb-8 h-20 w-20 md:h-24 md:w-24 rounded-full ring-2 ring-white/70 shadow-md overflow-hidden opacity-0 translate-y-2 blur-sm [transform:scale(0.98)] transition-all duration-700 ease-out will-change-transform transform-gpu" data-reveal data-delay="0">
         <img src="Bilder/BörseninitiativeSaarPortraits22.05.25©A.Lombardozzi-21.jpg" alt="Niklas Ganz – Portrait" class="h-full w-full object-cover object-left" loading="lazy" />
       </div>
       <div class="mx-auto max-w-4xl">
         <h2 id="niklas-quote-title" class="sr-only">Zitat von Niklas Ganz</h2>
-        <p class="text-3xl md:text-4xl lg:text-5xl leading-tight tracking-tight text-slate-700">
+        <p class="text-3xl md:text-4xl lg:text-5xl leading-tight tracking-tight text-slate-700 opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu" data-reveal data-delay="80">
           “Wachstum ist kein Zufall. Mit Performance‑Ads, Social Content und Automationen verwandeln wir Aufmerksamkeit in planbaren Umsatz.”
         </p>
-        <p class="mt-6 text-base md:text-lg text-slate-600">Niklas Ganz, Gründer und Geschäftsführer von Peakmont</p>
+        <p class="mt-6 text-base md:text-lg text-slate-600 opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu" data-reveal data-delay="160">Niklas Ganz, Gründer und Geschäftsführer von Peakmont</p>
       </div>
     </div>
   </section>
 
   <!-- Placeholder anchors for future sections (so menu links work during scaffolding) -->
-  <main id="leistungen"></main>
   <main id="kontakt"></main>
   <main id="gespraech"></main>
-</main>
 
   <!-- Zahlen & Fakten (Dark, like Hero) -->
   <section id="zahlen-fakten" class="relative hero-bg noise" aria-labelledby="zahlen-fakten-title">
     <div class="mx-auto max-w-7xl px-6 py-24 md:py-32 text-center text-slate-100">
       <div class="max-w-4xl mx-auto">
-        <h2 id="zahlen-fakten-title" class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight">Zahlen. Daten. Fakten.</h2>
-        <p class="mt-4 text-base md:text-lg text-slate-300">Unsere Kunden machen Performance sichtbar – Klicks, CPM, CPC und Ausgaben vs. Resultate.</p>
-        <p class="mt-1 text-base md:text-lg text-slate-300">Im Überblick:</p>
+  <span class="inline-block mb-4 px-5 py-1.5 rounded-full bg-white/10 text-blue-200 font-semibold text-base opacity-0 translate-y-2 blur-sm transition-all duration-1000 ease-out will-change-transform transform-gpu" data-reveal data-delay="0">Zahlen & Fakten</span>
+  <h2 id="zahlen-fakten-title" class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight opacity-0 translate-y-2 blur-sm transition-all duration-1000 ease-out will-change-transform transform-gpu" data-reveal data-delay="80">Zahlen. Daten. Fakten.</h2>
+  <p class="mt-4 text-base md:text-lg text-slate-300 opacity-0 translate-y-2 blur-sm transition-all duration-1000 ease-out will-change-transform transform-gpu" data-reveal data-delay="160">Unsere Kunden machen Performance sichtbar – Klicks, CPM, CPC und Ausgaben vs. Resultate.</p>
+  <p class="mt-1 text-base md:text-lg text-slate-300 opacity-0 translate-y-2 blur-sm transition-all duration-1000 ease-out will-change-transform transform-gpu" data-reveal data-delay="240">Im Überblick:</p>
       </div>
 
       <div class="mt-14 grid gap-6 md:gap-8 md:grid-cols-3">
         <!-- Stat 1 -->
-        <div class="group rounded-2xl border border-white/10 bg-white/5 p-8 md:p-10 text-center hover:border-white/20 transition-colors">
-          <div class="text-4xl md:text-5xl font-extrabold tracking-tight">+210%</div>
+        <div class="group rounded-2xl border border-white/10 bg-white/5 p-8 md:p-10 text-center transition-all opacity-0 translate-y-2 blur-sm [transform:scale(0.98)] duration-1000 ease-out will-change-transform transform-gpu hover:-translate-y-1 hover:scale-[1.02] hover:bg-white/10 hover:border-white/30 hover:shadow-lg hover:shadow-blue-500/10 hover:duration-300" data-reveal data-delay="320">
+          <div class="text-4xl md:text-5xl font-extrabold tracking-tight transition-transform duration-300 ease-out transform-gpu group-hover:scale-[1.03]"><span class="stat-num" data-countup data-target="210" data-decimals="0" data-suffix="%" data-plus="true">0</span></div>
           <p class="mt-2 text-sm md:text-base text-slate-300">Mehr Klicks auf Anzeigen</p>
         </div>
 
         <!-- Stat 2 -->
-        <div class="group rounded-2xl border border-white/10 bg-white/5 p-8 md:p-10 text-center hover:border-white/20 transition-colors">
-          <div class="text-4xl md:text-5xl font-extrabold tracking-tight">−28%</div>
+        <div class="group rounded-2xl border border-white/10 bg-white/5 p-8 md:p-10 text-center transition-all opacity-0 translate-y-2 blur-sm [transform:scale(0.98)] duration-1000 ease-out will-change-transform transform-gpu hover:-translate-y-1 hover:scale-[1.02] hover:bg-white/10 hover:border-white/30 hover:shadow-lg hover:shadow-blue-500/10 hover:duration-300" data-reveal data-delay="400">
+          <div class="text-4xl md:text-5xl font-extrabold tracking-tight transition-transform duration-300 ease-out transform-gpu group-hover:scale-[1.03]"><span class="stat-num" data-countup data-target="-28" data-decimals="0" data-suffix="%">0</span></div>
           <p class="mt-2 text-sm md:text-base text-slate-300">Niedrigerer CPM</p>
         </div>
 
         <!-- Stat 3 -->
-        <div class="group rounded-2xl border border-white/10 bg-white/5 p-8 md:p-10 text-center hover:border-white/20 transition-colors">
-          <div class="text-4xl md:text-5xl font-extrabold tracking-tight">−35%</div>
+        <div class="group rounded-2xl border border-white/10 bg-white/5 p-8 md:p-10 text-center transition-all opacity-0 translate-y-2 blur-sm [transform:scale(0.98)] duration-1000 ease-out will-change-transform transform-gpu hover:-translate-y-1 hover:scale-[1.02] hover:bg-white/10 hover:border-white/30 hover:shadow-lg hover:shadow-blue-500/10 hover:duration-300" data-reveal data-delay="480">
+          <div class="text-4xl md:text-5xl font-extrabold tracking-tight transition-transform duration-300 ease-out transform-gpu group-hover:scale-[1.03]"><span class="stat-num" data-countup data-target="-35" data-decimals="0" data-suffix="%">0</span></div>
           <p class="mt-2 text-sm md:text-base text-slate-300">Geringerer CPC</p>
         </div>
 
         <!-- Stat 4 -->
-        <div class="group rounded-2xl border border-white/10 bg-white/5 p-8 md:p-10 text-center hover:border-white/20 transition-colors">
-          <div class="text-4xl md:text-5xl font-extrabold tracking-tight">+180%</div>
+        <div class="group rounded-2xl border border-white/10 bg-white/5 p-8 md:p-10 text-center transition-all opacity-0 translate-y-2 blur-sm [transform:scale(0.98)] duration-1000 ease-out will-change-transform transform-gpu hover:-translate-y-1 hover:scale-[1.02] hover:bg-white/10 hover:border-white/30 hover:shadow-lg hover:shadow-blue-500/10 hover:duration-300" data-reveal data-delay="560">
+          <div class="text-4xl md:text-5xl font-extrabold tracking-tight transition-transform duration-300 ease-out transform-gpu group-hover:scale-[1.03]"><span class="stat-num" data-countup data-target="180" data-decimals="0" data-suffix="%" data-plus="true">0</span></div>
           <p class="mt-2 text-sm md:text-base text-slate-300">Mehr qualifizierte Leads</p>
         </div>
 
         <!-- Stat 5 -->
-        <div class="group rounded-2xl border border-white/10 bg-white/5 p-8 md:p-10 text-center hover:border-white/20 transition-colors">
-          <div class="text-4xl md:text-5xl font-extrabold tracking-tight">4,2×</div>
+        <div class="group rounded-2xl border border-white/10 bg-white/5 p-8 md:p-10 text-center transition-all opacity-0 translate-y-2 blur-sm [transform:scale(0.98)] duration-1000 ease-out will-change-transform transform-gpu hover:-translate-y-1 hover:scale-[1.02] hover:bg-white/10 hover:border-white/30 hover:shadow-lg hover:shadow-blue-500/10 hover:duration-300" data-reveal data-delay="640">
+          <div class="text-4xl md:text-5xl font-extrabold tracking-tight transition-transform duration-300 ease-out transform-gpu group-hover:scale-[1.03]"><span class="stat-num" data-countup data-target="4.2" data-decimals="1" data-suffix="×">0</span></div>
           <p class="mt-2 text-sm md:text-base text-slate-300">ROAS im Performance‑Marketing</p>
         </div>
 
         <!-- Stat 6 -->
-        <div class="group rounded-2xl border border-white/10 bg-white/5 p-8 md:p-10 text-center hover:border-white/20 transition-colors">
-          <div class="text-4xl md:text-5xl font-extrabold tracking-tight">+160%</div>
+        <div class="group rounded-2xl border border-white/10 bg-white/5 p-8 md:p-10 text-center transition-all opacity-0 translate-y-2 blur-sm [transform:scale(0.98)] duration-1000 ease-out will-change-transform transform-gpu hover:-translate-y-1 hover:scale-[1.02] hover:bg-white/10 hover:border-white/30 hover:shadow-lg hover:shadow-blue-500/10 hover:duration-300" data-reveal data-delay="720">
+          <div class="text-4xl md:text-5xl font-extrabold tracking-tight transition-transform duration-300 ease-out transform-gpu group-hover:scale-[1.03]"><span class="stat-num" data-countup data-target="160" data-decimals="0" data-suffix="%" data-plus="true">0</span></div>
           <p class="mt-2 text-sm md:text-base text-slate-300">Umsatzbeitrag durch Paid Social</p>
         </div>
       </div>
 
-      <div class="mt-14">
-        <a href="#cases" class="inline-flex items-center gap-2 rounded-full bg-blue-500 text-white px-5 py-2.5 font-semibold shadow hover:bg-blue-600">
-          Mehr Cases
-          <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      <div class="mt-14 opacity-0 translate-y-2 blur-sm transition-all duration-1000 ease-out will-change-transform transform-gpu" data-reveal data-delay="820">
+  <a href="leistungen.html" class="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-blue-600 via-blue-600 to-sky-500 px-5 py-2.5 text-white font-semibold shadow-md ring-1 ring-blue-300/20 transform-gpu transition-all duration-300 ease-out hover:scale-[1.02] hover:from-blue-600 hover:via-blue-500 hover:to-sky-400 hover:ring-blue-200/40">
+          <span class="relative z-10 inline-flex items-center gap-2">Mehr über Leistungen erfahren
+            <svg viewBox="0 0 24 24" class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-0.5" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </span>
+          <span class="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true">
+            <span class="absolute inset-0 bg-[radial-gradient(100px_50px_at_10%_50%,rgba(255,255,255,0.18),transparent_60%),radial-gradient(100px_50px_at_90%_50%,rgba(255,255,255,0.14),transparent_60%)]"></span>
+          </span>
+          <div class="absolute inset-0 flex h-full w-full justify-center [transform:skewX(-20deg)_translateX(-140%)] transition-transform duration-700 ease-out group-hover:duration-[1200ms] group-hover:[transform:skewX(-20deg)_translateX(140%)]" aria-hidden="true">
+            <div class="relative h-full w-12 bg-gradient-to-r from-white/0 via-white/70 to-white/0 blur-sm mix-blend-screen"></div>
+          </div>
+          <div class="absolute inset-0 flex h-full w-full justify-center [transform:skewX(-20deg)_translateX(-160%)] transition-transform duration-1000 ease-out group-hover:duration-[1500ms] group-hover:[transform:skewX(-20deg)_translateX(160%)]" aria-hidden="true">
+            <div class="relative h-full w-24 bg-gradient-to-r from-white/0 via-white/25 to-white/0 blur-md mix-blend-screen"></div>
+          </div>
         </a>
       </div>
     </div>
@@ -420,51 +465,330 @@
 
   <!-- Ablauf Section (drei Schritte Fahrplan) -->
   <section class="bg-white text-slate-900" aria-labelledby="ablauf-title">
-    <div class="mx-auto max-w-7xl px-6 py-24 md:py-32">
+    <div class="mx-auto max-w-7xl px-6 py-28 md:py-36">
       <div class="max-w-3xl mx-auto text-center">
-        <span class="inline-block mb-4 px-5 py-1.5 rounded-full bg-slate-100 text-slate-400 font-semibold text-base">Ablauf</span>
-        <h2 id="ablauf-title" class="text-4xl md:text-5xl font-extrabold tracking-tight">Der drei Schritte Fahrplan</h2>
+        <span class="inline-block mb-4 px-5 py-1.5 rounded-full bg-slate-100 text-slate-400 font-semibold text-base opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu" data-reveal data-delay="0">Ablauf</span>
+        <h2 id="ablauf-title" class="text-5xl md:text-6xl font-extrabold tracking-tight opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu" data-reveal data-delay="80">Der Drei‑Schritte‑Fahrplan</h2>
+  <p class="mt-4 text-base md:text-lg text-slate-600 opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu" data-reveal data-delay="160">Für alle Leistungen – Performance Marketing, Social Media Management sowie Automation & Strategie: Kennenlernen, Strategie‑Sprint und Umsetzung mit Testing, Tracking & Skalierung.</p>
       </div>
 
-      <div class="mt-14 grid gap-10 md:gap-10 md:grid-cols-3 bg-slate-50 rounded-3xl p-8 md:p-14">
-        <!-- Schritt 1: Kennenlernen -->
-        <div class="flex flex-col items-center text-center">
-          <span class="inline-flex h-20 w-20 items-center justify-center rounded-full bg-blue-100 mb-6">
-            <!-- Icon: Handshake -->
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-10 w-10 text-blue-400"><path d="M17 8.5V7a2 2 0 0 0-2-2h-2.5a2 2 0 0 0-2 2v1.5"/><path d="M8 12.5l-2.5-2.5a2 2 0 0 1 0-2.8l.7-.7a2 2 0 0 1 2.8 0l2.5 2.5"/><path d="M16 12.5l2.5-2.5a2 2 0 0 0 0-2.8l-.7-.7a2 2 0 0 0-2.8 0l-2.5 2.5"/><path d="M8 12.5l4 4a2 2 0 0 0 2.8 0l.7-.7a2 2 0 0 0 0-2.8l-4-4"/></svg>
-          </span>
-          <h3 class="text-xl font-semibold">Das Kennenlernen</h3>
-          <p class="mt-3 text-base text-slate-600">In unserem ersten unverbindlichen Kennenlerngespräch sprechen wir über dich, dein Unternehmen, deine aktuelle Situation sowie deine Ziele und Visionen.</p>
-        </div>
+      <div class="relative mt-16 bg-slate-50 rounded-3xl p-8 md:p-14 ring-1 ring-slate-200 opacity-0 translate-y-2 blur-sm [transform:scale(0.98)] transition-all duration-700 ease-out will-change-transform transform-gpu" data-reveal data-delay="240">
+        <!-- connecting line on larger screens -->
+        <div class="pointer-events-none absolute left-8 right-8 top-1/2 hidden h-px -translate-y-1/2 bg-gradient-to-r from-transparent via-slate-300 to-transparent md:block"></div>
 
-        <!-- Schritt 2: Strategiegespräch -->
-        <div class="flex flex-col items-center text-center">
-          <span class="inline-flex h-20 w-20 items-center justify-center rounded-full bg-blue-100 mb-6">
-            <!-- Icon: Target -->
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-10 w-10 text-blue-400"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><path d="M12 8v4l2 2"/></svg>
-          </span>
-          <h3 class="text-xl font-semibold">Das Strategiegespräch</h3>
-          <p class="mt-3 text-base text-slate-600">Nach unserem Kennenlernen entscheiden wir gemeinsam und ganz individuell, wie es für dich weitergeht und erarbeiten deinen Fahrplan.</p>
-        </div>
+        <ol class="relative grid gap-8 md:gap-10 md:grid-cols-3">
+          <!-- Schritt 1: Kennenlernen -->
+          <li class="group relative flex flex-col items-center text-center rounded-3xl bg-white/95 backdrop-blur-sm p-10 ring-1 ring-slate-200 shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-md hover:ring-blue-200/60 min-h-[380px] opacity-0 translate-y-2 blur-sm [transform:scale(0.98)] duration-700 ease-out will-change-transform transform-gpu" data-reveal data-delay="320">
+            <span class="absolute -top-4 inline-flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-b from-blue-500 to-blue-600 text-white text-sm font-semibold ring-2 ring-white shadow-md">1</span>
+            <span class="inline-flex h-24 w-24 items-center justify-center rounded-2xl bg-blue-50 text-blue-500 ring-1 ring-blue-100 shadow-sm mb-6">
+              <span class="material-symbols-outlined text-5xl">handshake</span>
+            </span>
+            <h3 class="text-2xl font-semibold leading-snug">Das Kennenlernen</h3>
+            <p class="mt-3 text-lg text-slate-600">15–20 Minuten Fokus auf Ziele, Zielgruppe und Status quo. Wir identifizieren den größten Hebel in Ads, Content und Automation.</p>
+            <ul class="mt-5 space-y-2 text-left text-slate-600">
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-blue-500 text-lg mt-0.5">check_circle</span><span>Status quo: Tracking, Daten, Kanäle</span></li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-blue-500 text-lg mt-0.5">check_circle</span><span>Ziele, Zielgruppe, Angebot</span></li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-blue-500 text-lg mt-0.5">check_circle</span><span>Quick‑Wins in Ads, Content & Automation</span></li>
+            </ul>
+          </li>
 
-        <!-- Schritt 3: Umsetzung -->
-        <div class="flex flex-col items-center text-center">
-          <span class="inline-flex h-20 w-20 items-center justify-center rounded-full bg-blue-100 mb-6">
-            <!-- Icon: Rocket -->
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-10 w-10 text-blue-400"><path d="M4 20l1.5-5.5L18 4l2 2-11.5 12.5L4 20z"/><path d="M14 7l3 3"/></svg>
-          </span>
-          <h3 class="text-xl font-semibold">Die Umsetzung</h3>
-          <p class="mt-3 text-base text-slate-600">Lerne mithilfe unserer praxiserprobten Tools, Leitfäden und Strategien, wie du deine Reichweite auf Social Media auf- und ausbaust, kontinuierlich neue Kunden gewinnst und dein Business nachhaltig skalierst.</p>
-        </div>
+          <!-- Schritt 2: Strategiegespräch -->
+          <li class="group relative flex flex-col items-center text-center rounded-3xl bg-white/95 backdrop-blur-sm p-10 ring-1 ring-slate-200 shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-md hover:ring-blue-200/60 min-h-[380px] opacity-0 translate-y-2 blur-sm [transform:scale(0.98)] duration-700 ease-out will-change-transform transform-gpu" data-reveal data-delay="420">
+            <span class="absolute -top-4 inline-flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-b from-blue-500 to-blue-600 text-white text-sm font-semibold ring-2 ring-white shadow-md">2</span>
+            <span class="inline-flex h-24 w-24 items-center justify-center rounded-2xl bg-blue-50 text-blue-500 ring-1 ring-blue-100 shadow-sm mb-6" title="Roadmap & Prioritäten">
+              <span class="material-symbols-outlined text-5xl" aria-hidden="true">route</span>
+            </span>
+            <h3 class="text-2xl font-semibold leading-snug">Das Strategiegespräch</h3>
+            <p class="mt-3 text-lg text-slate-600">Nach unserem Kennenlernen entscheiden wir gemeinsam und ganz individuell, wie es für dich weitergeht und erarbeiten deinen Fahrplan.</p>
+            <ul class="mt-5 space-y-2 text-left text-slate-600">
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-blue-500 text-lg mt-0.5">check_circle</span><span>Roadmap nach Prioritäten</span></li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-blue-500 text-lg mt-0.5">check_circle</span><span>Budget, KPIs, Timeline</span></li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-blue-500 text-lg mt-0.5">check_circle</span><span>Setup je Leistung: Ads, Content, CRM</span></li>
+            </ul>
+          </li>
+
+          <!-- Schritt 3: Umsetzung -->
+          <li class="group relative flex flex-col items-center text-center rounded-3xl bg-white/95 backdrop-blur-sm p-10 ring-1 ring-slate-200 shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-md hover:ring-blue-200/60 min-h-[380px] opacity-0 translate-y-2 blur-sm [transform:scale(0.98)] duration-700 ease-out will-change-transform transform-gpu" data-reveal data-delay="520">
+            <span class="absolute -top-4 inline-flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-b from-blue-500 to-blue-600 text-white text-sm font-semibold ring-2 ring-white shadow-md">3</span>
+            <span class="inline-flex h-24 w-24 items-center justify-center rounded-2xl bg-blue-50 text-blue-500 ring-1 ring-blue-100 shadow-sm mb-6">
+              <span class="material-symbols-outlined text-5xl">rocket_launch</span>
+            </span>
+            <h3 class="text-2xl font-semibold leading-snug">Die Umsetzung</h3>
+            <p class="mt-3 text-lg text-slate-600">Wir setzen um, testen und skalieren: Kampagnen, Content‑Rhythmus und Automationen – mit sauberem Tracking und transparentem Reporting.</p>
+            <ul class="mt-5 space-y-2 text-left text-slate-600">
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-blue-500 text-lg mt-0.5">check_circle</span><span>Setup & Tracking live</span></li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-blue-500 text-lg mt-0.5">check_circle</span><span>Creative‑Tests & Content‑Plan</span></li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-blue-500 text-lg mt-0.5">check_circle</span><span>Reporting, Iteration & Skalierung</span></li>
+            </ul>
+          </li>
+        </ol>
       </div>
 
-      <div class="mt-14 text-center">
-        <a href="#gespraech" class="inline-flex items-center gap-2 rounded-full bg-blue-500 text-white px-8 py-3 font-semibold shadow hover:bg-blue-600 transition-colors">
-          Jetzt durchstarten
-          <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      <div class="mt-16 text-center opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu" data-reveal data-delay="620">
+  <a href="gespraech.html" class="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-blue-600 via-blue-600 to-sky-500 px-10 py-3.5 text-white text-lg font-semibold shadow-md ring-1 ring-blue-300/20 transform-gpu transition-all duration-300 ease-out hover:scale-[1.02] hover:from-blue-600 hover:via-blue-500 hover:to-sky-400 hover:ring-blue-200/40">
+          <span class="relative z-10 inline-flex items-center gap-3">Jetzt durchstarten
+            <svg viewBox="0 0 24 24" class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-0.5" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </span>
+          <span class="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true">
+            <span class="absolute inset-0 bg-[radial-gradient(140px_70px_at_10%_50%,rgba(255,255,255,0.18),transparent_60%),radial-gradient(140px_70px_at_90%_50%,rgba(255,255,255,0.14),transparent_60%)]"></span>
+          </span>
+          <div class="absolute inset-0 flex h-full w-full justify-center [transform:skewX(-20deg)_translateX(-140%)] transition-transform duration-700 ease-out group-hover:duration-[1200ms] group-hover:[transform:skewX(-20deg)_translateX(140%)]" aria-hidden="true">
+            <div class="relative h-full w-16 bg-gradient-to-r from-white/0 via-white/70 to-white/0 blur-sm mix-blend-screen"></div>
+          </div>
+          <div class="absolute inset-0 flex h-full w-full justify-center [transform:skewX(-20deg)_translateX(-160%)] transition-transform duration-1000 ease-out group-hover:duration-[1500ms] group-hover:[transform:skewX(-20deg)_translateX(160%)]" aria-hidden="true">
+            <div class="relative h-full w-28 bg-gradient-to-r from-white/0 via-white/25 to-white/0 blur-md mix-blend-screen"></div>
+          </div>
         </a>
       </div>
     </div>
   </section>
+  
+  <!-- CTA Bottom Section -->
+  <section id="cta" class="relative bg-slate-100">
+    <!-- Top dark overlay that fades halfway over the inner box -->
+  <div class="absolute inset-x-0 top-0 cta-background-drop hero-bg noise opacity-0 transition-opacity duration-700 ease-out" data-reveal data-delay="0"></div>
+    <div class="relative z-10 mx-auto max-w-7xl px-6 pt-16 md:pt-20 pb-24 md:pb-32 text-center text-slate-100">
+      <span class="inline-block mb-4 px-5 py-1.5 rounded-full bg-white/10 text-blue-200 font-semibold text-base opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu" data-reveal data-delay="0">Jetzt starten</span>
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu" data-reveal data-delay="80">
+        Starte jetzt durch und vereinbare<br class="hidden md:block"> dein Kennenlerngespräch
+      </h2>
+
+      <!-- Inner CTA panel -->
+  <div class="mx-auto mt-8 max-w-4xl rounded-2xl bg-white text-slate-900 ring-1 ring-slate-200 shadow-xl p-8 md:p-12 text-center opacity-0 translate-y-2 blur-sm [transform:scale(0.98)] transition-all duration-700 ease-out will-change-transform transform-gpu" data-reveal data-delay="160">
+        <div>
+          <p class="mx-auto max-w-2xl text-base md:text-lg leading-relaxed text-slate-700 opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu" data-reveal data-delay="240">
+            Unsere Mission ist es, dich zum Marktführer in deiner Nische zu machen. Werde Teil unserer Erfolgsgeschichte und verwandle deine Personenmarke in ein Symbol des Erfolgs.
+          </p>
+          <ul class="mt-5 flex flex-wrap justify-center gap-x-6 gap-y-3 text-slate-700 opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu" data-reveal data-delay="300">
+            <li class="inline-flex items-center gap-2"><span class="material-symbols-outlined text-blue-600 text-xl">schedule</span><span>15–20 Minuten</span></li>
+            <li class="inline-flex items-center gap-2"><span class="material-symbols-outlined text-blue-600 text-xl">check_circle</span><span>Kostenlos</span></li>
+          </ul>
+          <div class="mt-8">
+            <a href="gespraech.html" class="group cta-breath relative inline-flex items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-blue-600 via-blue-600 to-sky-500 px-8 py-3.5 text-white text-base md:text-lg font-semibold shadow-md ring-1 ring-blue-300/20 transform-gpu transition-all duration-300 ease-out hover:scale-[1.02] hover:from-blue-600 hover:via-blue-500 hover:to-sky-400 hover:ring-blue-200/40 opacity-0 translate-y-2 blur-sm transition-opacity will-change-transform" data-reveal data-delay="380">
+              <span class="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true">
+                <span class="absolute inset-0 bg-[radial-gradient(140px_70px_at_10%_50%,rgba(255,255,255,0.18),transparent_60%),radial-gradient(140px_70px_at_90%_50%,rgba(255,255,255,0.14),transparent_60%)]"></span>
+              </span>
+              <span class="relative z-10 inline-flex items-center gap-3">Jetzt Strategiegespräch vereinbaren
+                <svg viewBox="0 0 24 24" class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-0.5" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+              </span>
+              <div class="absolute inset-0 flex h-full w-full justify-center [transform:skewX(-20deg)_translateX(-140%)] transition-transform duration-700 ease-out group-hover:duration-[1200ms] group-hover:[transform:skewX(-20deg)_translateX(140%)]" aria-hidden="true">
+                <div class="relative h-full w-16 bg-gradient-to-r from-white/0 via-white/70 to-white/0 blur-sm mix-blend-screen"></div>
+              </div>
+              <div class="absolute inset-0 flex h-full w-full justify-center [transform:skewX(-20deg)_translateX(-160%)] transition-transform duration-1000 ease-out group-hover:duration-[1500ms] group-hover:[transform:skewX(-20deg)_translateX(160%)]" aria-hidden="true">
+                <div class="relative h-full w-28 bg-gradient-to-r from-white/0 via-white/25 to-white/0 blur-md mix-blend-screen"></div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer (neue unterste Section) -->
+  <section id="footer" class="bg-slate-100 text-slate-900 border-t border-slate-200/60" aria-labelledby="footer-title">
+    <div class="mx-auto max-w-7xl px-6 pt-20 pb-6 md:pt-24 md:pb-6">
+      <!-- Main Footer Grid -->
+      <div class="grid gap-14 lg:grid-cols-5 lg:gap-20">
+        <!-- Left: Brand -->
+        <div class="lg:col-span-2 opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu" data-reveal data-delay="0">
+          <a href="index.html" class="inline-flex items-center gap-4 mb-7 group">
+            <span class="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 shadow-sm group-hover:bg-blue-700 transition-colors">
+              <svg viewBox="0 0 24 24" class="h-7 w-7 text-white" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 4h7a5 5 0 1 1 0 10H9v6H6V4z"/></svg>
+            </span>
+            <span class="text-2xl md:text-3xl font-bold tracking-tight text-slate-900">Peakmont</span>
+          </a>
+          
+          <p class="text-slate-600 leading-relaxed mb-8 max-w-sm text-base md:text-lg">
+            Performance‑Marketing für messbare Ergebnisse und nachhaltiges Wachstum.
+          </p>
+          
+          <a href="gespraech.html" class="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-xl bg-gradient-to-r from-blue-600 via-blue-600 to-sky-500 px-6 text-white text-base md:text-lg font-semibold shadow-md shadow-blue-900/30 ring-1 ring-blue-300/20 transition-all duration-300 ease-out hover:scale-105 hover:from-blue-600 hover:via-blue-500 hover:to-sky-400 hover:ring-blue-200/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300/60">
+            <!-- subtle inner glow on hover -->
+            <span class="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true">
+              <span class="absolute inset-0 bg-[radial-gradient(120px_60px_at_10%_50%,rgba(255,255,255,0.18),transparent_60%),radial-gradient(120px_60px_at_90%_50%,rgba(255,255,255,0.14),transparent_60%)]"></span>
+            </span>
+
+            <span class="relative z-10 inline-flex items-center gap-2">
+              Gespräch vereinbaren
+              <svg viewBox="0 0 24 24" class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </span>
+
+            <!-- primary bright sheen -->
+            <div class="absolute inset-0 flex h-full w-full justify-center [transform:skewX(-20deg)_translateX(-140%)] transition-transform duration-700 ease-out group-hover:duration-[1200ms] group-hover:[transform:skewX(-20deg)_translateX(140%)]" aria-hidden="true">
+              <div class="relative h-full w-12 bg-gradient-to-r from-white/0 via-white/70 to-white/0 blur-sm mix-blend-screen"></div>
+            </div>
+            <!-- soft wide sheen -->
+            <div class="absolute inset-0 flex h-full w-full justify-center [transform:skewX(-20deg)_translateX(-160%)] transition-transform duration-1000 ease-out group-hover:duration-[1500ms] group-hover:[transform:skewX(-20deg)_translateX(160%)]" aria-hidden="true">
+              <div class="relative h-full w-24 bg-gradient-to-r from-white/0 via-white/25 to-white/0 blur-md mix-blend-screen"></div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Right: Columns -->
+        <div class="lg:col-span-3 grid gap-10 sm:grid-cols-3">
+          <!-- Leistungen -->
+          <div class="opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu" data-reveal data-delay="160">
+            <h3 class="font-semibold text-slate-900 mb-5 text-lg md:text-xl">Leistungen</h3>
+            <ul class="space-y-3">
+              <li><a class="text-slate-600 hover:text-slate-900 transition-colors text-base md:text-lg" href="leistungen.html">Performance Marketing</a></li>
+              <li><a class="text-slate-600 hover:text-slate-900 transition-colors text-base md:text-lg" href="leistungen.html">Social Media</a></li>
+              <li><a class="text-slate-600 hover:text-slate-900 transition-colors text-base md:text-lg" href="leistungen.html">Automation</a></li>
+            </ul>
+          </div>
+
+          <!-- Menü -->
+          <div class="opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu" data-reveal data-delay="240">
+            <h3 class="font-semibold text-slate-900 mb-5 text-lg md:text-xl">Menü</h3>
+            <ul class="space-y-3">
+              <li><a class="text-slate-600 hover:text-slate-900 transition-colors text-base md:text-lg" href="index.html">Home</a></li>
+              <li><a class="text-slate-600 hover:text-slate-900 transition-colors text-base md:text-lg" href="leistungen.html">Leistungen</a></li>
+              <li><a class="text-slate-600 hover:text-slate-900 transition-colors text-base md:text-lg" href="ueber-mich.html">Über mich</a></li>
+              <li><a class="text-slate-600 hover:text-slate-900 transition-colors text-base md:text-lg" href="kontakt.html">Kontakt</a></li>
+            </ul>
+          </div>
+
+          <!-- Kontakt -->
+          <div class="opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu" data-reveal data-delay="320">
+            <h3 class="font-semibold text-slate-900 mb-5 text-lg md:text-xl">Kontakt</h3>
+            <ul class="space-y-3">
+              <li><a class="text-slate-600 hover:text-slate-900 transition-colors text-base md:text-lg" href="mailto:hello@peakmont.de">hello@peakmont.de</a></li>
+              <li><a class="text-slate-600 hover:text-slate-900 transition-colors text-base md:text-lg" href="#impressum">Impressum</a></li>
+              <li><a class="text-slate-600 hover:text-slate-900 transition-colors text-base md:text-lg" href="#datenschutz">Datenschutz</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Copyright -->
+      <div class="mt-10 pt-4 border-t border-slate-200 text-center pb-0 opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu" data-reveal data-delay="400">
+        <p class="text-slate-500 text-sm md:text-base">© 2025 Peakmont. Alle Rechte vorbehalten.</p>
+      </div>
+    </div>
+  </section>
+  <script>
+  // Reveal on view: navbar + hero and reusable for other sections
+  (function() {
+    const els = document.querySelectorAll('[data-reveal]');
+    if (!('IntersectionObserver' in window) || !els.length) return;
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const delay = parseInt(el.getAttribute('data-delay') || '0', 10);
+           setTimeout(() => {
+            el.classList.remove('opacity-0');
+            el.classList.remove('blur-sm');
+            el.classList.remove('translate-y-2');
+            el.classList.remove('-translate-y-2');
+            el.classList.remove('translate-y-4');
+            el.classList.remove('-translate-y-4');
+            el.classList.remove('-translate-x-4');
+            el.classList.remove('translate-x-4');
+            el.classList.remove('[transform:scale(0.98)]');
+            el.classList.add('revealed');
+            // Keep hero to simple reveal: no extra JS typing/wave here
+            if (el.classList.contains('scale-x-0')) {
+              el.classList.remove('scale-x-0');
+              el.classList.add('scale-x-100');
+              el.classList.remove('opacity-0');
+              el.classList.add('opacity-100');
+            }
+          }, Math.max(0, delay));
+          io.unobserve(el);
+        }
+      });
+    }, { threshold: 0.12 });
+    els.forEach((el) => io.observe(el));
+  })();
+  </script>
+  <script>
+    // Typewriter without layout jump: fixes span width to longest term
+    (function() {
+      const el = document.getElementById('service-rotate');
+      if (!el) return;
+  const words = ['Performance Marketing', 'Social Media', 'Automation', 'Strategie'];
+      // Reserve width for the longest word to prevent bouncing
+      const longest = words.reduce((a, b) => (a.length >= b.length ? a : b), '');
+      const measurer = document.createElement('span');
+      measurer.style.position = 'absolute';
+      measurer.style.visibility = 'hidden';
+      measurer.style.whiteSpace = 'nowrap';
+      measurer.style.font = getComputedStyle(el).font;
+      measurer.textContent = longest;
+      document.body.appendChild(measurer);
+      const w = measurer.getBoundingClientRect().width;
+      document.body.removeChild(measurer);
+      el.style.display = 'inline-block';
+      el.style.width = w + 'px';
+
+      let i = 0; // index in words
+      let j = words[0].length; // current length shown (starts full as in DOM)
+      let deleting = true;
+      const typeDelay = 60;
+      const pauseFull = 1100;
+      const pauseSwitch = 200;
+
+      // Initialize visible text to first word to match width
+      el.textContent = words[0];
+
+      function tick() {
+        if (deleting) {
+          j = Math.max(0, j - 1);
+          el.textContent = words[i].slice(0, j) || '\u00A0';
+          if (j === 0) {
+            deleting = false;
+            i = (i + 1) % words.length;
+            setTimeout(tick, pauseSwitch);
+            return;
+          }
+          setTimeout(tick, typeDelay);
+        } else {
+          j = Math.min(words[i].length, j + 1);
+          el.textContent = words[i].slice(0, j);
+          if (j === words[i].length) {
+            deleting = true;
+            setTimeout(tick, pauseFull);
+            return;
+          }
+          setTimeout(tick, typeDelay);
+        }
+      }
+      setTimeout(tick, 900);
+    })();
+  </script>
+  <script>
+  // Count-up numbers when visible (Zahlen & Fakten)
+    (function() {
+      const items = document.querySelectorAll('[data-countup]');
+      if (!('IntersectionObserver' in window) || !items.length) return;
+      const fmt = new Intl.NumberFormat('de-DE', { maximumFractionDigits: 1 });
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const el = entry.target;
+          io.unobserve(el);
+          const target = parseFloat(el.getAttribute('data-target') || '0');
+          const decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+          const suffix = el.getAttribute('data-suffix') || '';
+          const showPlus = el.hasAttribute('data-plus');
+          const duration = 2200; // slower count-up in ms
+          const start = performance.now();
+          const from = 0;
+          const easeOut = (t) => 1 - Math.pow(1 - t, 2.5); // slightly gentler ease
+          function frame(now) {
+            const progress = Math.min(1, (now - start) / duration);
+            const eased = easeOut(progress);
+            const value = from + (target - from) * eased;
+            const sign = value > 0 && (showPlus || target > 0) ? '+' : (value < 0 ? '−' : '');
+            const absVal = Math.abs(value);
+            el.textContent = `${sign}${fmt.format(absVal.toFixed(decimals))}${suffix}`;
+            if (progress < 1) requestAnimationFrame(frame);
+          }
+          requestAnimationFrame(frame);
+        });
+      }, { threshold: 0.25 });
+      items.forEach((el) => io.observe(el));
+    })();
+  </script>
 </body>
 </html>

@@ -1,5 +1,56 @@
 /* Custom overrides when Tailwind utilities are missing or not applied as expected */
 
+/* Prevent horizontal overflow artifacts (e.g., 1px right stripe) */
+html, body { overflow-x: hidden; }
+
+/* Premium entrance animations for navbar & hero */
+@keyframes pm-logo-pop {
+  0% { transform: scale(0.8) rotate(10deg); opacity: 0; }
+  60% { transform: scale(1.12) rotate(-4deg); opacity: 1; }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+@keyframes pm-nav-bounce {
+  0% { transform: translateY(-16px) scale(0.95); opacity: 0; }
+  60% { transform: translateY(-4px) scale(1.05); opacity: 1; }
+  100% { transform: translateY(0) scale(1); opacity: 1; }
+}
+@keyframes pm-hero-img-in {
+  0% { transform: translateX(28px) translateY(14px) scale(0.94) rotateY(14deg); filter: blur(6px); opacity: 0; }
+  100% { transform: translateX(0) translateY(0) scale(1) rotateY(0deg); filter: blur(0); opacity: 1; }
+}
+@keyframes pm-badge-drop {
+  0% { transform: translateY(-14px) rotate(6deg) scale(0.96); opacity: 0; }
+  60% { transform: translateY(-3px) rotate(-2deg) scale(1.04); opacity: 1; }
+  100% { transform: translateY(0) rotate(0) scale(1); opacity: 1; }
+}
+@keyframes pm-cta-pop {
+  0% { transform: translateY(18px) scale(0.9); opacity: 0; box-shadow: 0 0 0 rgba(59,130,246,0); }
+  60% { transform: translateY(-4px) scale(1.06); opacity: 1; box-shadow: 0 14px 36px rgba(59,130,246,0.25); }
+  100% { transform: translateY(0) scale(1); opacity: 1; box-shadow: 0 6px 20px rgba(59,130,246,0.15); }
+}
+
+/* Distinct, subtle logo entrance (not like menu items) */
+@keyframes pm-logo-fade {
+  0% { transform: translateX(-10px) scale(1); opacity: 0; }
+  100% { transform: translateX(0) scale(1); opacity: 1; }
+}
+
+/* Apply on reveal markers */
+.navbar-logo.revealed { animation: pm-logo-fade 520ms ease-out both; }
+.navbar-item.revealed { animation: pm-nav-bounce 700ms cubic-bezier(.2,.8,.2,1) both; }
+.navbar-cta.revealed { animation: pm-cta-pop 820ms cubic-bezier(.2,.8,.2,1) both; }
+/* Hero: use simple default reveal (no extra keyframes) */
+
+/* Optional reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .navbar-logo.revealed,
+  .navbar-item.revealed,
+  .navbar-cta.revealed,
+  .hero-badge.revealed,
+  .hero-cta.revealed,
+  .hero-image.revealed { animation: none !important; }
+}
+
 /* Hero image wrapper: crops horizontally to make the visual less wide */
 .hero-media {
   width: 100%;
@@ -61,5 +112,50 @@
   align-items: center;
   justify-content: center;
   line-height: 1;       /* avoid vertical stretching from line-height */
+}
+
+/* CTA button animations: first pop, then gentle breathing */
+@keyframes ctaPopOnce {
+  0% { transform: scale(0.97); }
+  52% { transform: scale(1.12); }
+  100% { transform: scale(1.00); }
+}
+@keyframes ctaBreath {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.02); }
+}
+
+.cta-breath { will-change: transform; transform-origin: center; }
+.cta-breath.revealed {
+  /* One-time smooth pop, then slower gentle breathing in one continuous flow */
+  animation: ctaPopOnce 2000ms cubic-bezier(0.16, 1, 0.3, 1) 120ms 1 both,
+             ctaBreath 5s ease-in-out 2.12s infinite alternate;
+}
+
+/* CTA section background: garage door drop effect */
+@keyframes ctaBackgroundDrop {
+  0% { height: 0; }
+  100% { height: var(--drop-height); }
+}
+
+.cta-background-drop {
+  --drop-height: 340px;
+  height: 0;
+  transition: height 0s;
+}
+.cta-background-drop.revealed {
+  animation: ctaBackgroundDrop 1200ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 200ms 1 both;
+}
+
+@media (min-width: 768px) {
+  .cta-background-drop { --drop-height: 420px; }
+}
+@media (min-width: 1024px) {
+  .cta-background-drop { --drop-height: 500px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cta-breath.revealed { animation: none; }
+  .cta-background-drop.revealed { animation: none; height: var(--drop-height); }
 }
 
