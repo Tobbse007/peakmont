@@ -29,6 +29,11 @@ html, body { overflow-x: hidden; }
   100% { transform: translateY(0) scale(1); opacity: 1; box-shadow: 0 6px 20px rgba(59,130,246,0.15); }
 }
 
+@keyframes slideIn {
+  0% { transform: translateX(16px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
 /* Distinct, subtle logo entrance (not like menu items) */
 @keyframes pm-logo-fade {
   0% { transform: translateX(-10px) scale(1); opacity: 0; }

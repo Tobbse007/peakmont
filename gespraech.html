@@ -1,30 +1,67 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Gespräch vereinbaren — Peakmont</title>
-  <meta name="description" content="Vereinbaren Sie ein unverbindliches Erstgespräch mit Peakmont." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Kostenloses Strategiegespräch vereinbaren — Performance Marketing Beratung | Peakmont</title>
+  <meta name="description" content="Vereinbaren Sie Ihr kostenloses Strategiegespräch für Performance Marketing. Maßgeschneiderte Lösungen für Social Media Ads und messbare Ergebnisse. Jetzt Termin buchen!">
+  <meta name="keywords" content="Strategiegespräch Performance Marketing, Kostenlose Beratung, Marketing Termin buchen, Social Media Strategie, Online Marketing Beratung, Performance Marketing Gespräch" />
+  <meta name="author" content="Peakmont Performance Marketing" />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Kostenloses Strategiegespräch — Performance Marketing | Peakmont" />
+  <meta property="og:description" content="Vereinbaren Sie Ihr kostenloses Strategiegespräch für Performance Marketing. Maßgeschneiderte Lösungen und messbare Ergebnisse." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://peakmont.de/gespraech.html" />
+  <meta property="og:image" content="https://peakmont.de/Bilder/Gravitas-Invest-Logo-Side.png" />
+  <meta property="og:site_name" content="Peakmont" />
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Kostenloses Strategiegespräch — Performance Marketing | Peakmont" />
+  <meta name="twitter:description" content="Vereinbaren Sie Ihr kostenloses Strategiegespräch für Performance Marketing." />
+  <meta name="twitter:image" content="https://peakmont.de/Bilder/Gravitas-Invest-Logo-Side.png" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%234F46E5'><path d='M6 4h7a5 5 0 1 1 0 10H9v6H6V4z'/></svg>">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://peakmont.de/gespraech.html" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400;600&display=swap" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400;600&display=swap" />
+
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          fontFamily: { sans: ['Montserrat', 'ui-sans-serif', 'system-ui'] },
-          colors: { peak: { bg: '#0A0E1A', bg2: '#080C18', primary: '#3B82F6', accent: '#60A5FA' } },
-          dropShadow: { glow: '0 0 40px rgba(59,130,246,0.35)' }
+          fontFamily: {
+            'sans': ['Montserrat', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            'peak-bg': '#0A0E1A',
+          },
+          dropShadow: {
+            'glow': [
+              '0 0 20px rgba(59, 130, 246, 0.15)',
+              '0 0 40px rgba(59, 130, 246, 0.1)'
+            ]
+          }
         }
       }
     }
   </script>
+
   <style>
+    /* Section background with blurred blue spots like Teaching Socials */
     .hero-bg {
       position: relative;
+      /* deep navy base + soft top glow + side blobs, lower saturation */
       background:
         radial-gradient(1200px 560px at 50% -6%, rgba(118,147,255,0.12), transparent 62%),
         radial-gradient(900px 520px at 85% 18%, rgba(64,99,189,0.12), transparent 60%),
@@ -32,48 +69,437 @@
         radial-gradient(1400px 800px at 50% 115%, rgba(0,0,0,0.35), transparent 60%),
         linear-gradient(180deg, #0A0E1A 0%, #0A1120 45%, #080C18 100%);
     }
-    .noise::after { content: ""; position: absolute; inset: 0; pointer-events: none; mix-blend-mode: overlay; background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="140" height="140" viewBox="0 0 140 140"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23n)" opacity="0.025"/></svg>'); }
+    /* very subtle film grain overlay for depth */
+    .noise::after {
+      content: "";
+      position: absolute; inset: 0; pointer-events: none; mix-blend-mode: overlay;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="140" height="140" viewBox="0 0 140 140"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23n)" opacity="0.025"/></svg>');
+    }
+
+    /* Form step transitions */
+    .form-step {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .form-step.step-exit {
+      opacity: 0;
+      transform: translateX(-20px);
+      pointer-events: none;
+    }
+    
+    .form-step.step-enter {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+    
+    .form-step.step-enter-active {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    /* Progress bar animation */
+    #progress-bar {
+      transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* Button loading state */
+    .btn-loading {
+      position: relative;
+      color: transparent !important;
+    }
+    
+    .btn-loading::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 20px;
+      height: 20px;
+      margin: -10px 0 0 -10px;
+      border: 2px solid transparent;
+      border-top: 2px solid currentColor;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      color: white;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Step counter animation */
+    .step-counter {
+      transition: all 0.3s ease-out;
+    }
   </style>
 </head>
 <body class="font-sans text-slate-100 bg-peak-bg selection:bg-blue-500/30 selection:text-white overflow-x-hidden">
   <div class="relative hero-bg noise">
-    <header class="relative z-20">
+    <!-- NAVBAR -->
+    <header class="relative z-20 border-b border-slate-700/50">
       <nav class="mx-auto max-w-7xl px-6 py-5">
         <div class="grid grid-cols-3 items-center">
-          <a href="index.html" class="flex items-center gap-3">
-            <span class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-blue-500/15 ring-1 ring-inset ring-blue-400/25 drop-shadow-glow">
+          <!-- Left: Logo + Name -->
+          <a href="index.html" class="navbar-logo flex items-center gap-3 opacity-0 transition-opacity text-white">
+            <span class="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-blue-500/15 ring-1 ring-inset ring-blue-400/25 drop-shadow-glow">
               <svg viewBox="0 0 24 24" class="h-5 w-5 text-blue-300" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 4h7a5 5 0 1 1 0 10H9v6H6V4z" /></svg>
             </span>
-            <span class="text-lg font-semibold tracking-tight">Peakmont</span>
+            <span class="text-xl font-semibold tracking-tight text-white">Peakmont</span>
           </a>
-          <ul class="hidden md:flex items-center justify-center gap-8 text-sm font-medium text-slate-200/90">
-            <li><a class="hover:text-white transition-colors" href="index.html">Home</a></li>
-            <li><a class="hover:text-white transition-colors" href="leistungen.html">Leistungen</a></li>
-            <li><a class="hover:text-white transition-colors" href="ueber-mich.html">Über mich</a></li>
-            <li><a class="hover:text-white transition-colors" href="kontakt.html">Kontakt</a></li>
+
+          <!-- Center: Navigation -->
+          <ul class="hidden md:flex items-center justify-center gap-8 text-base font-medium text-slate-200/90">
+            <li class="opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu navbar-item" data-reveal data-delay="80"><a class="hover:text-white transition-colors" href="index.html">Home</a></li>
+            <li class="opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu navbar-item" data-reveal data-delay="140"><a class="hover:text-white transition-colors" href="leistungen.html">Leistungen</a></li>
+            <li class="opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu navbar-item" data-reveal data-delay="200"><a class="hover:text-white transition-colors" href="ueber-mich.html">Über mich</a></li>
+            <li class="opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu navbar-item" data-reveal data-delay="260"><a class="hover:text-white transition-colors" href="kontakt.html">Kontakt</a></li>
           </ul>
+
+          <!-- Right: CTA -->
           <div class="flex items-center justify-end">
-            <a href="gespraech.html" class="group inline-flex items-center gap-2.5 rounded-full bg-blue-500/12 px-5 py-2.5 text-sm font-medium text-blue-100 drop-shadow-glow ring-1 ring-inset ring-blue-400/20 backdrop-blur-sm transform-gpu transition-all duration-300 hover:scale-[1.02] hover:bg-blue-500/25 hover:text-white hover:ring-blue-300/60 hover:shadow-lg hover:shadow-blue-400/30">
-              <span>Gespräch vereinbaren</span>
-              <svg class="h-4 w-4 transition-all duration-300 group-hover:translate-x-1 group-hover:scale-110" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7" /></svg>
+            <a href="gespraech.html" class="navbar-cta group inline-flex items-center gap-2.5 rounded-full bg-blue-500/12 px-6 py-3 text-base font-medium text-blue-100 drop-shadow-glow ring-1 ring-inset ring-blue-400/20 transform-gpu transition-all duration-300 hover:scale-[1.02] hover:bg-blue-500/25 hover:text-white hover:ring-blue-300/60 hover:shadow-lg hover:shadow-blue-400/30 hover:drop-shadow-[0_0_20px_rgba(59,130,246,0.5)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300/60 animate-[slideIn_0.6s_ease-out_0.32s_both]">
+              <span class="relative z-10 transition-transform duration-300">Gespräch vereinbaren</span>
+              <svg class="relative z-10 h-4 w-4 transition-all duration-300 group-hover:translate-x-1 group-hover:scale-110" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M13 5l7 7-7 7" />
+              </svg>
+              <div class="absolute inset-0 rounded-full bg-gradient-to-r from-blue-400/0 via-blue-300/20 to-blue-400/0 opacity-0 transition-opacity duration-300 group-hover:opacity-100 blur-sm" aria-hidden="true"></div>
             </a>
           </div>
         </div>
       </nav>
-      <div class="h-px w-full bg-white/10"></div>
     </header>
 
-    <!-- Centered Hero -->
-    <section class="relative">
-      <div class="mx-auto max-w-7xl px-6">
-        <div class="min-h-[70vh] flex items-center justify-center text-center py-16">
-          <div>
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">Gespräch vereinbaren</h1>
-            <p class="mt-4 text-lg md:text-xl text-slate-300 max-w-3xl mx-auto">Buchen Sie Ihr kurzes Strategiegespräch – wir prüfen, ob und wie wir helfen können.</p>
+    <!-- MAIN FORM SECTION -->
+    <main class="relative z-10">
+      <div class="mx-auto max-w-4xl px-6 pt-12 pb-20">
+
+        
+        <!-- Progress Bar -->
+        <div class="mb-12 opacity-0 translate-y-4 blur-sm transition-all duration-1000 ease-out will-change-transform transform-gpu" data-reveal data-delay="200">
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-sm font-medium text-slate-400">Schritt <span id="current-step">1</span> von 4</span>
+            <span class="text-sm font-medium text-slate-400"><span id="progress-percent">25</span>%</span>
+          </div>
+          <div class="w-full bg-slate-700/50 rounded-full h-2">
+            <div id="progress-bar" class="bg-gradient-to-r from-blue-600 to-blue-500 h-2 rounded-full transition-all duration-500 ease-out" style="width: 25%"></div>
+          </div>
+          <div class="flex justify-between mt-2 text-xs text-slate-500">
+            <span>Kontakt</span>
+            <span>Unternehmen</span>
+            <span>Ziele</span>
+            <span>Erfahrung</span>
+          </div>
+        </div>
+
+        <!-- Form Container -->
+        <div class="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-700/50 shadow-2xl p-8 md:p-12 opacity-0 translate-y-8 blur-sm transition-all duration-1000 ease-out will-change-transform transform-gpu" data-reveal data-delay="400">
+          
+          <!-- Step 1: Kontaktdaten -->
+          <div id="step-1" class="form-step">
+            <h2 class="text-2xl font-bold text-white mb-2">Ihre Kontaktdaten</h2>
+            <p class="text-slate-400 mb-8">Damit wir Sie für das Gespräch erreichen können</p>
+            
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+              <div>
+                <label for="vorname" class="block text-sm font-medium text-slate-300 mb-2">Vorname *</label>
+                <input type="text" id="vorname" name="vorname" required class="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300" placeholder="Ihr Vorname">
+              </div>
+              <div>
+                <label for="nachname" class="block text-sm font-medium text-slate-300 mb-2">Nachname *</label>
+                <input type="text" id="nachname" name="nachname" required class="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300" placeholder="Ihr Nachname">
+              </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+              <div>
+                <label for="email" class="block text-sm font-medium text-slate-300 mb-2">E-Mail-Adresse *</label>
+                <input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300" placeholder="ihre@email.de">
+              </div>
+              <div>
+                <label for="telefon" class="block text-sm font-medium text-slate-300 mb-2">Telefonnummer *</label>
+                <input type="tel" id="telefon" name="telefon" required class="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300" placeholder="+49 123 456789">
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2: Unternehmen -->
+          <div id="step-2" class="form-step hidden">
+            <h2 class="text-2xl font-bold text-white mb-2">Ihr Unternehmen</h2>
+            <p class="text-slate-400 mb-8">Erzählen Sie uns mehr über Ihr Business</p>
+            
+            <div class="mb-6">
+              <label for="unternehmen" class="block text-sm font-medium text-slate-300 mb-2">Unternehmensname *</label>
+              <input type="text" id="unternehmen" name="unternehmen" required class="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300" placeholder="Name Ihres Unternehmens">
+            </div>
+            
+            <div class="mb-6">
+              <label for="branche" class="block text-sm font-medium text-slate-300 mb-2">Branche *</label>
+              <select id="branche" name="branche" required class="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300">
+                <option value="">Bitte wählen...</option>
+                <option value="e-commerce">E-Commerce</option>
+                <option value="saas">SaaS/Software</option>
+                <option value="beratung">Beratung/Coaching</option>
+                <option value="gesundheit">Gesundheit/Wellness</option>
+                <option value="immobilien">Immobilien</option>
+                <option value="finanzdienstleistungen">Finanzdienstleistungen</option>
+                <option value="bildung">Bildung/E-Learning</option>
+                <option value="automotive">Automotive</option>
+                <option value="tourismus">Tourismus/Reisen</option>
+                <option value="andere">Andere</option>
+              </select>
+            </div>
+            
+            <div class="mb-6">
+              <label for="position" class="block text-sm font-medium text-slate-300 mb-2">Ihre Position *</label>
+              <input type="text" id="position" name="position" required class="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300" placeholder="z.B. Geschäftsführer, Marketing Manager">
+            </div>
+            
+            <div class="mb-6">
+              <label for="mitarbeiter" class="block text-sm font-medium text-slate-300 mb-2">Anzahl Mitarbeiter</label>
+              <select id="mitarbeiter" name="mitarbeiter" class="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300">
+                <option value="">Bitte wählen...</option>
+                <option value="1">Nur ich (Solopreneur)</option>
+                <option value="2-10">2-10 Mitarbeiter</option>
+                <option value="11-50">11-50 Mitarbeiter</option>
+                <option value="51-200">51-200 Mitarbeiter</option>
+                <option value="200+">Über 200 Mitarbeiter</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Step 3: Herausforderungen -->
+          <div id="step-3" class="form-step hidden">
+            <h2 class="text-2xl font-bold text-white mb-2">Ihre Herausforderungen</h2>
+            <p class="text-slate-400 mb-8">Wo können wir Sie am besten unterstützen?</p>
+            
+            <div class="mb-6">
+              <label class="block text-sm font-medium text-slate-300 mb-4">Hauptziele (Mehrfachauswahl möglich) *</label>
+              <div class="grid md:grid-cols-2 gap-3">
+                <label class="flex items-center p-3 bg-slate-800 rounded-lg border border-slate-600 cursor-pointer hover:border-blue-500 transition-colors">
+                  <input type="checkbox" name="ziele[]" value="leadgenerierung" class="mr-3 text-blue-600 bg-slate-700 border-slate-500 rounded focus:ring-blue-500">
+                  <span class="text-white">Leadgenerierung steigern</span>
+                </label>
+                <label class="flex items-center p-3 bg-slate-800 rounded-lg border border-slate-600 cursor-pointer hover:border-blue-500 transition-colors">
+                  <input type="checkbox" name="ziele[]" value="umsatz" class="mr-3 text-blue-600 bg-slate-700 border-slate-500 rounded focus:ring-blue-500">
+                  <span class="text-white">Umsatz erhöhen</span>
+                </label>
+                <label class="flex items-center p-3 bg-slate-800 rounded-lg border border-slate-600 cursor-pointer hover:border-blue-500 transition-colors">
+                  <input type="checkbox" name="ziele[]" value="reichweite" class="mr-3 text-blue-600 bg-slate-700 border-slate-500 rounded focus:ring-blue-500">
+                  <span class="text-white">Reichweite ausbauen</span>
+                </label>
+                <label class="flex items-center p-3 bg-slate-800 rounded-lg border border-slate-600 cursor-pointer hover:border-blue-500 transition-colors">
+                  <input type="checkbox" name="ziele[]" value="conversion" class="mr-3 text-blue-600 bg-slate-700 border-slate-500 rounded focus:ring-blue-500">
+                  <span class="text-white">Conversion optimieren</span>
+                </label>
+                <label class="flex items-center p-3 bg-slate-800 rounded-lg border border-slate-600 cursor-pointer hover:border-blue-500 transition-colors">
+                  <input type="checkbox" name="ziele[]" value="marke" class="mr-3 text-blue-600 bg-slate-700 border-slate-500 rounded focus:ring-blue-500">
+                  <span class="text-white">Marke stärken</span>
+                </label>
+                <label class="flex items-center p-3 bg-slate-800 rounded-lg border border-slate-600 cursor-pointer hover:border-blue-500 transition-colors">
+                  <input type="checkbox" name="ziele[]" value="automatisierung" class="mr-3 text-blue-600 bg-slate-700 border-slate-500 rounded focus:ring-blue-500">
+                  <span class="text-white">Prozesse automatisieren</span>
+                </label>
+              </div>
+            </div>
+            
+            <div class="mb-6">
+              <label for="budget" class="block text-sm font-medium text-slate-300 mb-2">Monatliches Marketing-Budget</label>
+              <select id="budget" name="budget" class="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300">
+                <option value="">Bitte wählen...</option>
+                <option value="unter-5000">Unter 5.000€</option>
+                <option value="5000-15000">5.000€ - 15.000€</option>
+                <option value="15000-50000">15.000€ - 50.000€</option>
+                <option value="ueber-50000">Über 50.000€</option>
+              </select>
+            </div>
+            
+            <div class="mb-6">
+              <label for="beschreibung" class="block text-sm font-medium text-slate-300 mb-2">Beschreiben Sie Ihre aktuelle Situation</label>
+              <textarea id="beschreibung" name="beschreibung" rows="4" class="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300" placeholder="Was sind Ihre größten Herausforderungen im Marketing? Was haben Sie bereits versucht?"></textarea>
+            </div>
+          </div>
+
+          <!-- Step 4: Erfahrung und Interesse -->
+          <div id="step-4" class="form-step hidden">
+            <h2 class="text-2xl font-bold text-white mb-2">Ihre Erfahrung & Interessen</h2>
+            <p class="text-slate-400 mb-8">Damit wir das Gespräch optimal auf Sie abstimmen können</p>
+            
+            <div class="mb-6">
+              <label class="block text-sm font-medium text-slate-300 mb-4">Haben Sie bereits Erfahrungen mit Social Media Marketing?</label>
+              <div class="grid md:grid-cols-3 gap-3">
+                <label class="flex items-center p-3 bg-slate-800 rounded-lg border border-slate-600 cursor-pointer hover:border-blue-500 transition-colors">
+                  <input type="radio" name="social_media_erfahrung" value="nein" class="mr-3 text-blue-600 bg-slate-700 border-slate-500 focus:ring-blue-500">
+                  <span class="text-white">Nein, bin Anfänger</span>
+                </label>
+                <label class="flex items-center p-3 bg-slate-800 rounded-lg border border-slate-600 cursor-pointer hover:border-blue-500 transition-colors">
+                  <input type="radio" name="social_media_erfahrung" value="etwas" class="mr-3 text-blue-600 bg-slate-700 border-slate-500 focus:ring-blue-500">
+                  <span class="text-white">Etwas Erfahrung</span>
+                </label>
+                <label class="flex items-center p-3 bg-slate-800 rounded-lg border border-slate-600 cursor-pointer hover:border-blue-500 transition-colors">
+                  <input type="radio" name="social_media_erfahrung" value="viel" class="mr-3 text-blue-600 bg-slate-700 border-slate-500 focus:ring-blue-500">
+                  <span class="text-white">Viel Erfahrung</span>
+                </label>
+              </div>
+            </div>
+            
+            <div class="mb-6">
+              <label class="block text-sm font-medium text-slate-300 mb-4">Auf welchen Plattformen sind Sie bereits aktiv? (Mehrfachauswahl möglich)</label>
+              <div class="grid md:grid-cols-3 gap-3">
+                <label class="flex items-center p-3 bg-slate-800 rounded-lg border border-slate-600 cursor-pointer hover:border-blue-500 transition-colors">
+                  <input type="checkbox" name="plattformen[]" value="facebook" class="mr-3 text-blue-600 bg-slate-700 border-slate-500 rounded focus:ring-blue-500">
+                  <span class="text-white">Facebook</span>
+                </label>
+                <label class="flex items-center p-3 bg-slate-800 rounded-lg border border-slate-600 cursor-pointer hover:border-blue-500 transition-colors">
+                  <input type="checkbox" name="plattformen[]" value="instagram" class="mr-3 text-blue-600 bg-slate-700 border-slate-500 rounded focus:ring-blue-500">
+                  <span class="text-white">Instagram</span>
+                </label>
+                <label class="flex items-center p-3 bg-slate-800 rounded-lg border border-slate-600 cursor-pointer hover:border-blue-500 transition-colors">
+                  <input type="checkbox" name="plattformen[]" value="linkedin" class="mr-3 text-blue-600 bg-slate-700 border-slate-500 rounded focus:ring-blue-500">
+                  <span class="text-white">LinkedIn</span>
+                </label>
+                <label class="flex items-center p-3 bg-slate-800 rounded-lg border border-slate-600 cursor-pointer hover:border-blue-500 transition-colors">
+                  <input type="checkbox" name="plattformen[]" value="tiktok" class="mr-3 text-blue-600 bg-slate-700 border-slate-500 rounded focus:ring-blue-500">
+                  <span class="text-white">TikTok</span>
+                </label>
+                <label class="flex items-center p-3 bg-slate-800 rounded-lg border border-slate-600 cursor-pointer hover:border-blue-500 transition-colors">
+                  <input type="checkbox" name="plattformen[]" value="youtube" class="mr-3 text-blue-600 bg-slate-700 border-slate-500 rounded focus:ring-blue-500">
+                  <span class="text-white">YouTube</span>
+                </label>
+                <label class="flex items-center p-3 bg-slate-800 rounded-lg border border-slate-600 cursor-pointer hover:border-blue-500 transition-colors">
+                  <input type="checkbox" name="plattformen[]" value="keine" class="mr-3 text-blue-600 bg-slate-700 border-slate-500 rounded focus:ring-blue-500">
+                  <span class="text-white">Noch keine</span>
+                </label>
+              </div>
+            </div>
+            
+            <div class="mb-6">
+              <label class="block text-sm font-medium text-slate-300 mb-4">Welche Leistungen interessieren Sie am meisten? (Mehrfachauswahl möglich)</label>
+              <div class="grid md:grid-cols-2 gap-3">
+                <label class="flex items-center p-3 bg-slate-800 rounded-lg border border-slate-600 cursor-pointer hover:border-blue-500 transition-colors">
+                  <input type="checkbox" name="leistungen_interesse[]" value="social_media_ads" class="mr-3 text-blue-600 bg-slate-700 border-slate-500 rounded focus:ring-blue-500">
+                  <span class="text-white">Social Media Advertising</span>
+                </label>
+                <label class="flex items-center p-3 bg-slate-800 rounded-lg border border-slate-600 cursor-pointer hover:border-blue-500 transition-colors">
+                  <input type="checkbox" name="leistungen_interesse[]" value="content_creation" class="mr-3 text-blue-600 bg-slate-700 border-slate-500 rounded focus:ring-blue-500">
+                  <span class="text-white">Content Creation</span>
+                </label>
+                <label class="flex items-center p-3 bg-slate-800 rounded-lg border border-slate-600 cursor-pointer hover:border-blue-500 transition-colors">
+                  <input type="checkbox" name="leistungen_interesse[]" value="strategy" class="mr-3 text-blue-600 bg-slate-700 border-slate-500 rounded focus:ring-blue-500">
+                  <span class="text-white">Marketing Strategie</span>
+                </label>
+                <label class="flex items-center p-3 bg-slate-800 rounded-lg border border-slate-600 cursor-pointer hover:border-blue-500 transition-colors">
+                  <input type="checkbox" name="leistungen_interesse[]" value="automation" class="mr-3 text-blue-600 bg-slate-700 border-slate-500 rounded focus:ring-blue-500">
+                  <span class="text-white">Marketing Automation</span>
+                </label>
+                <label class="flex items-center p-3 bg-slate-800 rounded-lg border border-slate-600 cursor-pointer hover:border-blue-500 transition-colors">
+                  <input type="checkbox" name="leistungen_interesse[]" value="analytics" class="mr-3 text-blue-600 bg-slate-700 border-slate-500 rounded focus:ring-blue-500">
+                  <span class="text-white">Analytics & Tracking</span>
+                </label>
+                <label class="flex items-center p-3 bg-slate-800 rounded-lg border border-slate-600 cursor-pointer hover:border-blue-500 transition-colors">
+                  <input type="checkbox" name="leistungen_interesse[]" value="beratung" class="mr-3 text-blue-600 bg-slate-700 border-slate-500 rounded focus:ring-blue-500">
+                  <span class="text-white">Beratung & Coaching</span>
+                </label>
+              </div>
+            </div>
+            
+            <div class="mb-6">
+              <label for="bisherige_versuche" class="block text-sm font-medium text-slate-300 mb-2">Was haben Sie bisher für Marketing versucht?</label>
+              <textarea id="bisherige_versuche" name="bisherige_versuche" rows="3" class="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300" placeholder="z.B. Google Ads, Facebook Posts, Influencer Marketing..."></textarea>
+            </div>
+            
+            <div class="mb-6">
+              <label for="sonstiges" class="block text-sm font-medium text-slate-300 mb-2">Sonstiges - Was sollten wir noch wissen?</label>
+              <textarea id="sonstiges" name="sonstiges" rows="3" class="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300" placeholder="Besondere Wünsche, Fragen oder Anmerkungen..."></textarea>
+            </div>
+          </div>
+
+          <!-- Step 5: Termin -->
+          <div id="step-5" class="form-step hidden">
+            <h2 class="text-2xl font-bold text-white mb-2">Termin vereinbaren</h2>
+            <p class="text-slate-400 mb-8">Perfekt! Jetzt können Sie einen passenden Termin auswählen</p>
+            
+            <div class="text-center">
+              <div class="bg-slate-800 rounded-lg p-8 mb-6">
+                <div class="mb-6">
+                  <svg class="w-16 h-16 text-green-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                  <h3 class="text-xl font-semibold text-white mb-2">Ihre Angaben wurden gespeichert!</h3>
+                  <p class="text-slate-400">Klicken Sie auf den Button unten, um einen Termin in unserem Kalender zu buchen.</p>
+                </div>
+                
+                <div class="bg-slate-700/50 rounded-lg p-4 mb-6 text-left">
+                  <h4 class="font-semibold text-white mb-2">Was erwartet Sie im Gespräch:</h4>
+                  <ul class="text-slate-300 space-y-1 text-sm">
+                    <li>• Analyse Ihrer aktuellen Marketing-Situation</li>
+                    <li>• Maßgeschneiderte Strategieempfehlungen</li>
+                    <li>• Konkrete nächste Schritte</li>
+                    <li>• Kostenloses Gespräch (30-45 Minuten)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Navigation Buttons -->
+          <div class="flex justify-between items-center pt-8 border-t border-slate-700">
+            <button type="button" id="prev-btn" class="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-xl bg-slate-700 px-6 text-slate-300 font-semibold shadow-md shadow-slate-900/30 ring-1 ring-slate-600/20 transition-all duration-300 ease-out hover:scale-105 hover:bg-slate-600 hover:text-white hover:ring-slate-500/40 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 hidden" onclick="previousStep()">
+              <span class="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true">
+                <span class="absolute inset-0 bg-[radial-gradient(140px_70px_at_10%_50%,rgba(255,255,255,0.1),transparent_60%),radial-gradient(140px_70px_at_90%_50%,rgba(255,255,255,0.08),transparent_60%)]"></span>
+              </span>
+              <span class="relative z-10 inline-flex items-center gap-2">
+                <svg class="w-4 h-4 transition-transform duration-300 group-hover:-translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+                Zurück
+              </span>
+              <div class="absolute inset-0 flex h-full w-full justify-center [transform:skewX(-20deg)_translateX(-140%)] transition-transform duration-700 ease-out group-hover:duration-[1200ms] group-hover:[transform:skewX(-20deg)_translateX(140%)]" aria-hidden="true">
+                <div class="relative h-full w-16 bg-gradient-to-r from-white/0 via-white/30 to-white/0 blur-sm mix-blend-screen"></div>
+              </div>
+            </button>
+            
+            <div class="ml-auto">
+              <button type="button" id="next-btn" class="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-xl bg-gradient-to-r from-blue-600 via-blue-600 to-sky-500 px-6 text-white text-base md:text-lg font-semibold shadow-md shadow-blue-900/30 ring-1 ring-blue-300/20 transition-all duration-300 ease-out hover:scale-105 hover:from-blue-600 hover:via-blue-500 hover:to-sky-400 hover:ring-blue-200/40" onclick="nextStep()">
+                <span class="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true">
+                  <span class="absolute inset-0 bg-[radial-gradient(140px_70px_at_10%_50%,rgba(255,255,255,0.18),transparent_60%),radial-gradient(140px_70px_at_90%_50%,rgba(255,255,255,0.14),transparent_60%)]"></span>
+                </span>
+                <span class="relative z-10 inline-flex items-center gap-2">
+                  <span id="next-btn-text">Weiter</span>
+                  <svg viewBox="0 0 24 24" class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M13 5l7 7-7 7"/>
+                  </svg>
+                </span>
+                <div class="absolute inset-0 flex h-full w-full justify-center [transform:skewX(-20deg)_translateX(-140%)] transition-transform duration-700 ease-out group-hover:duration-[1200ms] group-hover:[transform:skewX(-20deg)_translateX(140%)]" aria-hidden="true">
+                  <div class="relative h-full w-16 bg-gradient-to-r from-white/0 via-white/70 to-white/0 blur-sm mix-blend-screen"></div>
+                </div>
+                <div class="absolute inset-0 flex h-full w-full justify-center [transform:skewX(-20deg)_translateX(-160%)] transition-transform duration-1000 ease-out group-hover:duration-[1500ms] group-hover:[transform:skewX(-20deg)_translateX(160%)]" aria-hidden="true">
+                  <div class="relative h-full w-20 bg-gradient-to-r from-white/0 via-white/40 to-white/0"></div>
+                </div>
+              </button>
+              
+              <button type="button" id="calendly-btn" class="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-xl bg-gradient-to-r from-green-600 via-green-600 to-emerald-500 px-6 text-white text-base md:text-lg font-semibold shadow-md shadow-green-900/30 ring-1 ring-green-300/20 transition-all duration-300 ease-out hover:scale-105 hover:from-green-600 hover:via-green-500 hover:to-emerald-400 hover:ring-green-200/40 hidden" onclick="openCalendly()">
+                <span class="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true">
+                  <span class="absolute inset-0 bg-[radial-gradient(140px_70px_at_10%_50%,rgba(255,255,255,0.18),transparent_60%),radial-gradient(140px_70px_at_90%_50%,rgba(255,255,255,0.14),transparent_60%)]"></span>
+                </span>
+                <span class="relative z-10 inline-flex items-center gap-2">
+                  Termin buchen
+                  <svg viewBox="0 0 24 24" class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                  </svg>
+                </span>
+                <div class="absolute inset-0 flex h-full w-full justify-center [transform:skewX(-20deg)_translateX(-140%)] transition-transform duration-700 ease-out group-hover:duration-[1200ms] group-hover:[transform:skewX(-20deg)_translateX(140%)]" aria-hidden="true">
+                  <div class="relative h-full w-16 bg-gradient-to-r from-white/0 via-white/70 to-white/0 blur-sm mix-blend-screen"></div>
+                </div>
+                <div class="absolute inset-0 flex h-full w-full justify-center [transform:skewX(-20deg)_translateX(-160%)] transition-transform duration-1000 ease-out group-hover:duration-[1500ms] group-hover:[transform:skewX(-20deg)_translateX(160%)]" aria-hidden="true">
+                  <div class="relative h-full w-20 bg-gradient-to-r from-white/0 via-white/40 to-white/0"></div>
+                </div>
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </section>
+    </main>
   </div>
 
   <!-- Footer -->
@@ -88,42 +514,325 @@
             <span class="text-2xl md:text-3xl font-bold tracking-tight text-slate-900">Peakmont</span>
           </a>
           <p class="text-slate-600 leading-relaxed mb-8 max-w-sm text-base md:text-lg">Performance‑Marketing für messbare Ergebnisse und nachhaltiges Wachstum.</p>
-          <a href="gespraech.html" class="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-xl bg-gradient-to-r from-blue-600 via-blue-600 to-sky-500 px-6 text-white text-base md:text-lg font-semibold shadow-md shadow-blue-900/30 ring-1 ring-blue-300/20 transition-all duration-300 ease-out hover:scale-105 hover:from-blue-600 hover:via-blue-500 hover:to-sky-400 hover:ring-blue-200/40">
+          <a href="gespraech.html" class="footer-cta-breath group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-xl bg-gradient-to-r from-blue-600 via-blue-600 to-sky-500 px-6 text-white text-base md:text-lg font-semibold shadow-md shadow-blue-900/30 ring-1 ring-blue-300/20 transition-all duration-300 ease-out hover:scale-105 hover:from-blue-600 hover:via-blue-500 hover:to-sky-400 hover:ring-blue-200/40">
+            <span class="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true">
+              <span class="absolute inset-0 bg-[radial-gradient(140px_70px_at_10%_50%,rgba(255,255,255,0.18),transparent_60%),radial-gradient(140px_70px_at_90%_50%,rgba(255,255,255,0.14),transparent_60%)]"></span>
+            </span>
             <span class="relative z-10 inline-flex items-center gap-2">Gespräch vereinbaren<svg viewBox="0 0 24 24" class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+            <div class="absolute inset-0 flex h-full w-full justify-center [transform:skewX(-20deg)_translateX(-140%)] transition-transform duration-700 ease-out group-hover:duration-[1200ms] group-hover:[transform:skewX(-20deg)_translateX(140%)]" aria-hidden="true">
+              <div class="relative h-full w-16 bg-gradient-to-r from-white/0 via-white/70 to-white/0 blur-sm mix-blend-screen"></div>
+            </div>
+            <div class="absolute inset-0 flex h-full w-full justify-center [transform:skewX(-20deg)_translateX(-160%)] transition-transform duration-1000 ease-out group-hover:duration-[1500ms] group-hover:[transform:skewX(-20deg)_translateX(160%)]" aria-hidden="true">
+              <div class="relative h-full w-20 bg-gradient-to-r from-white/0 via-white/40 to-white/0"></div>
+            </div>
           </a>
         </div>
-        <div class="lg:col-span-3 grid gap-10 sm:grid-cols-3">
-          <div>
-            <h3 class="font-semibold text-slate-900 mb-5 text-lg md:text-xl">Leistungen</h3>
-            <ul class="space-y-3">
-              <li><a class="text-slate-600 hover:text-slate-900 transition-colors" href="leistungen.html">Performance Marketing</a></li>
-              <li><a class="text-slate-600 hover:text-slate-900 transition-colors" href="leistungen.html">Social Media</a></li>
-              <li><a class="text-slate-600 hover:text-slate-900 transition-colors" href="leistungen.html">Automation</a></li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="font-semibold text-slate-900 mb-5 text-lg md:text-xl">Menü</h3>
-            <ul class="space-y-3">
-              <li><a class="text-slate-600 hover:text-slate-900 transition-colors" href="index.html">Home</a></li>
-              <li><a class="text-slate-600 hover:text-slate-900 transition-colors" href="leistungen.html">Leistungen</a></li>
-              <li><a class="text-slate-600 hover:text-slate-900 transition-colors" href="ueber-mich.html">Über mich</a></li>
-              <li><a class="text-slate-600 hover:text-slate-900 transition-colors" href="kontakt.html">Kontakt</a></li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="font-semibold text-slate-900 mb-5 text-lg md:text-xl">Kontakt</h3>
-            <ul class="space-y-3">
-              <li><a class="text-slate-600 hover:text-slate-900 transition-colors" href="mailto:hello@peakmont.de">hello@peakmont.de</a></li>
-              <li><a class="text-slate-600 hover:text-slate-900 transition-colors" href="#impressum">Impressum</a></li>
-              <li><a class="text-slate-600 hover:text-slate-900 transition-colors" href="#datenschutz">Datenschutz</a></li>
-            </ul>
-          </div>
+
+        <div>
+          <h3 id="footer-title" class="text-base font-semibold text-slate-900 mb-6">Navigation</h3>
+          <ul class="space-y-4 text-base">
+            <li><a class="text-slate-600 hover:text-slate-900 transition-colors" href="index.html">Home</a></li>
+            <li><a class="text-slate-600 hover:text-slate-900 transition-colors" href="leistungen.html">Leistungen</a></li>
+            <li><a class="text-slate-600 hover:text-slate-900 transition-colors" href="ueber-mich.html">Über mich</a></li>
+            <li><a class="text-slate-600 hover:text-slate-900 transition-colors" href="kontakt.html">Kontakt</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-base font-semibold text-slate-900 mb-6">Leistungen</h3>
+          <ul class="space-y-4 text-base">
+            <li><a class="text-slate-600 hover:text-slate-900 transition-colors" href="leistungen.html#performance-marketing">Performance Marketing</a></li>
+            <li><a class="text-slate-600 hover:text-slate-900 transition-colors" href="leistungen.html#social-media">Social Media</a></li>
+            <li><a class="text-slate-600 hover:text-slate-900 transition-colors" href="leistungen.html#automation">Marketing Automation</a></li>
+            <li><a class="text-slate-600 hover:text-slate-900 transition-colors" href="leistungen.html#analytics">Analytics & Tracking</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-base font-semibold text-slate-900 mb-6">Kontakt</h3>
+          <ul class="space-y-4 text-base">
+            <li><a class="text-slate-600 hover:text-slate-900 transition-colors" href="mailto:hello@peakmont.de">hello@peakmont.de</a></li>
+            <li><a class="text-slate-600 hover:text-slate-900 transition-colors" href="tel:+49123456789">+49 123 456 789</a></li>
+            <li class="text-slate-600">München, Deutschland</li>
+          </ul>
         </div>
       </div>
-      <div class="mt-10 pt-4 border-t border-slate-200 text-center pb-0">
-        <p class="text-slate-500 text-sm md:text-base">© 2025 Peakmont. Alle Rechte vorbehalten.</p>
+
+      <div class="mt-16 pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500">
+        <p>&copy; 2024 Peakmont. Alle Rechte vorbehalten.</p>
+        <div class="flex space-x-6 mt-4 md:mt-0">
+          <a href="#" class="hover:text-slate-700 transition-colors">Impressum</a>
+          <a href="#" class="hover:text-slate-700 transition-colors">Datenschutz</a>
+          <a href="#" class="hover:text-slate-700 transition-colors">AGB</a>
+        </div>
       </div>
     </div>
   </section>
+
+  <script>
+    let currentStep = 1;
+    const totalSteps = 4;
+
+    function updateProgress() {
+      const progressPercent = (currentStep / totalSteps) * 100;
+      const currentStepEl = document.getElementById('current-step');
+      const progressPercentEl = document.getElementById('progress-percent');
+      const progressBar = document.getElementById('progress-bar');
+      
+      // Animate step counter
+      currentStepEl.classList.add('step-counter');
+      currentStepEl.style.transform = 'scale(1.1)';
+      currentStepEl.style.color = '#3B82F6';
+      
+      setTimeout(() => {
+        currentStepEl.textContent = currentStep;
+        progressPercentEl.textContent = Math.round(progressPercent);
+      }, 150);
+      
+      setTimeout(() => {
+        currentStepEl.style.transform = 'scale(1)';
+        currentStepEl.style.color = '';
+      }, 300);
+      
+      // Animate progress bar
+      progressBar.style.width = progressPercent + '%';
+      
+      // Add a pulse effect to progress bar
+      progressBar.style.boxShadow = '0 0 10px rgba(59, 130, 246, 0.5)';
+      setTimeout(() => {
+        progressBar.style.boxShadow = '';
+      }, 600);
+    }
+
+    function showStep(step) {
+      const currentStepElement = document.querySelector('.form-step:not(.hidden)');
+      const nextStepElement = document.getElementById(`step-${step}`);
+      
+      // Animate out current step
+      if (currentStepElement && currentStepElement !== nextStepElement) {
+        currentStepElement.classList.add('step-exit');
+        
+        setTimeout(() => {
+          currentStepElement.classList.add('hidden');
+          currentStepElement.classList.remove('step-exit');
+        }, 200);
+      }
+      
+      // Animate in new step
+      setTimeout(() => {
+        // Hide all steps first
+        for (let i = 1; i <= totalSteps; i++) {
+          const stepEl = document.getElementById(`step-${i}`);
+          if (stepEl !== nextStepElement) {
+            stepEl.classList.add('hidden');
+          }
+        }
+        
+        // Show and animate new step
+        nextStepElement.classList.remove('hidden');
+        nextStepElement.classList.add('step-enter');
+        
+        setTimeout(() => {
+          nextStepElement.classList.add('step-enter-active');
+          nextStepElement.classList.remove('step-enter');
+        }, 50);
+        
+        setTimeout(() => {
+          nextStepElement.classList.remove('step-enter-active');
+        }, 450);
+      }, currentStepElement && currentStepElement !== nextStepElement ? 200 : 0);
+      
+      // Update navigation buttons
+      const prevBtn = document.getElementById('prev-btn');
+      const nextBtn = document.getElementById('next-btn');
+      const nextBtnText = document.getElementById('next-btn-text');
+      
+      if (step === 1) {
+        prevBtn.classList.add('hidden');
+      } else {
+        prevBtn.classList.remove('hidden');
+      }
+      
+      // Update button text and color for last step
+      if (step === totalSteps) {
+        nextBtnText.textContent = 'Termin buchen';
+        nextBtn.classList.remove('from-blue-600', 'via-blue-600', 'to-blue-500', 'hover:from-blue-600', 'hover:via-blue-500', 'hover:to-sky-400');
+        nextBtn.classList.add('from-green-600', 'via-green-600', 'to-green-500', 'hover:from-green-600', 'hover:via-green-500', 'hover:to-emerald-400');
+      } else {
+        nextBtnText.textContent = 'Weiter';
+        nextBtn.classList.remove('from-green-600', 'via-green-600', 'to-green-500', 'hover:from-green-600', 'hover:via-green-500', 'hover:to-emerald-400');
+        nextBtn.classList.add('from-blue-600', 'via-blue-600', 'to-blue-500', 'hover:from-blue-600', 'hover:via-blue-500', 'hover:to-sky-400');
+      }
+      
+      updateProgress();
+    }
+
+    function validateStep(step) {
+      const stepElement = document.getElementById(`step-${step}`);
+      const requiredFields = stepElement.querySelectorAll('[required]');
+      let isValid = true;
+      
+      // Remove all existing error messages first
+      stepElement.querySelectorAll('.error-message').forEach(msg => msg.remove());
+      
+      requiredFields.forEach(field => {
+        const fieldContainer = field.parentElement;
+        
+        if (!field.value.trim()) {
+          field.classList.add('border-red-500', 'focus:ring-red-500', 'focus:border-red-500');
+          field.classList.remove('border-slate-600', 'focus:ring-blue-500', 'focus:border-transparent');
+          
+          // Add error message
+          const errorMsg = document.createElement('div');
+          errorMsg.className = 'error-message text-red-400 text-sm mt-1';
+          errorMsg.textContent = 'Dieses Feld muss ausgefüllt werden';
+          fieldContainer.appendChild(errorMsg);
+          
+          isValid = false;
+        } else {
+          field.classList.remove('border-red-500', 'focus:ring-red-500', 'focus:border-red-500');
+          field.classList.add('border-slate-600', 'focus:ring-blue-500', 'focus:border-transparent');
+        }
+      });
+      
+      // Special validation for step 3 (checkboxes)
+      if (step === 3) {
+        const checkboxes = stepElement.querySelectorAll('input[name="ziele[]"]:checked');
+        const checkboxContainer = stepElement.querySelector('label:has(input[name="ziele[]"])').parentElement.parentElement;
+        
+        if (checkboxes.length === 0) {
+          // Add error message for checkboxes
+          const errorMsg = document.createElement('div');
+          errorMsg.className = 'error-message text-red-400 text-sm mt-2';
+          errorMsg.textContent = 'Bitte wählen Sie mindestens ein Ziel aus';
+          checkboxContainer.appendChild(errorMsg);
+          isValid = false;
+        }
+      }
+      
+      return isValid;
+    }
+
+    function nextStep() {
+      if (validateStep(currentStep)) {
+        // Add loading state to button
+        const nextBtn = document.getElementById('next-btn');
+        const nextBtnText = document.getElementById('next-btn-text');
+        const originalText = nextBtnText.textContent;
+        
+        nextBtn.classList.add('btn-loading');
+        nextBtn.disabled = true;
+        
+        setTimeout(() => {
+          if (currentStep < totalSteps) {
+            currentStep++;
+            showStep(currentStep);
+          } else if (currentStep === totalSteps) {
+            // Nach dem letzten Schritt direkt zu Calendly
+            openCalendly();
+          }
+          
+          // Remove loading state
+          nextBtn.classList.remove('btn-loading');
+          nextBtn.disabled = false;
+        }, 600);
+      }
+    }
+
+    function previousStep() {
+      if (currentStep > 1) {
+        // Add loading state to button
+        const prevBtn = document.getElementById('prev-btn');
+        prevBtn.classList.add('btn-loading');
+        prevBtn.disabled = true;
+        
+        setTimeout(() => {
+          currentStep--;
+          showStep(currentStep);
+          
+          // Remove loading state
+          prevBtn.classList.remove('btn-loading');
+          prevBtn.disabled = false;
+        }, 300);
+      }
+    }
+
+    function openCalendly() {
+      // Replace this URL with your actual Calendly link
+      const calendlyUrl = 'https://calendly.com/your-username/strategiegespraech';
+      
+      // You can either open in new window or same window
+      window.open(calendlyUrl, '_blank');
+      
+      // Optional: Show a confirmation message
+      setTimeout(() => {
+        alert('Sie werden zu Calendly weitergeleitet, um Ihren Termin zu buchen.');
+      }, 500);
+    }
+
+    // Initialize form
+    document.addEventListener('DOMContentLoaded', function() {
+      showStep(1);
+      
+      // Add event listeners to clear errors when user starts typing
+      document.querySelectorAll('input[required], select[required], textarea[required]').forEach(field => {
+        field.addEventListener('input', function() {
+          if (this.value.trim()) {
+            this.classList.remove('border-red-500', 'focus:ring-red-500', 'focus:border-red-500');
+            this.classList.add('border-slate-600', 'focus:ring-blue-500', 'focus:border-transparent');
+            
+            // Remove error message
+            const errorMsg = this.parentElement.querySelector('.error-message');
+            if (errorMsg) {
+              errorMsg.remove();
+            }
+          }
+        });
+      });
+    });
+
+    // Reveal animations (same as kontakt.html)
+    document.addEventListener('DOMContentLoaded', function() {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const delay = parseInt(entry.target.dataset.delay) || 0;
+            setTimeout(() => {
+              entry.target.style.opacity = '1';
+              entry.target.style.transform = 'translateY(0) translateX(0) scale(1)';
+              entry.target.style.filter = 'blur(0)';
+            }, delay);
+          }
+        });
+      }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      });
+
+      // Observe all elements with data-reveal
+      document.querySelectorAll('[data-reveal]').forEach(el => {
+        observer.observe(el);
+      });
+
+      // Navbar animations
+      setTimeout(() => {
+        const navbarLogo = document.querySelector('.navbar-logo');
+        if (navbarLogo) {
+          navbarLogo.style.opacity = '1';
+        }
+      }, 50);
+
+      setTimeout(() => {
+        const navbarItems = document.querySelectorAll('.navbar-item');
+        navbarItems.forEach((item, index) => {
+          setTimeout(() => {
+            item.style.opacity = '1';
+            item.style.transform = 'translateY(0)';
+            item.style.filter = 'blur(0)';
+          }, index * 60);
+        });
+      }, 80);
+    });
+  </script>
 </body>
 </html>
