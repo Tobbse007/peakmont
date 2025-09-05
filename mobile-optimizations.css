@@ -113,14 +113,50 @@
   }
 }
 
-/* Focus States für Accessibility */
+/* Focus States für Touch-Geräte - entfernt blaue Rahmen */
 @media (max-width: 768px) {
+  /* Entferne Standard Browser Focus Outlines auf Touch-Geräten */
   button:focus,
   input:focus,
   textarea:focus,
   select:focus,
-  a:focus {
-    outline: 2px solid #3B82F6;
-    outline-offset: 2px;
+  a:focus,
+  [role="button"]:focus {
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-touch-callout: none !important;
+    -webkit-user-select: none !important;
+    user-select: none !important;
+  }
+  
+  /* Entferne Touch-Highlights bei Links und Buttons */
+  a, button, [role="button"], input[type="submit"], input[type="button"] {
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-touch-callout: none !important;
+    -webkit-user-select: none !important;
+    user-select: none !important;
+    outline: none !important;
+  }
+  
+  /* Spezielle Behandlung für Navigation */
+  nav a:focus,
+  nav button:focus,
+  .navbar a:focus,
+  .navbar button:focus,
+  #mobile-menu a:focus,
+  #mobile-menu button:focus,
+  #mobile-menu-btn:focus,
+  #mobile-menu-close:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+  }
+  
+  /* Entferne auch bei aktiven/pressed States */
+  button:active,
+  a:active,
+  [role="button"]:active {
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent !important;
   }
 }
