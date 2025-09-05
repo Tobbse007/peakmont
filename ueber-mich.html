@@ -33,6 +33,8 @@
         linear-gradient(180deg, #0A0E1A 0%, #0A1120 45%, #080C18 100%);
     }
     .noise::after { content: ""; position: absolute; inset: 0; pointer-events: none; mix-blend-mode: overlay; background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="140" height="140" viewBox="0 0 140 140"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23n)" opacity="0.025"/></svg>'); }
+    .cta-background-drop { height: 50%; }
+  </style>
   </style>
 </head>
 <body class="font-sans text-slate-100 bg-peak-bg selection:bg-blue-500/30 selection:text-white overflow-x-hidden">
@@ -78,6 +80,215 @@
       </div>
     </section>
   </div>
+
+  <!-- Kurzgeschichte / Storytelling Section -->
+  <section class="bg-white text-slate-900 py-24 md:py-32" aria-labelledby="storytelling-title">
+    <div class="mx-auto max-w-7xl px-6">
+      <div class="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+        <!-- Left: Content -->
+        <div class="opacity-0 translate-y-2 blur-sm transition-all duration-1000 ease-out will-change-transform transform-gpu" data-reveal data-delay="200">
+          <span class="inline-block mb-6 px-4 py-2 rounded-full bg-slate-200 text-slate-500 font-semibold text-sm">Meine Geschichte</span>
+          <h2 id="storytelling-title" class="text-4xl md:text-5xl font-extrabold tracking-tight mb-8 leading-tight">Von der Vision zur Realität</h2>
+          <div class="prose prose-lg text-slate-600 leading-relaxed space-y-6">
+            <p>Mein Weg ins digitale Marketing begann nicht mit einem großen Plan, sondern mit einer einfachen Erkenntnis: <strong>Erfolg entsteht, wenn Strategie auf echte Leidenschaft trifft.</strong></p>
+            
+            <p>Nach meinem BWL-Studium und ersten Erfahrungen in traditionellen Marketing-Agenturen wurde mir schnell klar, dass die Zukunft digital ist. Aber nicht nur das – sie ist <em>messbar, transparent und skalierbar</em>.</p>
+            
+            <p>Was mich täglich antreibt? Die Möglichkeit, mit datengetriebenen Strategien echte Geschäftserfolge zu erzielen. Jede Kampagne ist ein neues Puzzle, jeder Kunde eine neue Herausforderung. Diese Kombination aus Analytik und Kreativität fasziniert mich bis heute.</p>
+            
+            <p class="text-slate-800 font-semibold">Heute helfe ich Unternehmen dabei, ihre digitale Präsenz nicht nur aufzubauen, sondern nachhaltig zu skalieren – mit klaren Strategien, messbaren Ergebnissen und einer Prise Leidenschaft für das, was wir tun.</p>
+          </div>
+        </div>
+        
+        <!-- Right: Image -->
+        <div class="lg:order-last opacity-0 translate-x-4 blur-sm transition-all duration-1000 ease-out will-change-transform transform-gpu" data-reveal data-delay="400">
+          <div class="relative">
+            <div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl shadow-slate-900/20">
+              <img 
+                src="Bilder/BörseninitiativeSaarPortraits22.05.25©A.Lombardozzi-21.jpg" 
+                alt="Portrait von Niklas Ganz - Gründer von Peakmont" 
+                class="w-full h-full object-cover object-center"
+                loading="lazy"
+              />
+            </div>
+            <!-- Decorative elements -->
+            <div class="absolute -inset-4 bg-gradient-to-r from-blue-500/20 to-sky-500/20 rounded-3xl -z-10 blur-3xl opacity-30"></div>
+            <div class="absolute top-4 right-4 w-24 h-24 bg-blue-500/10 rounded-full -z-10"></div>
+            <div class="absolute bottom-8 left-8 w-16 h-16 bg-sky-500/15 rounded-full -z-10"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission & Werte Section -->
+  <section class="bg-slate-100 text-slate-900 py-24 md:py-32 relative overflow-hidden" aria-labelledby="mission-title">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-5">
+      <div class="absolute top-20 left-10 w-32 h-32 bg-blue-500 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-20 right-10 w-24 h-24 bg-sky-500 rounded-full blur-2xl"></div>
+      <div class="absolute top-1/2 left-1/3 w-16 h-16 bg-blue-400 rounded-full blur-xl"></div>
+    </div>
+
+    <div class="mx-auto max-w-7xl px-6 relative z-10">
+      <!-- Hero-style Header -->
+      <div class="text-center mb-20">
+        <div class="opacity-0 translate-y-2 blur-sm transition-all duration-1000 ease-out will-change-transform transform-gpu" data-reveal data-delay="200">
+          <span class="inline-block mb-4 px-5 py-1.5 rounded-full bg-slate-200 text-slate-500 font-semibold text-base">Mission & Antrieb</span>
+          <h2 id="mission-title" class="text-4xl md:text-5xl font-extrabold tracking-tight mb-8 leading-tight">Meine Mission</h2>
+        </div>
+      </div>
+
+      <!-- Problem & Solution Cards -->
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 mb-20">
+        <!-- Problem Card -->
+        <div class="opacity-0 translate-x-8 blur-sm transition-all duration-1000 ease-out will-change-transform transform-gpu" data-reveal data-delay="400">
+          <div class="bg-white rounded-3xl p-8 md:p-10 shadow-xl ring-1 ring-slate-200 relative overflow-hidden hover:-translate-y-2 hover:shadow-2xl hover:ring-red-200/60 transition-all duration-300">
+            <div class="relative">
+              <div class="inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-red-100 text-red-600 mb-6">
+                <svg viewBox="0 0 24 24" class="h-8 w-8" fill="currentColor">
+                  <path d="M12 2c-.8 0-1.5.4-1.9 1.1l-8.5 14.8c-.4.7-.4 1.5 0 2.2.4.7 1.1 1.1 1.9 1.1h17c.8 0 1.5-.4 1.9-1.1.4-.7.4-1.5 0-2.2L14.9 3.1c-.4-.7-1.1-1.1-1.9-1.1z" stroke="none"/>
+                  <circle cx="12" cy="17" r="1" fill="white"/>
+                  <rect x="11" y="8" width="2" height="6" rx="1" fill="white"/>
+                </svg>
+              </div>
+              <h3 class="text-2xl md:text-3xl font-bold mb-4 text-slate-900">Das Problem</h3>
+              <p class="text-lg text-slate-600 leading-relaxed">Ich sehe täglich Unternehmer mit <strong>brillanten Ideen</strong>, die im digitalen Chaos verloren gehen. Budgets werden verschwendet, Potenziale bleiben ungenutzt.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Solution Card -->
+        <div class="opacity-0 translate-x-8 blur-sm transition-all duration-1000 ease-out will-change-transform transform-gpu" data-reveal data-delay="600">
+          <div class="bg-white rounded-3xl p-8 md:p-10 shadow-xl ring-1 ring-slate-200 relative overflow-hidden hover:-translate-y-2 hover:shadow-2xl hover:ring-blue-200/60 transition-all duration-300">
+            <div class="relative">
+              <div class="inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-100 text-blue-600 mb-6">
+                <svg viewBox="0 0 24 24" class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                  <polyline points="22,4 12,14.01 9,11.01"/>
+                </svg>
+              </div>
+              <h3 class="text-2xl md:text-3xl font-bold mb-4 text-slate-900">Meine Mission</h3>
+              <p class="text-lg text-slate-600 leading-relaxed">Dieser Verschwendung ein Ende setzen. <strong>Jedes Unternehmen verdient es</strong>, seine wahre Reichweite zu entfalten – mit System statt Chaos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Central Quote -->
+      <div class="opacity-0 translate-y-4 blur-sm transition-all duration-1000 ease-out will-change-transform transform-gpu" data-reveal data-delay="800">
+        <div class="relative hover:-translate-y-2 transition-all duration-300">
+          <div class="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-sky-500/10 to-blue-500/10 rounded-3xl blur-3xl"></div>
+          <div class="relative bg-gradient-to-r from-blue-600 via-blue-700 to-sky-600 rounded-3xl p-8 md:p-12 text-white shadow-2xl hover:shadow-3xl transition-all duration-300">
+            <div class="text-center">
+              <svg viewBox="0 0 24 24" class="h-12 w-12 text-blue-200 mx-auto mb-6 opacity-50" fill="currentColor">
+                <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z"/>
+              </svg>
+              <blockquote class="text-2xl md:text-4xl font-bold leading-tight mb-6">
+                Erfolg entsteht nicht durch Zufall, sondern durch <span class="text-blue-200">systematische Strategien</span>, die Vision in <span class="text-sky-200">messbare Realität</span> verwandeln.
+              </blockquote>
+              <cite class="text-lg text-blue-100 font-medium">— Niklas Ganz</cite>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Values Grid -->
+      <div class="mt-20 grid md:grid-cols-3 gap-8 lg:gap-12">
+        <!-- Wert 1: Transparenz -->
+        <div class="opacity-0 translate-y-2 blur-sm transition-all duration-1000 ease-out will-change-transform transform-gpu" data-reveal data-delay="1000">
+          <div class="bg-white rounded-2xl p-8 shadow-lg ring-1 ring-slate-200 h-full hover:-translate-y-1 hover:shadow-xl hover:ring-blue-200/60 transition-all duration-300">
+            <div class="mb-6">
+              <div class="inline-flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 text-white mb-4 shadow-lg">
+                <svg viewBox="0 0 24 24" class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                  <circle cx="12" cy="12" r="3"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold mb-3">Transparenz</h3>
+            </div>
+            <p class="text-slate-600 leading-relaxed">Jede Entscheidung ist nachvollziehbar. Keine Black-Box-Strategien – nur klare, verständliche Prozesse.</p>
+          </div>
+        </div>
+
+        <!-- Wert 2: Performance -->
+        <div class="opacity-0 translate-y-2 blur-sm transition-all duration-1000 ease-out will-change-transform transform-gpu" data-reveal data-delay="1150">
+          <div class="bg-white rounded-2xl p-8 shadow-lg ring-1 ring-slate-200 h-full hover:-translate-y-1 hover:shadow-xl hover:ring-blue-200/60 transition-all duration-300">
+            <div class="mb-6">
+              <div class="inline-flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 text-white mb-4 shadow-lg">
+                <svg viewBox="0 0 24 24" class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M3 3v18h18"/>
+                  <path d="M7 12l3-3 3 3 6-6"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold mb-3">Performance</h3>
+            </div>
+            <p class="text-slate-600 leading-relaxed">Jeder Euro muss sich rechnen. Datengetriebene Entscheidungen für nachhaltige Ergebnisse.</p>
+          </div>
+        </div>
+
+        <!-- Wert 3: Partnerschaft -->
+        <div class="opacity-0 translate-y-2 blur-sm transition-all duration-1000 ease-out will-change-transform transform-gpu" data-reveal data-delay="1300">
+          <div class="bg-white rounded-2xl p-8 shadow-lg ring-1 ring-slate-200 h-full hover:-translate-y-1 hover:shadow-xl hover:ring-blue-200/60 transition-all duration-300">
+            <div class="mb-6">
+              <div class="inline-flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 to-sky-600 text-white mb-4 shadow-lg">
+                <svg viewBox="0 0 24 24" class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold mb-3">Partnerschaft</h3>
+            </div>
+            <p class="text-slate-600 leading-relaxed">Ich arbeite mit, nicht für meine Kunden. Langfristige Beziehungen auf Augenhöhe.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Bottom Section -->
+  <section id="cta" class="relative bg-slate-100">
+    <!-- Top dark overlay that fades halfway over the inner box -->
+  <div class="absolute inset-x-0 top-0 cta-background-drop hero-bg noise opacity-0 transition-opacity duration-700 ease-out" data-reveal data-delay="0"></div>
+    <div class="relative z-10 mx-auto max-w-7xl px-6 pt-16 md:pt-20 pb-24 md:pb-32 text-center text-slate-100">
+      <span class="inline-block mb-4 px-5 py-1.5 rounded-full bg-white/10 text-blue-200 font-semibold text-base opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu" data-reveal data-delay="0">Jetzt starten</span>
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu" data-reveal data-delay="80">
+        Starte jetzt durch und vereinbare<br class="hidden md:block"> dein Kennenlerngespräch
+      </h2>
+
+      <!-- Inner CTA panel -->
+  <div class="mx-auto mt-8 max-w-4xl rounded-2xl bg-white text-slate-900 ring-1 ring-slate-200 shadow-xl p-8 md:p-12 text-center opacity-0 translate-y-2 blur-sm [transform:scale(0.98)] transition-all duration-700 ease-out will-change-transform transform-gpu" data-reveal data-delay="160">
+        <div>
+          <p class="mx-auto max-w-2xl text-base md:text-lg leading-relaxed text-slate-700 opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu" data-reveal data-delay="240">
+            Ihre Anfrage ist der erste Schritt zu messbaren Erfolgen. Lassen Sie uns gemeinsam eine datengetriebene Strategie entwickeln, die Ihr Unternehmen zum Marktführer macht.
+          </p>
+          <ul class="mt-5 flex flex-wrap justify-center gap-x-6 gap-y-3 text-slate-700 opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu" data-reveal data-delay="300">
+            <li class="inline-flex items-center gap-2"><span class="material-symbols-outlined text-blue-600 text-xl">schedule</span><span>15–20 Minuten</span></li>
+            <li class="inline-flex items-center gap-2"><span class="material-symbols-outlined text-blue-600 text-xl">check_circle</span><span>Kostenlos</span></li>
+            <li class="inline-flex items-center gap-2"><span class="material-symbols-outlined text-blue-600 text-xl">security</span><span>Unverbindlich</span></li>
+          </ul>
+          <div class="mt-8">
+            <a href="gespraech.html" class="group cta-breath relative inline-flex items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-blue-600 via-blue-600 to-sky-500 px-8 py-3.5 text-white text-base md:text-lg font-semibold shadow-md ring-1 ring-blue-300/20 transform-gpu transition-all duration-300 ease-out hover:scale-[1.02] hover:from-blue-600 hover:via-blue-500 hover:to-sky-400 hover:ring-blue-200/40 opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform" data-reveal data-delay="380">
+              <span class="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true">
+                <span class="absolute inset-0 bg-[radial-gradient(140px_70px_at_10%_50%,rgba(255,255,255,0.18),transparent_60%),radial-gradient(140px_70px_at_90%_50%,rgba(255,255,255,0.14),transparent_60%)]"></span>
+              </span>
+              <span class="relative z-10 inline-flex items-center gap-3">Jetzt Strategiegespräch vereinbaren
+                <svg viewBox="0 0 24 24" class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-0.5" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+              </span>
+              <div class="absolute inset-0 flex h-full w-full justify-center [transform:skewX(-20deg)_translateX(-140%)] transition-transform duration-700 ease-out group-hover:duration-[1200ms] group-hover:[transform:skewX(-20deg)_translateX(140%)]" aria-hidden="true">
+                <div class="relative h-full w-16 bg-gradient-to-r from-white/0 via-white/70 to-white/0 blur-sm mix-blend-screen"></div>
+              </div>
+              <div class="absolute inset-0 flex h-full w-full justify-center [transform:skewX(-20deg)_translateX(-160%)] transition-transform duration-1000 ease-out group-hover:duration-[1500ms] group-hover:[transform:skewX(-20deg)_translateX(160%)]" aria-hidden="true">
+                <div class="relative h-full w-28 bg-gradient-to-r from-white/0 via-white/25 to-white/0 blur-md mix-blend-screen"></div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Footer -->
   <section class="bg-slate-100 text-slate-900 border-t border-slate-200/60" aria-labelledby="footer-title">
