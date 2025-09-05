@@ -33,6 +33,7 @@
   <link rel="canonical" href="https://peakmont.de/gespraech.html" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="mobile-optimizations.css" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400;600&display=swap" />
 
@@ -172,7 +173,7 @@
 
     <!-- MAIN FORM SECTION -->
     <main class="relative z-10">
-      <div class="mx-auto max-w-4xl px-6 pt-12 pb-20">
+      <div class="mx-auto max-w-4xl px-4 sm:px-6 pt-8 sm:pt-12 pb-16 sm:pb-20">
 
         
         <!-- Progress Bar -->
@@ -414,34 +415,6 @@
             </div>
           </div>
 
-          <!-- Step 5: Termin -->
-          <div id="step-5" class="form-step hidden">
-            <h2 class="text-2xl font-bold text-white mb-2">Termin vereinbaren</h2>
-            <p class="text-slate-400 mb-8">Perfekt! Jetzt können Sie einen passenden Termin auswählen</p>
-            
-            <div class="text-center">
-              <div class="bg-slate-800 rounded-lg p-8 mb-6">
-                <div class="mb-6">
-                  <svg class="w-16 h-16 text-green-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                  </svg>
-                  <h3 class="text-xl font-semibold text-white mb-2">Ihre Angaben wurden gespeichert!</h3>
-                  <p class="text-slate-400">Klicken Sie auf den Button unten, um einen Termin in unserem Kalender zu buchen.</p>
-                </div>
-                
-                <div class="bg-slate-700/50 rounded-lg p-4 mb-6 text-left">
-                  <h4 class="font-semibold text-white mb-2">Was erwartet Sie im Gespräch:</h4>
-                  <ul class="text-slate-300 space-y-1 text-sm">
-                    <li>• Analyse Ihrer aktuellen Marketing-Situation</li>
-                    <li>• Maßgeschneiderte Strategieempfehlungen</li>
-                    <li>• Konkrete nächste Schritte</li>
-                    <li>• Kostenloses Gespräch (30-45 Minuten)</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
           <!-- Navigation Buttons -->
           <div class="flex justify-between items-center pt-8 border-t border-slate-700">
             <button type="button" id="prev-btn" class="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-xl bg-slate-700 px-6 text-slate-300 font-semibold shadow-md shadow-slate-900/30 ring-1 ring-slate-600/20 transition-all duration-300 ease-out hover:scale-105 hover:bg-slate-600 hover:text-white hover:ring-slate-500/40 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 hidden" onclick="previousStep()">
@@ -468,24 +441,6 @@
                   <span id="next-btn-text">Weiter</span>
                   <svg viewBox="0 0 24 24" class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M5 12h14M13 5l7 7-7 7"/>
-                  </svg>
-                </span>
-                <div class="absolute inset-0 flex h-full w-full justify-center [transform:skewX(-20deg)_translateX(-140%)] transition-transform duration-700 ease-out group-hover:duration-[1200ms] group-hover:[transform:skewX(-20deg)_translateX(140%)]" aria-hidden="true">
-                  <div class="relative h-full w-16 bg-gradient-to-r from-white/0 via-white/70 to-white/0 blur-sm mix-blend-screen"></div>
-                </div>
-                <div class="absolute inset-0 flex h-full w-full justify-center [transform:skewX(-20deg)_translateX(-160%)] transition-transform duration-1000 ease-out group-hover:duration-[1500ms] group-hover:[transform:skewX(-20deg)_translateX(160%)]" aria-hidden="true">
-                  <div class="relative h-full w-20 bg-gradient-to-r from-white/0 via-white/40 to-white/0"></div>
-                </div>
-              </button>
-              
-              <button type="button" id="calendly-btn" class="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-xl bg-gradient-to-r from-green-600 via-green-600 to-emerald-500 px-6 text-white text-base md:text-lg font-semibold shadow-md shadow-green-900/30 ring-1 ring-green-300/20 transition-all duration-300 ease-out hover:scale-105 hover:from-green-600 hover:via-green-500 hover:to-emerald-400 hover:ring-green-200/40 hidden" onclick="openCalendly()">
-                <span class="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true">
-                  <span class="absolute inset-0 bg-[radial-gradient(140px_70px_at_10%_50%,rgba(255,255,255,0.18),transparent_60%),radial-gradient(140px_70px_at_90%_50%,rgba(255,255,255,0.14),transparent_60%)]"></span>
-                </span>
-                <span class="relative z-10 inline-flex items-center gap-2">
-                  Termin buchen
-                  <svg viewBox="0 0 24 24" class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
                   </svg>
                 </span>
                 <div class="absolute inset-0 flex h-full w-full justify-center [transform:skewX(-20deg)_translateX(-140%)] transition-transform duration-700 ease-out group-hover:duration-[1200ms] group-hover:[transform:skewX(-20deg)_translateX(140%)]" aria-hidden="true">
@@ -653,15 +608,12 @@
         prevBtn.classList.remove('hidden');
       }
       
-      // Update button text and color for last step
+      // Update button text for last step (keep blue color)
       if (step === totalSteps) {
         nextBtnText.textContent = 'Termin buchen';
-        nextBtn.classList.remove('from-blue-600', 'via-blue-600', 'to-blue-500', 'hover:from-blue-600', 'hover:via-blue-500', 'hover:to-sky-400');
-        nextBtn.classList.add('from-green-600', 'via-green-600', 'to-green-500', 'hover:from-green-600', 'hover:via-green-500', 'hover:to-emerald-400');
+        // Button bleibt blau - keine Farbänderung nötig
       } else {
         nextBtnText.textContent = 'Weiter';
-        nextBtn.classList.remove('from-green-600', 'via-green-600', 'to-green-500', 'hover:from-green-600', 'hover:via-green-500', 'hover:to-emerald-400');
-        nextBtn.classList.add('from-blue-600', 'via-blue-600', 'to-blue-500', 'hover:from-blue-600', 'hover:via-blue-500', 'hover:to-sky-400');
       }
       
       updateProgress();
@@ -834,5 +786,7 @@
       }, 80);
     });
   </script>
+  
+  <script src="mobile-menu.js"></script>
 </body>
 </html>

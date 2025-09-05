@@ -68,6 +68,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="mobile-optimizations.css" />
   <!-- Icons: Material Symbols Outlined -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400;600&display=swap" />
 
@@ -119,7 +120,7 @@
     <!-- NAVBAR -->
     <header class="relative z-20">
       <nav class="mx-auto max-w-7xl px-6 py-5">
-        <div class="grid grid-cols-3 items-center">
+        <div class="flex items-center justify-between md:grid md:grid-cols-3">
           <!-- Left: Logo + Name -->
           <a href="index.html" class="flex items-center gap-3 opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu navbar-logo" data-reveal data-delay="0">
             <span class="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-blue-500/15 ring-1 ring-inset ring-blue-400/25 drop-shadow-glow">
@@ -131,7 +132,14 @@
             <span class="text-xl font-semibold tracking-tight">Peakmont</span>
           </a>
 
-          <!-- Center: Menu -->
+          <!-- Mobile Menu Button -->
+          <button id="mobile-menu-btn" class="md:hidden relative z-30 p-2 text-slate-300 hover:text-white transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+
+          <!-- Center: Desktop Menu -->
           <ul class="hidden md:flex items-center justify-center gap-8 text-base font-medium text-slate-200/90">
             <li class="opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu navbar-item" data-reveal data-delay="80"><a class="hover:text-white transition-colors" href="index.html">Home</a></li>
             <li class="opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu navbar-item" data-reveal data-delay="140"><a class="hover:text-white transition-colors" href="leistungen.html">Leistungen</a></li>
@@ -139,8 +147,8 @@
             <li class="opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu navbar-item" data-reveal data-delay="260"><a class="hover:text-white transition-colors" href="kontakt.html">Kontakt</a></li>
           </ul>
 
-          <!-- Right: CTA with subtle divider line -->
-          <div class="flex items-center justify-end">
+          <!-- Right: Desktop CTA -->
+          <div class="hidden md:flex items-center justify-end">
             <a href="gespraech.html" class="navbar-cta group inline-flex items-center gap-2.5 rounded-full bg-blue-500/12 px-6 py-3 text-base font-medium text-blue-100 drop-shadow-glow ring-1 ring-inset ring-blue-400/20 transform-gpu transition-all duration-300 hover:scale-[1.02] hover:bg-blue-500/25 hover:text-white hover:ring-blue-300/60 hover:shadow-lg hover:shadow-blue-400/30 hover:drop-shadow-[0_0_20px_rgba(59,130,246,0.5)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300/60 animate-[slideIn_0.6s_ease-out_0.32s_both]">
               <span class="relative z-10 transition-transform duration-300">Gespräch vereinbaren</span>
               <svg class="relative z-10 h-4 w-4 transition-all duration-300 group-hover:translate-x-1 group-hover:scale-110" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -151,6 +159,33 @@
           </div>
         </div>
       </nav>
+
+      <!-- Mobile Menu Overlay -->
+      <div id="mobile-menu" class="md:hidden fixed inset-0 z-40 bg-slate-900/95 backdrop-blur-sm opacity-0 invisible transition-all duration-300">
+        <div class="flex flex-col h-full pt-20 px-6 relative">
+          <!-- Schließen-Kreuz oben rechts -->
+          <button id="mobile-menu-close" class="absolute top-6 right-6 z-50 p-2 text-slate-300 hover:text-white transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+          
+          <ul class="space-y-6 text-2xl font-medium text-slate-200">
+            <li><a href="index.html" class="block text-white transition-colors">Home</a></li>
+            <li><a href="leistungen.html" class="block hover:text-white transition-colors">Leistungen</a></li>
+            <li><a href="ueber-mich.html" class="block hover:text-white transition-colors">Über mich</a></li>
+            <li><a href="kontakt.html" class="block hover:text-white transition-colors">Kontakt</a></li>
+          </ul>
+          <div class="mt-8">
+            <a href="gespraech.html" class="inline-flex w-full items-center justify-center gap-2.5 rounded-xl bg-blue-600 px-6 py-4 text-lg font-medium text-white shadow-lg transition-all duration-300 hover:bg-blue-700 hover:scale-[1.02]">
+              Gespräch vereinbaren
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M13 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
       <!-- fine hairline separator under navbar -->
   <div class="h-px w-full bg-white/10 origin-center scale-x-0 opacity-0 transition-transform duration-700 ease-out will-change-transform" data-reveal data-delay="380"></div>
     </header>
@@ -193,22 +228,23 @@
             </div>
             <!-- Social proof under CTA (left column) -->
             <div class="mt-8 md:mt-10">
-              <p class="text-xs md:text-sm text-slate-300/90 flex items-center gap-2 mb-3">
+              <p class="text-xs md:text-sm text-slate-300/90 flex items-center gap-2 mb-4">
                 <span class="h-1.5 w-1.5 rounded-full bg-blue-400/80"></span>
                 Unternehmen, die uns vertrauen:
               </p>
-              <div class="flex items-center justify-start gap-x-8 md:gap-x-10 flex-wrap md:flex-nowrap opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu" data-reveal data-delay="320">
-                <a href="https://gravitas-invest.de/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center transition-opacity hover:opacity-90" title="Gravitas Invest – Website öffnen">
-                  <img src="Bilder/Gravitas-Invest-Logo-Side.png" alt="Gravitas Invest" class="h-16 md:h-20 object-contain brightness-110 contrast-110" />
+              <div class="flex items-center justify-start gap-x-6 sm:gap-x-8 md:gap-x-10 opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu" data-reveal data-delay="320">
+                <a href="https://gravitas-invest.de/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center transition-opacity hover:opacity-90 flex-shrink-0" title="Gravitas Invest – Website öffnen">
+                  <img src="Bilder/Gravitas-Invest-Logo-Side.png" alt="Gravitas Invest" class="h-12 sm:h-14 md:h-16 lg:h-20 object-contain brightness-110 contrast-110" />
                 </a>
-                <a href="https://www.wirtschaftsjunioren.saarland/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center transition-opacity hover:opacity-90" title="Wirtschaftsjunioren Saarland – Website öffnen">
-                  <img src="Bilder/WJ-Logo-WJS-Saarland-color.png" alt="Wirtschaftsjunioren Saarland" class="h-16 md:h-20 object-contain brightness-110 contrast-110" />
+                <a href="https://www.wirtschaftsjunioren.saarland/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center transition-opacity hover:opacity-90 flex-shrink-0" title="Wirtschaftsjunioren Saarland – Website öffnen">
+                  <img src="Bilder/WJ-Logo-WJS-Saarland-color.png" alt="Wirtschaftsjunioren Saarland" class="h-12 sm:h-14 md:h-16 lg:h-20 object-contain brightness-110 contrast-110" />
                 </a>
               </div>
             </div>
           </div>
 
-  <div class="relative flex justify-center lg:justify-end overflow-hidden lg:col-span-7 min-w-0 z-0 opacity-0 translate-y-4 [transform:scale(0.98)] blur-sm transition-all duration-700 ease-out will-change-transform hero-image" data-reveal data-delay="180">
+  <!-- Hero Image - versteckt auf Mobile -->
+  <div class="relative hidden lg:flex justify-center lg:justify-end overflow-hidden lg:col-span-7 min-w-0 z-0 opacity-0 translate-y-4 [transform:scale(0.98)] blur-sm transition-all duration-700 ease-out will-change-transform hero-image" data-reveal data-delay="180">
       <div class="relative flex justify-center lg:justify-end overflow-hidden lg:col-span-7 min-w-0 z-0">
             <div class="absolute -top-8 right-0 h-36 w-36 rounded-full bg-blue-500/30 blur-3xl"></div>
             <div class="hero-media rounded-3xl ring-1 ring-white/10 shadow-2xl shadow-blue-900/30">
@@ -898,6 +934,68 @@
       }, { threshold: 0.25 });
       items.forEach((el) => io.observe(el));
     })();
+  </script>
+
+  <!-- Mobile Menu Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const mobileMenuClose = document.getElementById('mobile-menu-close');
+      const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+      
+      let isMenuOpen = false;
+      
+      function toggleMenu() {
+        isMenuOpen = !isMenuOpen;
+        
+        if (isMenuOpen) {
+          mobileMenu.classList.remove('opacity-0', 'invisible');
+          mobileMenu.classList.add('opacity-100', 'visible');
+          document.body.style.overflow = 'hidden';
+          
+          // Change hamburger to X
+          mobileMenuBtn.innerHTML = `
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          `;
+        } else {
+          mobileMenu.classList.add('opacity-0', 'invisible');
+          mobileMenu.classList.remove('opacity-100', 'visible');
+          document.body.style.overflow = '';
+          
+          // Change X back to hamburger
+          mobileMenuBtn.innerHTML = `
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          `;
+        }
+      }
+      
+      mobileMenuBtn.addEventListener('click', toggleMenu);
+      
+      // Event Listener für das Schließen-Kreuz
+      mobileMenuClose.addEventListener('click', toggleMenu);
+      
+      // Close menu when clicking on a link
+      mobileMenuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          if (isMenuOpen) toggleMenu();
+        });
+      });
+      
+      // Close menu when clicking outside
+      mobileMenu.addEventListener('click', (e) => {
+        if (e.target === mobileMenu) {
+          toggleMenu();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
   </script>
 </body>
 </html>

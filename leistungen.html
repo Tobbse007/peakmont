@@ -35,6 +35,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="mobile-optimizations.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400;600&display=swap" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -68,20 +69,28 @@
   <div class="relative hero-bg noise text-white">
     <header class="relative z-20">
       <nav class="mx-auto max-w-7xl px-6 py-5">
-        <div class="grid grid-cols-3 items-center">
+        <div class="flex items-center justify-between md:grid md:grid-cols-3">
           <a href="index.html" class="navbar-logo flex items-center gap-3 opacity-0 transition-opacity text-white">
             <span class="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-blue-500/15 ring-1 ring-inset ring-blue-400/25 drop-shadow-glow">
               <svg viewBox="0 0 24 24" class="h-5 w-5 text-blue-300" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 4h7a5 5 0 1 1 0 10H9v6H6V4z" /></svg>
             </span>
             <span class="text-xl font-semibold tracking-tight text-white">Peakmont</span>
           </a>
+
+          <!-- Mobile Menu Button -->
+          <button id="mobile-menu-btn" class="md:hidden relative z-30 p-2 text-slate-300 hover:text-white transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+
           <ul class="hidden md:flex items-center justify-center gap-8 text-base font-medium text-slate-200/90">
             <li class="opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu navbar-item" data-reveal data-delay="80"><a class="hover:text-white transition-colors" href="index.html">Home</a></li>
             <li class="opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu navbar-item" data-reveal data-delay="140"><a class="hover:text-white transition-colors text-white" href="leistungen.html">Leistungen</a></li>
             <li class="opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu navbar-item" data-reveal data-delay="200"><a class="hover:text-white transition-colors" href="ueber-mich.html">Über mich</a></li>
             <li class="opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu navbar-item" data-reveal data-delay="260"><a class="hover:text-white transition-colors" href="kontakt.html">Kontakt</a></li>
           </ul>
-          <div class="flex items-center justify-end">
+          <div class="hidden md:flex items-center justify-end">
             <a href="gespraech.html" class="navbar-cta group inline-flex items-center gap-2.5 rounded-full bg-blue-500/12 px-6 py-3 text-base font-medium text-blue-100 drop-shadow-glow ring-1 ring-inset ring-blue-400/20 transform-gpu transition-all duration-300 hover:scale-[1.02] hover:bg-blue-500/25 hover:text-white hover:ring-blue-300/60 hover:shadow-lg hover:shadow-blue-400/30 hover:drop-shadow-[0_0_20px_rgba(59,130,246,0.5)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300/60 animate-[slideIn_0.6s_ease-out_0.32s_both]">
               <span class="relative z-10 transition-transform duration-300">Gespräch vereinbaren</span>
               <svg class="relative z-10 h-4 w-4 transition-all duration-300 group-hover:translate-x-1 group-hover:scale-110" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -92,6 +101,26 @@
           </div>
         </div>
       </nav>
+
+      <!-- Mobile Menu Overlay -->
+      <div id="mobile-menu" class="md:hidden fixed inset-0 z-40 bg-slate-900/95 backdrop-blur-sm opacity-0 invisible transition-all duration-300">
+        <div class="flex flex-col h-full pt-20 px-6">
+          <ul class="space-y-6 text-2xl font-medium text-slate-200">
+            <li><a href="index.html" class="block hover:text-white transition-colors">Home</a></li>
+            <li><a href="leistungen.html" class="block text-white">Leistungen</a></li>
+            <li><a href="ueber-mich.html" class="block hover:text-white transition-colors">Über mich</a></li>
+            <li><a href="kontakt.html" class="block hover:text-white transition-colors">Kontakt</a></li>
+          </ul>
+          <div class="mt-8">
+            <a href="gespraech.html" class="inline-flex w-full items-center justify-center gap-2.5 rounded-xl bg-blue-600 px-6 py-4 text-lg font-medium text-white shadow-lg transition-all duration-300 hover:bg-blue-700 hover:scale-[1.02]">
+              Gespräch vereinbaren
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M13 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
       <div class="h-px w-full bg-white/10"></div>
     </header>
 
@@ -198,99 +227,99 @@
       </div>
 
       <!-- Row 1: links Text, rechts Bild -->
-  <div class="grid gap-16 lg:gap-24 lg:grid-cols-2 items-start mb-8 relative">
+  <div class="grid gap-8 md:gap-16 lg:gap-24 lg:grid-cols-2 items-start mb-8 relative">
         <!-- Vertical divider -->
         <div class="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-slate-300 to-transparent transform -translate-x-1/2 opacity-0 transition-all duration-700 ease-out" data-reveal data-delay="600"></div>
         
-        <div id="was-ist" class="lg:pr-8 opacity-0 translate-x-8 transition-all duration-700 ease-out" data-reveal data-delay="700">
-          <span class="inline-block mb-4 px-5 py-1.5 rounded-full bg-slate-200 text-slate-500 font-semibold text-base">Konzept</span>
-          <h3 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">Was ist Performance Marketing?</h3>
-          <p class="text-xl text-slate-600 mb-6 leading-relaxed">Datengetriebene Werbung, bei der jedes Budget zielgerichtet eingesetzt und laufend optimiert wird. Der Fokus liegt auf klaren Zielen, präzisem Tracking und konsequentem Testing.</p>
+        <div id="was-ist" class="px-4 sm:px-0 lg:pr-8 opacity-0 translate-x-8 transition-all duration-700 ease-out" data-reveal data-delay="700">
+          <span class="inline-block mb-4 px-4 sm:px-5 py-1.5 rounded-full bg-slate-200 text-slate-500 font-semibold text-sm sm:text-base">Konzept</span>
+          <h3 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4 sm:mb-6 leading-tight break-words">Was ist Performance Marketing?</h3>
+          <p class="text-base sm:text-lg md:text-xl text-slate-600 mb-4 sm:mb-6 leading-relaxed">Datengetriebene Werbung, bei der jedes Budget zielgerichtet eingesetzt und laufend optimiert wird. Der Fokus liegt auf klaren Zielen, präzisem Tracking und konsequentem Testing.</p>
           
-          <div class="space-y-4 mb-6">
-            <div class="flex gap-4 items-start">
-              <span class="mt-1 flex-shrink-0 inline-flex h-7 w-7 items-center justify-center rounded-full bg-blue-600 text-white aspect-square">
-                <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="3">
+          <div class="space-y-3 sm:space-y-4 mb-4 sm:mb-6">
+            <div class="flex gap-3 sm:gap-4 items-start">
+              <span class="mt-1 flex-shrink-0 inline-flex h-6 w-6 sm:h-7 sm:w-7 items-center justify-center rounded-full bg-blue-600 text-white aspect-square">
+                <svg viewBox="0 0 24 24" class="h-3 w-3 sm:h-4 sm:w-4" fill="none" stroke="currentColor" stroke-width="3">
                   <path d="M5 13l4 4L19 7"/>
                 </svg>
               </span>
-              <div>
-                <h4 class="font-bold text-slate-900 text-base md:text-lg mb-2">Messbar & zielorientiert</h4>
-                <p class="text-slate-600 text-sm md:text-base">Optimierung auf ROAS, CPL und Conversion‑Rate statt Vanity‑Metriken.</p>
+              <div class="min-w-0 flex-1">
+                <h4 class="font-bold text-slate-900 text-sm sm:text-base md:text-lg mb-1 sm:mb-2 break-words">Messbar & zielorientiert</h4>
+                <p class="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed">Optimierung auf ROAS, CPL und Conversion‑Rate statt Vanity‑Metriken.</p>
               </div>
             </div>
-            <div class="flex gap-4 items-start">
-              <span class="mt-1 flex-shrink-0 inline-flex h-7 w-7 items-center justify-center rounded-full bg-blue-600 text-white aspect-square">
-                <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="3">
+            <div class="flex gap-3 sm:gap-4 items-start">
+              <span class="mt-1 flex-shrink-0 inline-flex h-6 w-6 sm:h-7 sm:w-7 items-center justify-center rounded-full bg-blue-600 text-white aspect-square">
+                <svg viewBox="0 0 24 24" class="h-3 w-3 sm:h-4 sm:w-4" fill="none" stroke="currentColor" stroke-width="3">
                   <path d="M5 13l4 4L19 7"/>
                 </svg>
               </span>
-              <div>
-                <h4 class="font-bold text-slate-900 text-base md:text-lg mb-2">Daten statt Bauchgefühl</h4>
-                <p class="text-slate-600 text-sm md:text-base">Entscheidungen auf Basis von Tests und validen Zahlen.</p>
+              <div class="min-w-0 flex-1">
+                <h4 class="font-bold text-slate-900 text-sm sm:text-base md:text-lg mb-1 sm:mb-2 break-words">Daten statt Bauchgefühl</h4>
+                <p class="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed">Entscheidungen auf Basis von Tests und validen Zahlen.</p>
               </div>
             </div>
-            <div class="flex gap-4 items-start">
-              <span class="mt-1 flex-shrink-0 inline-flex h-7 w-7 items-center justify-center rounded-full bg-blue-600 text-white aspect-square">
-                <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="3">
+            <div class="flex gap-3 sm:gap-4 items-start">
+              <span class="mt-1 flex-shrink-0 inline-flex h-6 w-6 sm:h-7 sm:w-7 items-center justify-center rounded-full bg-blue-600 text-white aspect-square">
+                <svg viewBox="0 0 24 24" class="h-3 w-3 sm:h-4 sm:w-4" fill="none" stroke="currentColor" stroke-width="3">
                   <path d="M5 13l4 4L19 7"/>
                 </svg>
               </span>
-              <div>
-                <h4 class="font-bold text-slate-900 text-base md:text-lg mb-2">Skalierbar & transparent</h4>
-                <p class="text-slate-600 text-sm md:text-base">Jeder Euro ist nachvollziehbar und rechtfertigbar.</p>
+              <div class="min-w-0 flex-1">
+                <h4 class="font-bold text-slate-900 text-sm sm:text-base md:text-lg mb-1 sm:mb-2 break-words">Skalierbar & transparent</h4>
+                <p class="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed">Jeder Euro ist nachvollziehbar und rechtfertigbar.</p>
               </div>
             </div>
           </div>
           
-          <div class="bg-slate-50 border-l-4 border-blue-600 p-4 rounded-r-lg">
-            <p class="text-slate-700 font-bold text-base md:text-lg">Kurz: Testen, messen, skalieren — mit Fokus auf das, was wirklich Wachstum bringt.</p>
+          <div class="bg-slate-50 border-l-4 border-blue-600 p-3 sm:p-4 rounded-r-lg mx-0">
+            <p class="text-slate-700 font-bold text-sm sm:text-base md:text-lg leading-relaxed break-words">Kurz: Testen, messen, skalieren — mit Fokus auf das, was wirklich Wachstum bringt.</p>
           </div>
         </div>
         
-        <div id="leistungen" class="lg:pl-8 opacity-0 -translate-x-8 transition-all duration-700 ease-out" data-reveal data-delay="850">
-          <span class="inline-block mb-4 px-5 py-1.5 rounded-full bg-slate-200 text-slate-500 font-semibold text-base">Umsetzung</span>
-          <h3 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">Was macht Peakmont?</h3>
-          <p class="text-xl text-slate-600 mb-6 leading-relaxed">Wir übernehmen die komplette Performance‑Marketing‑Kette: von Tracking & Setup über Kampagnen‑Management bis zur ROI‑Optimierung.</p>
+        <div id="leistungen" class="px-4 sm:px-0 lg:pl-8 opacity-0 -translate-x-8 transition-all duration-700 ease-out" data-reveal data-delay="850">
+          <span class="inline-block mb-4 px-4 sm:px-5 py-1.5 rounded-full bg-slate-200 text-slate-500 font-semibold text-sm sm:text-base">Umsetzung</span>
+          <h3 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4 sm:mb-6 leading-tight break-words">Was macht Peakmont?</h3>
+          <p class="text-base sm:text-lg md:text-xl text-slate-600 mb-4 sm:mb-6 leading-relaxed">Wir übernehmen die komplette Performance‑Marketing‑Kette: von Tracking & Setup über Kampagnen‑Management bis zur ROI‑Optimierung.</p>
           
-          <div class="space-y-4 mb-6">
-            <div class="flex gap-4 items-start">
-              <span class="mt-1 flex-shrink-0 inline-flex h-7 w-7 items-center justify-center rounded-full bg-blue-600 text-white aspect-square">
-                <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="3">
+          <div class="space-y-3 sm:space-y-4 mb-4 sm:mb-6">
+            <div class="flex gap-3 sm:gap-4 items-start">
+              <span class="mt-1 flex-shrink-0 inline-flex h-6 w-6 sm:h-7 sm:w-7 items-center justify-center rounded-full bg-blue-600 text-white aspect-square">
+                <svg viewBox="0 0 24 24" class="h-3 w-3 sm:h-4 sm:w-4" fill="none" stroke="currentColor" stroke-width="3">
                   <path d="M5 13l4 4L19 7"/>
                 </svg>
               </span>
-              <div>
-                <h4 class="font-bold text-slate-900 text-base md:text-lg mb-2">Google & Microsoft Ads</h4>
-                <p class="text-slate-600 text-sm md:text-base">Search, Shopping, Display & YouTube Kampagnen mit Fokus auf Performance.</p>
+              <div class="min-w-0 flex-1">
+                <h4 class="font-bold text-slate-900 text-sm sm:text-base md:text-lg mb-1 sm:mb-2 break-words">Google & Microsoft Ads</h4>
+                <p class="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed">Search, Shopping, Display & YouTube Kampagnen mit Fokus auf Performance.</p>
               </div>
             </div>
-            <div class="flex gap-4 items-start">
-              <span class="mt-1 flex-shrink-0 inline-flex h-7 w-7 items-center justify-center rounded-full bg-blue-600 text-white aspect-square">
-                <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="3">
+            <div class="flex gap-3 sm:gap-4 items-start">
+              <span class="mt-1 flex-shrink-0 inline-flex h-6 w-6 sm:h-7 sm:w-7 items-center justify-center rounded-full bg-blue-600 text-white aspect-square">
+                <svg viewBox="0 0 24 24" class="h-3 w-3 sm:h-4 sm:w-4" fill="none" stroke="currentColor" stroke-width="3">
                   <path d="M5 13l4 4L19 7"/>
                 </svg>
               </span>
-              <div>
-                <h4 class="font-bold text-slate-900 text-base md:text-lg mb-2">Meta & LinkedIn Ads</h4>
-                <p class="text-slate-600 text-sm md:text-base">Lead‑Gen, Conversion & Retargeting auf Social‑Plattformen.</p>
+              <div class="min-w-0 flex-1">
+                <h4 class="font-bold text-slate-900 text-sm sm:text-base md:text-lg mb-1 sm:mb-2 break-words">Meta & LinkedIn Ads</h4>
+                <p class="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed">Lead‑Gen, Conversion & Retargeting auf Social‑Plattformen.</p>
               </div>
             </div>
-            <div class="flex gap-4 items-start">
-              <span class="mt-1 flex-shrink-0 inline-flex h-7 w-7 items-center justify-center rounded-full bg-blue-600 text-white aspect-square">
-                <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="3">
+            <div class="flex gap-3 sm:gap-4 items-start">
+              <span class="mt-1 flex-shrink-0 inline-flex h-6 w-6 sm:h-7 sm:w-7 items-center justify-center rounded-full bg-blue-600 text-white aspect-square">
+                <svg viewBox="0 0 24 24" class="h-3 w-3 sm:h-4 sm:w-4" fill="none" stroke="currentColor" stroke-width="3">
                   <path d="M5 13l4 4L19 7"/>
                 </svg>
               </span>
-              <div>
-                <h4 class="font-bold text-slate-900 text-base md:text-lg mb-2">Tracking & Analytics</h4>
-                <p class="text-slate-600 text-sm md:text-base">GA4, GTM, Conversion‑APIs für saubere Attribution.</p>
+              <div class="min-w-0 flex-1">
+                <h4 class="font-bold text-slate-900 text-sm sm:text-base md:text-lg mb-1 sm:mb-2 break-words">Tracking & Analytics</h4>
+                <p class="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed">GA4, GTM, Conversion‑APIs für saubere Attribution.</p>
               </div>
             </div>
           </div>
           
-          <div class="bg-slate-50 border-l-4 border-blue-600 p-4 rounded-r-lg">
-            <p class="text-slate-700 font-bold text-base md:text-lg">Starke Creatives + sauberes Tracking + striktes Management = nachhaltige Skalierung.</p>
+          <div class="bg-slate-50 border-l-4 border-blue-600 p-3 sm:p-4 rounded-r-lg mx-0">
+            <p class="text-slate-700 font-bold text-sm sm:text-base md:text-lg leading-relaxed break-words">Starke Creatives + sauberes Tracking + striktes Management = nachhaltige Skalierung.</p>
           </div>
         </div>
       </div>
@@ -351,99 +380,99 @@
       </div>
 
       <!-- Row 1: links Text, rechts Bild -->
-      <div class="grid gap-16 lg:gap-24 lg:grid-cols-2 items-start mb-8 relative">
+      <div class="grid gap-8 md:gap-16 lg:gap-24 lg:grid-cols-2 items-start mb-8 relative">
         <!-- Vertical divider -->
         <div class="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-blue-300/30 to-transparent transform -translate-x-1/2 opacity-0 transition-all duration-700 ease-out" data-reveal data-delay="600"></div>
         
-        <div id="was-ist-social" class="lg:pr-8 opacity-0 translate-x-8 transition-all duration-700 ease-out" data-reveal data-delay="700">
-          <span class="inline-block mb-4 px-5 py-1.5 rounded-full bg-blue-500/15 text-blue-100 font-semibold text-base ring-1 ring-inset ring-blue-400/25">Konzept</span>
-          <h3 class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">Was ist Social Media Management?</h3>
-          <p class="text-xl text-slate-300 mb-6 leading-relaxed">Content-Planung und Community-Building mit klaren Zielen. Content, der Reichweite generiert, Engagement aufbaut und Leads qualifiziert.</p>
+        <div id="was-ist-social" class="px-4 sm:px-0 lg:pr-8 opacity-0 translate-x-8 transition-all duration-700 ease-out" data-reveal data-delay="700">
+          <span class="inline-block mb-4 px-4 sm:px-5 py-1.5 rounded-full bg-blue-500/15 text-blue-100 font-semibold text-sm sm:text-base ring-1 ring-inset ring-blue-400/25">Konzept</span>
+          <h3 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 leading-tight break-words">Was ist Social Media Management?</h3>
+          <p class="text-base sm:text-lg md:text-xl text-slate-300 mb-4 sm:mb-6 leading-relaxed">Content-Planung und Community-Building mit klaren Zielen. Content, der Reichweite generiert, Engagement aufbaut und Leads qualifiziert.</p>
           
-          <div class="space-y-4 mb-6">
-            <div class="flex gap-4 items-start">
-              <span class="mt-1 flex-shrink-0 inline-flex h-7 w-7 items-center justify-center rounded-full bg-blue-600 text-white aspect-square">
-                <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="3">
+          <div class="space-y-3 sm:space-y-4 mb-4 sm:mb-6">
+            <div class="flex gap-3 sm:gap-4 items-start">
+              <span class="mt-1 flex-shrink-0 inline-flex h-6 w-6 sm:h-7 sm:w-7 items-center justify-center rounded-full bg-blue-600 text-white aspect-square">
+                <svg viewBox="0 0 24 24" class="h-3 w-3 sm:h-4 sm:w-4" fill="none" stroke="currentColor" stroke-width="3">
                   <path d="M5 13l4 4L19 7"/>
                 </svg>
               </span>
-              <div>
-                <h4 class="font-bold text-white text-base md:text-lg mb-2">Strategisch & zielgerichtet</h4>
-                <p class="text-slate-300 text-sm md:text-base">Content-Pläne basierend auf Zielgruppen-Insights und Performance-Daten.</p>
+              <div class="min-w-0 flex-1">
+                <h4 class="font-bold text-white text-sm sm:text-base md:text-lg mb-1 sm:mb-2 break-words">Strategisch & zielgerichtet</h4>
+                <p class="text-slate-300 text-xs sm:text-sm md:text-base leading-relaxed">Content-Pläne basierend auf Zielgruppen-Insights und Performance-Daten.</p>
               </div>
             </div>
-            <div class="flex gap-4 items-start">
-              <span class="mt-1 flex-shrink-0 inline-flex h-7 w-7 items-center justify-center rounded-full bg-blue-600 text-white aspect-square">
-                <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="3">
+            <div class="flex gap-3 sm:gap-4 items-start">
+              <span class="mt-1 flex-shrink-0 inline-flex h-6 w-6 sm:h-7 sm:w-7 items-center justify-center rounded-full bg-blue-600 text-white aspect-square">
+                <svg viewBox="0 0 24 24" class="h-3 w-3 sm:h-4 sm:w-4" fill="none" stroke="currentColor" stroke-width="3">
                   <path d="M5 13l4 4L19 7"/>
                 </svg>
               </span>
-              <div>
-                <h4 class="font-bold text-white text-base md:text-lg mb-2">Content mit System</h4>
-                <p class="text-slate-300 text-sm md:text-base">Redaktionspläne, Formate und Posting-Rhythmen für kontinuierliche Präsenz.</p>
+              <div class="min-w-0 flex-1">
+                <h4 class="font-bold text-white text-sm sm:text-base md:text-lg mb-1 sm:mb-2 break-words">Content mit System</h4>
+                <p class="text-slate-300 text-xs sm:text-sm md:text-base leading-relaxed">Redaktionspläne, Formate und Posting-Rhythmen für kontinuierliche Präsenz.</p>
               </div>
             </div>
-            <div class="flex gap-4 items-start">
-              <span class="mt-1 flex-shrink-0 inline-flex h-7 w-7 items-center justify-center rounded-full bg-blue-600 text-white aspect-square">
-                <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="3">
+            <div class="flex gap-3 sm:gap-4 items-start">
+              <span class="mt-1 flex-shrink-0 inline-flex h-6 w-6 sm:h-7 sm:w-7 items-center justify-center rounded-full bg-blue-600 text-white aspect-square">
+                <svg viewBox="0 0 24 24" class="h-3 w-3 sm:h-4 sm:w-4" fill="none" stroke="currentColor" stroke-width="3">
                   <path d="M5 13l4 4L19 7"/>
                 </svg>
               </span>
-              <div>
-                <h4 class="font-bold text-white text-base md:text-lg mb-2">Messbar & optimiert</h4>
-                <p class="text-slate-300 text-sm md:text-base">Performance-Tracking und Content-Optimierung basierend auf Engagement-Daten.</p>
+              <div class="min-w-0 flex-1">
+                <h4 class="font-bold text-white text-sm sm:text-base md:text-lg mb-1 sm:mb-2 break-words">Messbar & optimiert</h4>
+                <p class="text-slate-300 text-xs sm:text-sm md:text-base leading-relaxed">Performance-Tracking und Content-Optimierung basierend auf Engagement-Daten.</p>
               </div>
             </div>
           </div>
           
-          <div class="bg-white/5 border-l-4 border-blue-400/60 p-4 rounded-r-lg">
-            <p class="text-slate-200 font-bold text-base md:text-lg">Kurz: Planen, produzieren, posten — mit Fokus auf Reichweite, Engagement und Leads.</p>
+          <div class="bg-white/5 border-l-4 border-blue-400/60 p-3 sm:p-4 rounded-r-lg mx-0">
+            <p class="text-slate-200 font-bold text-sm sm:text-base md:text-lg leading-relaxed break-words">Kurz: Planen, produzieren, posten — mit Fokus auf Reichweite, Engagement und Leads.</p>
           </div>
         </div>
         
-        <div id="leistungen-social" class="lg:pl-8 opacity-0 -translate-x-8 transition-all duration-700 ease-out" data-reveal data-delay="850">
-          <span class="inline-block mb-4 px-5 py-1.5 rounded-full bg-blue-500/15 text-blue-100 font-semibold text-base ring-1 ring-inset ring-blue-400/25">Umsetzung</span>
-          <h3 class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">Was macht Peakmont?</h3>
-          <p class="text-xl text-slate-300 mb-6 leading-relaxed">Wir übernehmen die komplette Social-Media-Kette: von Content-Strategie über Produktion bis zur Community-Betreuung und Performance-Analyse.</p>
+        <div id="leistungen-social" class="px-4 sm:px-0 lg:pl-8 opacity-0 -translate-x-8 transition-all duration-700 ease-out" data-reveal data-delay="850">
+          <span class="inline-block mb-4 px-4 sm:px-5 py-1.5 rounded-full bg-blue-500/15 text-blue-100 font-semibold text-sm sm:text-base ring-1 ring-inset ring-blue-400/25">Umsetzung</span>
+          <h3 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 leading-tight break-words">Was macht Peakmont?</h3>
+          <p class="text-base sm:text-lg md:text-xl text-slate-300 mb-4 sm:mb-6 leading-relaxed">Wir übernehmen die komplette Social-Media-Kette: von Content-Strategie über Produktion bis zur Community-Betreuung und Performance-Analyse.</p>
           
-          <div class="space-y-4 mb-6">
-            <div class="flex gap-4 items-start">
-              <span class="mt-1 flex-shrink-0 inline-flex h-7 w-7 items-center justify-center rounded-full bg-blue-600 text-white aspect-square">
-                <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="3">
+          <div class="space-y-3 sm:space-y-4 mb-4 sm:mb-6">
+            <div class="flex gap-3 sm:gap-4 items-start">
+              <span class="mt-1 flex-shrink-0 inline-flex h-6 w-6 sm:h-7 sm:w-7 items-center justify-center rounded-full bg-blue-600 text-white aspect-square">
+                <svg viewBox="0 0 24 24" class="h-3 w-3 sm:h-4 sm:w-4" fill="none" stroke="currentColor" stroke-width="3">
                   <path d="M5 13l4 4L19 7"/>
                 </svg>
               </span>
-              <div>
-                <h4 class="font-bold text-white text-base md:text-lg mb-2">Content-Strategie & Planung</h4>
-                <p class="text-slate-300 text-sm md:text-base">Redaktionspläne, Formate (Feed, Stories, Reels) und Content-Kalender.</p>
+              <div class="min-w-0 flex-1">
+                <h4 class="font-bold text-white text-sm sm:text-base md:text-lg mb-1 sm:mb-2 break-words">Content-Strategie & Planung</h4>
+                <p class="text-slate-300 text-xs sm:text-sm md:text-base leading-relaxed">Redaktionspläne, Formate (Feed, Stories, Reels) und Content-Kalender.</p>
               </div>
             </div>
-            <div class="flex gap-4 items-start">
-              <span class="mt-1 flex-shrink-0 inline-flex h-7 w-7 items-center justify-center rounded-full bg-blue-600 text-white aspect-square">
-                <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="3">
+            <div class="flex gap-3 sm:gap-4 items-start">
+              <span class="mt-1 flex-shrink-0 inline-flex h-6 w-6 sm:h-7 sm:w-7 items-center justify-center rounded-full bg-blue-600 text-white aspect-square">
+                <svg viewBox="0 0 24 24" class="h-3 w-3 sm:h-4 sm:w-4" fill="none" stroke="currentColor" stroke-width="3">
                   <path d="M5 13l4 4L19 7"/>
                 </svg>
               </span>
-              <div>
-                <h4 class="font-bold text-white text-base md:text-lg mb-2">Produktion & Posting</h4>
-                <p class="text-slate-300 text-sm md:text-base">Content-Erstellung, Grafiken, Videos und automatisiertes Publishing.</p>
+              <div class="min-w-0 flex-1">
+                <h4 class="font-bold text-white text-sm sm:text-base md:text-lg mb-1 sm:mb-2 break-words">Produktion & Posting</h4>
+                <p class="text-slate-300 text-xs sm:text-sm md:text-base leading-relaxed">Content-Erstellung, Grafiken, Videos und automatisiertes Publishing.</p>
               </div>
             </div>
-            <div class="flex gap-4 items-start">
-              <span class="mt-1 flex-shrink-0 inline-flex h-7 w-7 items-center justify-center rounded-full bg-blue-600 text-white aspect-square">
-                <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="3">
+            <div class="flex gap-3 sm:gap-4 items-start">
+              <span class="mt-1 flex-shrink-0 inline-flex h-6 w-6 sm:h-7 sm:w-7 items-center justify-center rounded-full bg-blue-600 text-white aspect-square">
+                <svg viewBox="0 0 24 24" class="h-3 w-3 sm:h-4 sm:w-4" fill="none" stroke="currentColor" stroke-width="3">
                   <path d="M5 13l4 4L19 7"/>
                 </svg>
               </span>
-              <div>
-                <h4 class="font-bold text-white text-base md:text-lg mb-2">Community & Analytics</h4>
-                <p class="text-slate-300 text-sm md:text-base">Community-Management, Engagement-Optimierung und Performance-Reporting.</p>
+              <div class="min-w-0 flex-1">
+                <h4 class="font-bold text-white text-sm sm:text-base md:text-lg mb-1 sm:mb-2 break-words">Community & Analytics</h4>
+                <p class="text-slate-300 text-xs sm:text-sm md:text-base leading-relaxed">Community-Management, Engagement-Optimierung und Performance-Reporting.</p>
               </div>
             </div>
           </div>
           
-          <div class="bg-white/5 border-l-4 border-blue-400/60 p-4 rounded-r-lg">
-            <p class="text-slate-200 font-bold text-base md:text-lg">Starke Inhalte + konsistente Präsenz + aktive Community = nachhaltige Reichweite.</p>
+          <div class="bg-white/5 border-l-4 border-blue-400/60 p-3 sm:p-4 rounded-r-lg mx-0">
+            <p class="text-slate-200 font-bold text-sm sm:text-base md:text-lg leading-relaxed break-words">Starke Inhalte + konsistente Präsenz + aktive Community = nachhaltige Reichweite.</p>
           </div>
         </div>
       </div>
@@ -502,99 +531,99 @@
       </div>
 
       <!-- Row 1: links Text, rechts Bild -->
-      <div class="grid gap-16 lg:gap-24 lg:grid-cols-2 items-start mb-8 relative">
+      <div class="grid gap-8 md:gap-16 lg:gap-24 lg:grid-cols-2 items-start mb-8 relative">
         <!-- Vertical divider -->
         <div class="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-slate-300 to-transparent transform -translate-x-1/2 opacity-0 transition-all duration-700 ease-out" data-reveal data-delay="600"></div>
         
-        <div class="lg:pr-8 opacity-0 translate-x-8 transition-all duration-700 ease-out" data-reveal data-delay="700">
-          <span class="inline-block mb-4 px-5 py-1.5 rounded-full bg-slate-200 text-slate-500 font-semibold text-base">Konzept</span>
-          <h3 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">Was ist Automation & Strategie?</h3>
-          <p class="text-xl text-slate-600 mb-6 leading-relaxed">Intelligente Workflows und strategische Prozesse, die Leads automatisch qualifizieren, nurturing betreiben und den gesamten Funnel optimieren. Fokus auf Skalierung ohne proportionalen Mehraufwand.</p>
+        <div class="px-4 sm:px-0 lg:pr-8 opacity-0 translate-x-8 transition-all duration-700 ease-out" data-reveal data-delay="700">
+          <span class="inline-block mb-4 px-4 sm:px-5 py-1.5 rounded-full bg-slate-200 text-slate-500 font-semibold text-sm sm:text-base">Konzept</span>
+          <h3 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4 sm:mb-6 leading-tight break-words">Was ist Automation & Strategie?</h3>
+          <p class="text-base sm:text-lg md:text-xl text-slate-600 mb-4 sm:mb-6 leading-relaxed">Intelligente Workflows und strategische Prozesse, die Leads automatisch qualifizieren, nurturing betreiben und den gesamten Funnel optimieren. Fokus auf Skalierung ohne proportionalen Mehraufwand.</p>
           
-          <div class="space-y-4 mb-6">
-            <div class="flex gap-4 items-start">
-              <span class="mt-1 flex-shrink-0 inline-flex h-7 w-7 items-center justify-center rounded-full bg-blue-600 text-white aspect-square">
-                <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="3">
+          <div class="space-y-3 sm:space-y-4 mb-4 sm:mb-6">
+            <div class="flex gap-3 sm:gap-4 items-start">
+              <span class="mt-1 flex-shrink-0 inline-flex h-6 w-6 sm:h-7 sm:w-7 items-center justify-center rounded-full bg-blue-600 text-white aspect-square">
+                <svg viewBox="0 0 24 24" class="h-3 w-3 sm:h-4 sm:w-4" fill="none" stroke="currentColor" stroke-width="3">
                   <path d="M5 13l4 4L19 7"/>
                 </svg>
               </span>
-              <div>
-                <h4 class="font-bold text-slate-900 text-base md:text-lg mb-2">Automatisierte Workflows</h4>
-                <p class="text-slate-600 text-sm md:text-base">CRM-Integration, Lead-Scoring und intelligente Nachfass-Sequenzen.</p>
+              <div class="min-w-0 flex-1">
+                <h4 class="font-bold text-slate-900 text-sm sm:text-base md:text-lg mb-1 sm:mb-2 break-words">Automatisierte Workflows</h4>
+                <p class="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed">CRM-Integration, Lead-Scoring und intelligente Nachfass-Sequenzen.</p>
               </div>
             </div>
-            <div class="flex gap-4 items-start">
-              <span class="mt-1 flex-shrink-0 inline-flex h-7 w-7 items-center justify-center rounded-full bg-blue-600 text-white aspect-square">
-                <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="3">
+            <div class="flex gap-3 sm:gap-4 items-start">
+              <span class="mt-1 flex-shrink-0 inline-flex h-6 w-6 sm:h-7 sm:w-7 items-center justify-center rounded-full bg-blue-600 text-white aspect-square">
+                <svg viewBox="0 0 24 24" class="h-3 w-3 sm:h-4 sm:w-4" fill="none" stroke="currentColor" stroke-width="3">
                   <path d="M5 13l4 4L19 7"/>
                 </svg>
               </span>
-              <div>
-                <h4 class="font-bold text-slate-900 text-base md:text-lg mb-2">Datenbasierte Strategien</h4>
-                <p class="text-slate-600 text-sm md:text-base">Funnel-Analyse, Attribution und strategische Optimierung auf Basis echter Zahlen.</p>
+              <div class="min-w-0 flex-1">
+                <h4 class="font-bold text-slate-900 text-sm sm:text-base md:text-lg mb-1 sm:mb-2 break-words">Datenbasierte Strategien</h4>
+                <p class="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed">Funnel-Analyse, Attribution und strategische Optimierung auf Basis echter Zahlen.</p>
               </div>
             </div>
-            <div class="flex gap-4 items-start">
-              <span class="mt-1 flex-shrink-0 inline-flex h-7 w-7 items-center justify-center rounded-full bg-blue-600 text-white aspect-square">
-                <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="3">
+            <div class="flex gap-3 sm:gap-4 items-start">
+              <span class="mt-1 flex-shrink-0 inline-flex h-6 w-6 sm:h-7 sm:w-7 items-center justify-center rounded-full bg-blue-600 text-white aspect-square">
+                <svg viewBox="0 0 24 24" class="h-3 w-3 sm:h-4 sm:w-4" fill="none" stroke="currentColor" stroke-width="3">
                   <path d="M5 13l4 4L19 7"/>
                 </svg>
               </span>
-              <div>
-                <h4 class="font-bold text-slate-900 text-base md:text-lg mb-2">Skalierbare Prozesse</h4>
-                <p class="text-slate-600 text-sm md:text-base">Workflows, die ohne manuellen Aufwand wachsen können.</p>
+              <div class="min-w-0 flex-1">
+                <h4 class="font-bold text-slate-900 text-sm sm:text-base md:text-lg mb-1 sm:mb-2 break-words">Skalierbare Prozesse</h4>
+                <p class="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed">Workflows, die ohne manuellen Aufwand wachsen können.</p>
               </div>
             </div>
           </div>
           
-          <div class="bg-slate-50 border-l-4 border-blue-600 p-4 rounded-r-lg">
-            <p class="text-slate-700 font-bold text-base md:text-lg">Kurz: Einmal aufsetzen, kontinuierlich optimieren — Systeme, die für Sie arbeiten.</p>
+          <div class="bg-slate-50 border-l-4 border-blue-600 p-3 sm:p-4 rounded-r-lg mx-0">
+            <p class="text-slate-700 font-bold text-sm sm:text-base md:text-lg leading-relaxed break-words">Kurz: Einmal aufsetzen, kontinuierlich optimieren — Systeme, die für Sie arbeiten.</p>
           </div>
         </div>
         
-        <div class="lg:pl-8 opacity-0 translate-x-8 transition-all duration-700 ease-out" data-reveal data-delay="850">
-          <span class="inline-block mb-4 px-5 py-1.5 rounded-full bg-slate-200 text-slate-500 font-semibold text-base">Umsetzung</span>
-          <h3 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">Was macht Peakmont?</h3>
-          <p class="text-xl text-slate-600 mb-6 leading-relaxed">Wir entwickeln und implementieren maßgeschneiderte Automatisierungen und strategische Frameworks für nachhaltiges, skalierbares Wachstum.</p>
+        <div class="px-4 sm:px-0 lg:pl-8 opacity-0 translate-x-8 transition-all duration-700 ease-out" data-reveal data-delay="850">
+          <span class="inline-block mb-4 px-4 sm:px-5 py-1.5 rounded-full bg-slate-200 text-slate-500 font-semibold text-sm sm:text-base">Umsetzung</span>
+          <h3 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4 sm:mb-6 leading-tight break-words">Was macht Peakmont?</h3>
+          <p class="text-base sm:text-lg md:text-xl text-slate-600 mb-4 sm:mb-6 leading-relaxed">Wir entwickeln und implementieren maßgeschneiderte Automatisierungen und strategische Frameworks für nachhaltiges, skalierbares Wachstum.</p>
           
-          <div class="space-y-4 mb-6">
-            <div class="flex gap-4 items-start">
-              <span class="mt-1 flex-shrink-0 inline-flex h-7 w-7 items-center justify-center rounded-full bg-blue-600 text-white aspect-square">
-                <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="3">
+          <div class="space-y-3 sm:space-y-4 mb-4 sm:mb-6">
+            <div class="flex gap-3 sm:gap-4 items-start">
+              <span class="mt-1 flex-shrink-0 inline-flex h-6 w-6 sm:h-7 sm:w-7 items-center justify-center rounded-full bg-blue-600 text-white aspect-square">
+                <svg viewBox="0 0 24 24" class="h-3 w-3 sm:h-4 sm:w-4" fill="none" stroke="currentColor" stroke-width="3">
                   <path d="M5 13l4 4L19 7"/>
                 </svg>
               </span>
-              <div>
-                <h4 class="font-bold text-slate-900 text-base md:text-lg mb-2">CRM & Lead-Nurturing</h4>
-                <p class="text-slate-600 text-sm md:text-base">Automatisierte E-Mail-Sequenzen, Lead-Scoring und Qualifizierungs-Workflows.</p>
+              <div class="min-w-0 flex-1">
+                <h4 class="font-bold text-slate-900 text-sm sm:text-base md:text-lg mb-1 sm:mb-2 break-words">CRM & Lead-Nurturing</h4>
+                <p class="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed">Automatisierte E-Mail-Sequenzen, Lead-Scoring und Qualifizierungs-Workflows.</p>
               </div>
             </div>
-            <div class="flex gap-4 items-start">
-              <span class="mt-1 flex-shrink-0 inline-flex h-7 w-7 items-center justify-center rounded-full bg-blue-600 text-white aspect-square">
-                <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="3">
+            <div class="flex gap-3 sm:gap-4 items-start">
+              <span class="mt-1 flex-shrink-0 inline-flex h-6 w-6 sm:h-7 sm:w-7 items-center justify-center rounded-full bg-blue-600 text-white aspect-square">
+                <svg viewBox="0 0 24 24" class="h-3 w-3 sm:h-4 sm:w-4" fill="none" stroke="currentColor" stroke-width="3">
                   <path d="M5 13l4 4L19 7"/>
                 </svg>
               </span>
-              <div>
-                <h4 class="font-bold text-slate-900 text-base md:text-lg mb-2">Zapier & Make Automationen</h4>
-                <p class="text-slate-600 text-sm md:text-base">Tool-Integration und Daten-Synchronisation zwischen Systemen.</p>
+              <div class="min-w-0 flex-1">
+                <h4 class="font-bold text-slate-900 text-sm sm:text-base md:text-lg mb-1 sm:mb-2 break-words">Zapier & Make Automationen</h4>
+                <p class="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed">Tool-Integration und Daten-Synchronisation zwischen Systemen.</p>
               </div>
             </div>
-            <div class="flex gap-4 items-start">
-              <span class="mt-1 flex-shrink-0 inline-flex h-7 w-7 items-center justify-center rounded-full bg-blue-600 text-white aspect-square">
-                <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="3">
+            <div class="flex gap-3 sm:gap-4 items-start">
+              <span class="mt-1 flex-shrink-0 inline-flex h-6 w-6 sm:h-7 sm:w-7 items-center justify-center rounded-full bg-blue-600 text-white aspect-square">
+                <svg viewBox="0 0 24 24" class="h-3 w-3 sm:h-4 sm:w-4" fill="none" stroke="currentColor" stroke-width="3">
                   <path d="M5 13l4 4L19 7"/>
                 </svg>
               </span>
-              <div>
-                <h4 class="font-bold text-slate-900 text-base md:text-lg mb-2">Attribution & Funnel-Analyse</h4>
-                <p class="text-slate-600 text-sm md:text-base">Tracking-Setup, Datenanalyse und strategische Optimierung.</p>
+              <div class="min-w-0 flex-1">
+                <h4 class="font-bold text-slate-900 text-sm sm:text-base md:text-lg mb-1 sm:mb-2 break-words">Attribution & Funnel-Analyse</h4>
+                <p class="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed">Tracking-Setup, Datenanalyse und strategische Optimierung.</p>
               </div>
             </div>
           </div>
           
-          <div class="bg-slate-50 border-l-4 border-blue-600 p-4 rounded-r-lg">
-            <p class="text-slate-700 font-bold text-base md:text-lg">Intelligente Systeme + strategische Analyse + kontinuierliche Optimierung = nachhaltiges Wachstum.</p>
+          <div class="bg-slate-50 border-l-4 border-blue-600 p-3 sm:p-4 rounded-r-lg mx-0">
+            <p class="text-slate-700 font-bold text-sm sm:text-base md:text-lg leading-relaxed break-words">Intelligente Systeme + strategische Analyse + kontinuierliche Optimierung = nachhaltiges Wachstum.</p>
           </div>
         </div>
       </div>
@@ -807,6 +836,55 @@
     }, { threshold: 0.12 });
     els.forEach((el) => io.observe(el));
   })();
+
+  // Mobile Menu Script
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+    
+    let isMenuOpen = false;
+    
+    function toggleMenu() {
+      isMenuOpen = !isMenuOpen;
+      
+      if (isMenuOpen) {
+        mobileMenu.classList.remove('opacity-0', 'invisible');
+        mobileMenu.classList.add('opacity-100', 'visible');
+        document.body.style.overflow = 'hidden';
+        
+        mobileMenuBtn.innerHTML = `
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        `;
+      } else {
+        mobileMenu.classList.add('opacity-0', 'invisible');
+        mobileMenu.classList.remove('opacity-100', 'visible');
+        document.body.style.overflow = '';
+        
+        mobileMenuBtn.innerHTML = `
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        `;
+      }
+    }
+    
+    mobileMenuBtn.addEventListener('click', toggleMenu);
+    
+    mobileMenuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (isMenuOpen) toggleMenu();
+      });
+    });
+    
+    mobileMenu.addEventListener('click', (e) => {
+      if (e.target === mobileMenu) {
+        toggleMenu();
+      }
+    });
+  });
   </script>
 </body>
 </html>

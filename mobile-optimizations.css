@@ -1,0 +1,126 @@
+/* Mobile Optimierung für alle Seiten */
+
+/* Touch-friendly buttons */
+@media (max-width: 768px) {
+  button, .btn, a[class*="btn"] {
+    min-height: 48px;
+    min-width: 48px;
+  }
+  
+  /* Bessere Touch-Targets für Links */
+  nav a, .navbar a {
+    padding: 8px 12px;
+    margin: 2px 0;
+  }
+  
+  /* Mobile Typography */
+  h1 { font-size: 2rem !important; line-height: 1.2; }
+  h2 { font-size: 1.75rem !important; line-height: 1.3; }
+  h3 { font-size: 1.5rem !important; line-height: 1.4; }
+  
+  /* Hero Logo Section Mobile */
+  .hero [data-reveal*="320"] {
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+  
+  .hero [data-reveal*="320"] img {
+    max-height: 48px;
+    width: auto;
+  }
+  
+  /* Mobile Spacing */
+  .section { padding: 3rem 1rem; }
+  .container { padding-left: 1rem; padding-right: 1rem; }
+  
+  /* Form Optimierung */
+  input, textarea, select {
+    font-size: 16px; /* Verhindert Zoom auf iOS */
+    padding: 12px 16px;
+  }
+  
+  /* Card Spacing */
+  .card, .service-card { margin-bottom: 1.5rem; }
+  
+  /* Hero Section Mobile */
+  .hero { 
+    min-height: 70vh;
+    padding: 2rem 1rem;
+  }
+  
+  /* Navigation Mobile */
+  .mobile-menu-open {
+    overflow: hidden;
+  }
+  
+  /* Footer Mobile */
+  .footer {
+    text-align: center;
+  }
+  
+  .footer .grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  /* Progress Bar Mobile */
+  .progress-labels {
+    font-size: 0.75rem;
+  }
+  
+  /* CTA Buttons Mobile */
+  .cta-button {
+    width: 100%;
+    text-align: center;
+    padding: 16px 24px;
+  }
+}
+
+/* Sehr kleine Bildschirme */
+@media (max-width: 480px) {
+  h1 { font-size: 1.75rem !important; }
+  h2 { font-size: 1.5rem !important; }
+  
+  .px-6 { padding-left: 1rem; padding-right: 1rem; }
+  .py-12 { padding-top: 2rem; padding-bottom: 2rem; }
+  .py-24 { padding-top: 3rem; padding-bottom: 3rem; }
+  
+  /* Form Steps Mobile */
+  .form-step input,
+  .form-step textarea {
+    margin-bottom: 1rem;
+  }
+  
+  .form-navigation {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .form-navigation button {
+    width: 100%;
+  }
+}
+
+/* Landscape Mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .hero {
+    min-height: 50vh;
+    padding: 1rem;
+  }
+  
+  .mobile-menu {
+    padding-top: 10vh;
+  }
+}
+
+/* Focus States für Accessibility */
+@media (max-width: 768px) {
+  button:focus,
+  input:focus,
+  textarea:focus,
+  select:focus,
+  a:focus {
+    outline: 2px solid #3B82F6;
+    outline-offset: 2px;
+  }
+}
