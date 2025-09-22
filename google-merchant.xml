@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:g="http://base.google.com/ns/1.0">
+<channel>
+<title>Peakmont Performance Marketing</title>
+<link>http://peakmont.vereins-web.de</link>
+<description>Performance Marketing Agentur für messbare Ergebnisse</description>
+
+<item>
+<g:id>peakmont-performance-marketing</g:id>
+<g:title>Peakmont Performance Marketing</g:title>
+<g:description>Performance Marketing Agentur im Saarland. Spezialisiert auf Facebook Ads, Instagram Ads, TikTok Ads und Lead Generation. Messbare Ergebnisse für Unternehmen.</g:description>
+<g:link>http://peakmont.vereins-web.de</g:link>
+<g:image_link>http://peakmont.vereins-web.de/Bilder/portrait-niklas-lombardozzi.jpg</g:image_link>
+<g:condition>new</g:condition>
+<g:availability>in stock</g:availability>
+<g:price>500 EUR</g:price>
+<g:brand>Peakmont</g:brand>
+<g:mpn>PMK-001</g:mpn>
+<g:product_type>Marketing Services > Performance Marketing > Social Media Marketing</g:product_type>
+<g:google_product_category>Business &amp; Industrial > Advertising &amp; Marketing</g:google_product_category>
+</item>
+
+</channel>
+</rss>

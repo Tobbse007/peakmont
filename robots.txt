@@ -1,19 +1,48 @@
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://peakmont.de/sitemap.xml
+# Wichtige Seiten für Crawling
+Allow: /index.html
+Allow: /leistungen
+Allow: /ueber-mich
+Allow: /kontakt
+Allow: /gespraech
+Allow: /niklas-ganz
+Allow: /performance-marketing-saarland
+Allow: /impressum
+Allow: /datenschutz
 
-# Crawl delay (optional)
+# Sitemap
+Sitemap: http://peakmont.vereins-web.de/sitemap.xml
+
+# Crawl-Delay für bessere Server-Performance
 Crawl-delay: 1
 
-# Specific rules for search engines
+# Spezifische Bot-Anweisungen
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 1
 
-# Block access to specific files/folders if needed
-# Disallow: /private/
-# Disallow: /admin/
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+# Blockiere Admin/Backend Bereiche (falls vorhanden)
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /login/
+Disallow: /dashboard/
+Disallow: /.env
+Disallow: /config/
+Disallow: /phpmailer/
+
+# Temporäre/Test-Dateien
+Disallow: /test/
+Disallow: /tmp/
+Disallow: /_test/

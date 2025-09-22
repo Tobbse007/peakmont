@@ -15,22 +15,22 @@
   <meta property="og:title" content="Performance Marketing Leistungen — Peakmont" />
   <meta property="og:description" content="Professionelle Performance Marketing Services: Social Media Ads, Conversion Optimierung und Marketing Automation für messbare Ergebnisse." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://peakmont.de/leistungen.html" />
-  <meta property="og:image" content="https://peakmont.de/Bilder/Gravitas-Invest-Logo-Side.png" />
+  <meta property="og:url" content="http://peakmont.vereins-web.de/leistungen" />
+  <meta property="og:image" content="http://peakmont.vereins-web.de/Bilder/Gravitas-Invest-Logo-Side.png" />
   <meta property="og:site_name" content="Peakmont" />
   
   <!-- Twitter Card Meta Tags -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Performance Marketing Leistungen — Peakmont" />
   <meta name="twitter:description" content="Professionelle Performance Marketing Services für messbare Ergebnisse." />
-  <meta name="twitter:image" content="https://peakmont.de/Bilder/Gravitas-Invest-Logo-Side.png" />
+  <meta name="twitter:image" content="http://peakmont.vereins-web.de/Bilder/Gravitas-Invest-Logo-Side.png" />
   
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%234F46E5'><path d='M6 4h7a5 5 0 1 1 0 10H9v6H6V4z'/></svg>" />
   
   <!-- Canonical URL -->
-  <link rel="canonical" href="https://peakmont.de/leistungen.html" />
+  <link rel="canonical" href="http://peakmont.vereins-web.de/leistungen" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -63,6 +63,18 @@
         linear-gradient(180deg, #0A0E1A 0%, #0A1120 45%, #080C18 100%);
     }
     .noise::after { content: ""; position: absolute; inset: 0; pointer-events: none; mix-blend-mode: overlay; background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="140" height="140" viewBox="0 0 140 140"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23n)" opacity="0.025"/></svg>'); }
+    
+    /* Mobile-spezifische Titel-Größen */
+    @media (max-width: 767px) {
+      .mobile-title-large {
+        font-size: 3.2rem !important; /* Größer auf Mobile */
+        line-height: 1.1 !important;
+      }
+      .mobile-title-medium {
+        font-size: 2.8rem !important; /* Etwas kleiner für Übersicht-Titel */
+        line-height: 1.1 !important;
+      }
+    }
   </style>
 </head>
 <body class="font-sans text-slate-900 bg-white selection:bg-blue-500/30 selection:text-white overflow-x-hidden">
@@ -70,7 +82,7 @@
     <header class="relative z-20">
       <nav class="mx-auto max-w-7xl px-6 py-5">
         <div class="flex items-center justify-between md:grid md:grid-cols-3">
-          <a href="index.html" class="navbar-logo flex items-center gap-3 opacity-0 transition-opacity text-white">
+          <a href="/" class="navbar-logo flex items-center gap-3 opacity-0 transition-opacity text-white">
             <span class="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-blue-500/15 ring-1 ring-inset ring-blue-400/25 drop-shadow-glow">
               <svg viewBox="0 0 24 24" class="h-5 w-5 text-blue-300" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 4h7a5 5 0 1 1 0 10H9v6H6V4z" /></svg>
             </span>
@@ -78,20 +90,20 @@
           </a>
 
           <!-- Mobile Menu Button -->
-          <button id="mobile-menu-btn" class="md:hidden relative z-30 p-2 text-slate-300 hover:text-white transition-colors">
+          <button id="mobile-menu-btn" class="md:hidden relative z-50 p-2 text-slate-300 hover:text-white transition-colors">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
           </button>
 
           <ul class="hidden md:flex items-center justify-center gap-8 text-base font-medium text-slate-200/90">
-            <li class="opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu navbar-item" data-reveal data-delay="80"><a class="hover:text-white transition-colors" href="index.html">Home</a></li>
-            <li class="opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu navbar-item" data-reveal data-delay="140"><a class="hover:text-white transition-colors text-white" href="leistungen.html">Leistungen</a></li>
-            <li class="opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu navbar-item" data-reveal data-delay="200"><a class="hover:text-white transition-colors" href="ueber-mich.html">Über mich</a></li>
-            <li class="opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu navbar-item" data-reveal data-delay="260"><a class="hover:text-white transition-colors" href="kontakt.html">Kontakt</a></li>
+            <li class="opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu navbar-item" data-reveal data-delay="80"><a class="hover:text-white transition-colors" href="/">Home</a></li>
+            <li class="opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu navbar-item" data-reveal data-delay="140"><a class="hover:text-white transition-colors text-white" href="leistungen">Leistungen</a></li>
+            <li class="opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu navbar-item" data-reveal data-delay="200"><a class="hover:text-white transition-colors" href="ueber-mich">Über mich</a></li>
+            <li class="opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu navbar-item" data-reveal data-delay="260"><a class="hover:text-white transition-colors" href="kontakt">Kontakt</a></li>
           </ul>
           <div class="hidden md:flex items-center justify-end">
-            <a href="gespraech.html" class="navbar-cta group inline-flex items-center gap-2.5 rounded-full bg-blue-500/12 px-6 py-3 text-base font-medium text-blue-100 drop-shadow-glow ring-1 ring-inset ring-blue-400/20 transform-gpu transition-all duration-300 hover:scale-[1.02] hover:bg-blue-500/25 hover:text-white hover:ring-blue-300/60 hover:shadow-lg hover:shadow-blue-400/30 hover:drop-shadow-[0_0_20px_rgba(59,130,246,0.5)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300/60 animate-[slideIn_0.6s_ease-out_0.32s_both]">
+            <a href="gespraech" class="navbar-cta group inline-flex items-center gap-2.5 rounded-full bg-blue-500/12 px-6 py-3 text-base font-medium text-blue-100 drop-shadow-glow ring-1 ring-inset ring-blue-400/20 transform-gpu transition-all duration-300 hover:scale-[1.02] hover:bg-blue-500/25 hover:text-white hover:ring-blue-300/60 hover:shadow-lg hover:shadow-blue-400/30 hover:drop-shadow-[0_0_20px_rgba(59,130,246,0.5)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300/60 animate-[slideIn_0.6s_ease-out_0.32s_both]">
               <span class="relative z-10 transition-transform duration-300">Gespräch vereinbaren</span>
               <svg class="relative z-10 h-4 w-4 transition-all duration-300 group-hover:translate-x-1 group-hover:scale-110" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M5 12h14M13 5l7 7-7 7" />
@@ -104,15 +116,15 @@
 
       <!-- Mobile Menu Overlay -->
       <div id="mobile-menu" class="md:hidden fixed inset-0 z-40 bg-slate-900/95 backdrop-blur-sm opacity-0 invisible transition-all duration-300">
-        <div class="flex flex-col h-full pt-20 px-6">
+        <div class="flex flex-col h-full pt-20 px-6 relative">
           <ul class="space-y-6 text-2xl font-medium text-slate-200">
-            <li><a href="index.html" class="block hover:text-white transition-colors">Home</a></li>
-            <li><a href="leistungen.html" class="block text-white">Leistungen</a></li>
-            <li><a href="ueber-mich.html" class="block hover:text-white transition-colors">Über mich</a></li>
-            <li><a href="kontakt.html" class="block hover:text-white transition-colors">Kontakt</a></li>
+            <li><a href="/" class="block hover:text-white transition-colors">Home</a></li>
+            <li><a href="leistungen" class="block text-white">Leistungen</a></li>
+            <li><a href="ueber-mich" class="block hover:text-white transition-colors">Über mich</a></li>
+            <li><a href="kontakt" class="block hover:text-white transition-colors">Kontakt</a></li>
           </ul>
           <div class="mt-8">
-            <a href="gespraech.html" class="inline-flex w-full items-center justify-center gap-2.5 rounded-xl bg-blue-600 px-6 py-4 text-lg font-medium text-white shadow-lg transition-all duration-300 hover:bg-blue-700 hover:scale-[1.02]">
+            <a href="gespraech" class="inline-flex w-full items-center justify-center gap-2.5 rounded-xl bg-blue-600 px-6 py-4 text-lg font-medium text-white shadow-lg transition-all duration-300 hover:bg-blue-700 hover:scale-[1.02]">
               Gespräch vereinbaren
               <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M5 12h14M13 5l7 7-7 7" />
@@ -129,8 +141,8 @@
       <div class="mx-auto max-w-7xl px-6">
         <div class="min-h-[50vh] flex items-center justify-center text-center py-12">
           <div>
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight opacity-0 translate-y-2 blur-sm transition-all will-change-transform" data-reveal data-delay="400">Leistungen</h1>
-            <p class="mt-4 text-lg md:text-xl text-slate-300 max-w-3xl mx-auto opacity-0 translate-y-2 blur-sm transition-all will-change-transform" data-reveal data-delay="500">Performance Marketing, Social Media, Automation & Strategie – transparent, messbar, skalierbar.</p>
+            <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight opacity-0 translate-y-2 blur-sm transition-all will-change-transform" data-reveal data-delay="100">Leistungen</h1>
+            <p class="mt-4 text-lg md:text-xl text-slate-300 max-w-3xl mx-auto opacity-0 translate-y-2 blur-sm transition-all will-change-transform" data-reveal data-delay="150">Performance Marketing, Social Media, Automation & Strategie – transparent, messbar, skalierbar.</p>
           </div>
         </div>
       </div>
@@ -141,14 +153,13 @@
   <section id="uebersicht" class="bg-slate-50 text-slate-900" aria-labelledby="kernleistungen-title">
     <div class="mx-auto max-w-7xl px-6 py-24 md:py-32">
       <div class="max-w-4xl mx-auto text-center">
-        <span class="inline-block mb-4 px-5 py-1.5 rounded-full bg-slate-200 text-slate-500 font-semibold text-base opacity-0 translate-y-2 blur-sm transition-all duration-1000 ease-out will-change-transform transform-gpu" data-reveal data-delay="0">Unsere Leistungsübersicht</span>
-        <h2 id="kernleistungen-title" class="text-4xl md:text-5xl font-extrabold tracking-tight opacity-0 translate-y-2 blur-sm transition-all duration-1000 ease-out will-change-transform transform-gpu" data-reveal data-delay="150">Drei Säulen für nachhaltiges Wachstum</h2>
-        <p class="mt-6 text-lg md:text-xl text-slate-600 opacity-0 translate-y-2 blur-sm transition-all duration-1000 ease-out will-change-transform transform-gpu" data-reveal data-delay="300">Von der ersten Kampagne bis zur skalierten Marke — wir decken alle Bereiche ab, die für planbaren Erfolg entscheidend sind. <strong>Klicken Sie auf "Mehr erfahren"</strong> für detaillierte Informationen zu jeder Leistung.</p>
+        <span class="inline-block mb-4 px-5 py-1.5 rounded-full bg-slate-200 text-slate-500 font-semibold text-base opacity-0 translate-y-2 blur-sm transition-all duration-1000 ease-out will-change-transform transform-gpu" data-reveal data-delay="0">Leistungsportfolio</span>
+        <h2 id="kernleistungen-title" class="text-4xl md:text-5xl mobile-title-medium font-extrabold tracking-tight opacity-0 translate-y-2 blur-sm transition-all duration-1000 ease-out will-change-transform transform-gpu" data-reveal data-delay="50">Unsere Kernkompetenzen</h2>
       </div>
 
       <div class="mt-12 grid gap-6 lg:gap-8 md:grid-cols-3">
         <!-- Performance Marketing -->
-        <div class="group relative rounded-2xl bg-white ring-1 ring-slate-200 p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:ring-blue-200/60 opacity-0 translate-y-2 blur-sm will-change-transform transform-gpu" data-reveal data-delay="450">
+        <a href="#performance-ads" class="group relative rounded-2xl bg-white ring-1 ring-slate-200 p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:ring-blue-200/60 opacity-0 translate-y-2 blur-sm will-change-transform transform-gpu block" data-reveal data-delay="150">
           <div class="absolute -top-5 left-6">
             <span class="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 text-white shadow-lg">
               <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2">
@@ -160,17 +171,17 @@
           <div class="pt-7">
             <h3 class="text-xl font-bold">Performance Marketing</h3>
             <p class="mt-2 text-slate-600 leading-relaxed mb-4">Strukturierte Kampagnen auf Meta, Google & Co. für planbare Anfragen und messbaren ROAS. Von Creative-Testing bis Skalierung.</p>
-            <a href="#performance-ads" class="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold text-sm transition-colors">
-              Mehr erfahren 
+            <span class="inline-flex items-center text-blue-600 font-semibold text-sm">
+              Mehr Details erfahren 
               <svg viewBox="0 0 24 24" class="h-4 w-4 ml-1" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M5 12h14M13 5l7 7-7 7"/>
               </svg>
-            </a>
+            </span>
           </div>
-        </div>
+        </a>
 
         <!-- Social Media Management -->
-        <div class="group relative rounded-2xl bg-white ring-1 ring-slate-200 p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:ring-blue-200/60 opacity-0 translate-y-2 blur-sm will-change-transform transform-gpu" data-reveal data-delay="600">
+        <a href="#social-media" class="group relative rounded-2xl bg-white ring-1 ring-slate-200 p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:ring-blue-200/60 opacity-0 translate-y-2 blur-sm will-change-transform transform-gpu block" data-reveal data-delay="200">
           <div class="absolute -top-5 left-6">
             <span class="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 text-white shadow-lg">
               <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2">
@@ -182,17 +193,17 @@
           <div class="pt-7">
             <h3 class="text-xl font-bold">Social Media Management</h3>
             <p class="mt-2 text-slate-600 leading-relaxed mb-4">Konsistente Content-Strategie mit System. Von Redaktionsplan bis Community-Management — Content, der Marke und Sales verbindet.</p>
-            <a href="#social-media" class="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold text-sm transition-colors">
-              Mehr erfahren 
+            <span class="inline-flex items-center text-blue-600 font-semibold text-sm">
+              Mehr Details erfahren 
               <svg viewBox="0 0 24 24" class="h-4 w-4 ml-1" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M5 12h14M13 5l7 7-7 7"/>
               </svg>
-            </a>
+            </span>
           </div>
-        </div>
+        </a>
 
         <!-- Automation & Strategie -->
-        <div class="group relative rounded-2xl bg-white ring-1 ring-slate-200 p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:ring-blue-200/60 opacity-0 translate-y-2 blur-sm will-change-transform transform-gpu" data-reveal data-delay="750">
+        <a href="#automation-strategie" class="group relative rounded-2xl bg-white ring-1 ring-slate-200 p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:ring-blue-200/60 opacity-0 translate-y-2 blur-sm will-change-transform transform-gpu block" data-reveal data-delay="250">
           <div class="absolute -top-5 left-6">
             <span class="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 text-white shadow-lg">
               <svg viewBox="0 0 24 24" class="h-6 w-6" fill="currentColor" aria-hidden="true">
@@ -204,463 +215,482 @@
           <div class="pt-7">
             <h3 class="text-xl font-bold">Automation & Strategie</h3>
             <p class="mt-2 text-slate-600 leading-relaxed mb-4">CRM-Workflows, Lead-Nurturing und Tracking-Setups. Prozesse, die automatisch qualifizieren, nachfassen und skalieren.</p>
-            <a href="#automation-strategie" class="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold text-sm transition-colors">
-              Mehr erfahren 
+            <span class="inline-flex items-center text-blue-600 font-semibold text-sm">
+              Mehr Details erfahren 
               <svg viewBox="0 0 24 24" class="h-4 w-4 ml-1" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M5 12h14M13 5l7 7-7 7"/>
               </svg>
-            </a>
+            </span>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </section>
 
   <!-- Performance Marketing Deep-Dive -->
-  <section id="performance-ads" class="bg-slate-100 pt-20 md:pt-28 pb-12 md:pb-16">
-    <div class="mx-auto max-w-7xl px-6">
-      <div class="text-center mb-16">
-        <span class="inline-block mb-4 px-5 py-1.5 rounded-full bg-slate-200 text-slate-500 font-semibold text-base opacity-0 translate-y-4 transition-all duration-700 ease-out" data-reveal data-delay="0">Performance Marketing</span>
-        <h2 class="mt-6 text-6xl md:text-7xl font-extrabold tracking-tight text-slate-900 opacity-0 translate-y-4 transition-all duration-700 ease-out" data-reveal data-delay="150">Werbung die konvertiert</h2>
-        <p class="mt-5 text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto opacity-0 translate-y-4 transition-all duration-700 ease-out" data-reveal data-delay="300">Messbar statt Bauchgefühl: Budget zielgerichtet einsetzen, laufend testen und auf Leads, Verkäufe und ROI optimieren.</p>
-        <div class="mt-6 h-1 w-20 mx-auto rounded-full bg-gradient-to-r from-blue-600 to-sky-500 opacity-0 scale-x-0 transition-all duration-700 ease-out" data-reveal data-delay="450"></div>
-      </div>
+  <section id="performance-ads" class="bg-slate-100 pt-20 md:pt-28 pb-32 md:pb-32">
+    <!-- Subtle background pattern -->
 
-      <!-- Row 1: links Text, rechts Bild -->
-  <div class="grid gap-8 md:gap-16 lg:gap-24 lg:grid-cols-2 items-start mb-8 relative">
-        <!-- Vertical divider -->
-        <div class="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-slate-300 to-transparent transform -translate-x-1/2 opacity-0 transition-all duration-700 ease-out" data-reveal data-delay="600"></div>
+    
+    <div class="mx-auto max-w-7xl px-6 relative">
+
+      <!-- Content Layout - Zwei Boxen wie Automation -->
+      <div class="space-y-32">
         
-        <div id="was-ist" class="px-4 sm:px-0 lg:pr-8 opacity-0 translate-x-8 transition-all duration-700 ease-out" data-reveal data-delay="700">
-          <span class="inline-block mb-4 px-4 sm:px-5 py-1.5 rounded-full bg-slate-200 text-slate-500 font-semibold text-sm sm:text-base">Konzept</span>
-          <h3 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4 sm:mb-6 leading-tight break-words">Was ist Performance Marketing?</h3>
-          <p class="text-base sm:text-lg md:text-xl text-slate-600 mb-4 sm:mb-6 leading-relaxed">Datengetriebene Werbung, bei der jedes Budget zielgerichtet eingesetzt und laufend optimiert wird. Der Fokus liegt auf klaren Zielen, präzisem Tracking und konsequentem Testing.</p>
-          
-          <div class="space-y-3 sm:space-y-4 mb-4 sm:mb-6">
-            <div class="flex gap-3 sm:gap-4 items-start">
-              <span class="mt-1 flex-shrink-0 inline-flex h-6 w-6 sm:h-7 sm:w-7 items-center justify-center rounded-full bg-blue-600 text-white aspect-square">
-                <svg viewBox="0 0 24 24" class="h-3 w-3 sm:h-4 sm:w-4" fill="none" stroke="currentColor" stroke-width="3">
-                  <path d="M5 13l4 4L19 7"/>
-                </svg>
-              </span>
-              <div class="min-w-0 flex-1">
-                <h4 class="font-bold text-slate-900 text-sm sm:text-base md:text-lg mb-1 sm:mb-2 break-words">Messbar & zielorientiert</h4>
-                <p class="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed">Optimierung auf ROAS, CPL und Conversion‑Rate statt Vanity‑Metriken.</p>
+        <!-- Konzept Sektion - Titel zentriert, Icons darunter -->
+        <div class="opacity-0 translate-y-8 transition-all duration-700 ease-out will-change-transform" data-reveal data-delay="100">
+          <div class="max-w-5xl mx-auto mb-16 md:mb-32">
+            <div class="text-center mb-16">
+              <h3 class="text-5xl md:text-6xl lg:text-7xl mobile-title-large font-bold text-slate-900 mb-8 leading-tight opacity-0 translate-y-4 transition-all duration-700 ease-out will-change-transform" data-reveal data-delay="150">Performance <span class="text-blue-600">Marketing</span></h3>
+              <p class="text-xl md:text-2xl text-slate-600 leading-relaxed max-w-3xl mx-auto mb-8 md:mb-16 opacity-0 translate-y-4 transition-all duration-700 ease-out will-change-transform hidden md:block" data-reveal data-delay="200">Datengetriebene Werbung mit messbaren Resultaten. Jeder Euro zielgerichtet eingesetzt und laufend optimiert. Es umfasst:</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-10 hidden md:grid">
+              <!-- Icon 1: Kampagnen-Management -->
+              <div class="group flex items-center justify-center gap-4 cursor-pointer opacity-0 translate-y-4 transition-all duration-700 ease-out will-change-transform" data-reveal data-delay="250">
+                <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-500 to-sky-400 rounded-lg flex items-center justify-center shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl">
+                  <svg viewBox="0 0 24 24" class="h-6 w-6 text-white transition-all duration-300" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                    <polyline points="3.27,6.96 12,12.01 20.73,6.96"/>
+                    <line x1="12" y1="22.08" x2="12" y2="12"/>
+                  </svg>
+                </div>
+                <h4 class="font-bold text-slate-900 text-xl whitespace-nowrap transition-colors duration-300 group-hover:text-blue-600">Kampagnen-Management</h4>
+              </div>
+              
+              <!-- Icon 2: Testing & Optimierung -->
+              <div class="group flex items-center justify-center gap-4 cursor-pointer opacity-0 translate-y-4 transition-all duration-700 ease-out will-change-transform" data-reveal data-delay="300">
+                <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-500 to-sky-400 rounded-lg flex items-center justify-center shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl">
+                  <svg viewBox="0 0 24 24" class="h-6 w-6 text-white transition-all duration-300" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M20 6L9 17l-5-5"/>
+                  </svg>
+                </div>
+                <h4 class="font-bold text-slate-900 text-xl whitespace-nowrap transition-colors duration-300 group-hover:text-blue-600">Testing & Optimierung</h4>
+              </div>
+              
+              <!-- Icon 3: ROI-Maximierung -->
+              <div class="group flex items-center justify-center gap-4 cursor-pointer opacity-0 translate-y-4 transition-all duration-700 ease-out will-change-transform" data-reveal data-delay="350">
+                <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-500 to-sky-400 rounded-lg flex items-center justify-center shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl">
+                  <svg viewBox="0 0 24 24" class="h-6 w-6 text-white transition-all duration-300" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M12 6v6l4 2"/>
+                  </svg>
+                </div>
+                <h4 class="font-bold text-slate-900 text-xl whitespace-nowrap transition-colors duration-300 group-hover:text-blue-600">ROI-Maximierung</h4>
               </div>
             </div>
-            <div class="flex gap-3 sm:gap-4 items-start">
-              <span class="mt-1 flex-shrink-0 inline-flex h-6 w-6 sm:h-7 sm:w-7 items-center justify-center rounded-full bg-blue-600 text-white aspect-square">
-                <svg viewBox="0 0 24 24" class="h-3 w-3 sm:h-4 sm:w-4" fill="none" stroke="currentColor" stroke-width="3">
-                  <path d="M5 13l4 4L19 7"/>
-                </svg>
-              </span>
-              <div class="min-w-0 flex-1">
-                <h4 class="font-bold text-slate-900 text-sm sm:text-base md:text-lg mb-1 sm:mb-2 break-words">Daten statt Bauchgefühl</h4>
-                <p class="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed">Entscheidungen auf Basis von Tests und validen Zahlen.</p>
-              </div>
-            </div>
-            <div class="flex gap-3 sm:gap-4 items-start">
-              <span class="mt-1 flex-shrink-0 inline-flex h-6 w-6 sm:h-7 sm:w-7 items-center justify-center rounded-full bg-blue-600 text-white aspect-square">
-                <svg viewBox="0 0 24 24" class="h-3 w-3 sm:h-4 sm:w-4" fill="none" stroke="currentColor" stroke-width="3">
-                  <path d="M5 13l4 4L19 7"/>
-                </svg>
-              </span>
-              <div class="min-w-0 flex-1">
-                <h4 class="font-bold text-slate-900 text-sm sm:text-base md:text-lg mb-1 sm:mb-2 break-words">Skalierbar & transparent</h4>
-                <p class="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed">Jeder Euro ist nachvollziehbar und rechtfertigbar.</p>
-              </div>
-            </div>
-          </div>
-          
-          <div class="bg-slate-50 border-l-4 border-blue-600 p-3 sm:p-4 rounded-r-lg mx-0">
-            <p class="text-slate-700 font-bold text-sm sm:text-base md:text-lg leading-relaxed break-words">Kurz: Testen, messen, skalieren — mit Fokus auf das, was wirklich Wachstum bringt.</p>
           </div>
         </div>
         
-        <div id="leistungen" class="px-4 sm:px-0 lg:pl-8 opacity-0 -translate-x-8 transition-all duration-700 ease-out" data-reveal data-delay="850">
-          <span class="inline-block mb-4 px-4 sm:px-5 py-1.5 rounded-full bg-slate-200 text-slate-500 font-semibold text-sm sm:text-base">Umsetzung</span>
-          <h3 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4 sm:mb-6 leading-tight break-words">Was macht Peakmont?</h3>
-          <p class="text-base sm:text-lg md:text-xl text-slate-600 mb-4 sm:mb-6 leading-relaxed">Wir übernehmen die komplette Performance‑Marketing‑Kette: von Tracking & Setup über Kampagnen‑Management bis zur ROI‑Optimierung.</p>
-          
-          <div class="space-y-3 sm:space-y-4 mb-4 sm:mb-6">
-            <div class="flex gap-3 sm:gap-4 items-start">
-              <span class="mt-1 flex-shrink-0 inline-flex h-6 w-6 sm:h-7 sm:w-7 items-center justify-center rounded-full bg-blue-600 text-white aspect-square">
-                <svg viewBox="0 0 24 24" class="h-3 w-3 sm:h-4 sm:w-4" fill="none" stroke="currentColor" stroke-width="3">
-                  <path d="M5 13l4 4L19 7"/>
-                </svg>
-              </span>
-              <div class="min-w-0 flex-1">
-                <h4 class="font-bold text-slate-900 text-sm sm:text-base md:text-lg mb-1 sm:mb-2 break-words">Google & Microsoft Ads</h4>
-                <p class="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed">Search, Shopping, Display & YouTube Kampagnen mit Fokus auf Performance.</p>
+        <!-- Umsetzung Sektion - Links Text, rechts Box -->
+        <div class="opacity-0 translate-y-8 transition-all duration-700 ease-out will-change-transform" data-reveal data-delay="400">
+          <div class="grid lg:grid-cols-3 gap-12 items-center">
+            <!-- Text Content - Links -->
+            <div class="lg:col-span-2">
+              <div class="max-w-3xl">
+                <span class="inline-block mb-4 px-5 py-1.5 rounded-full bg-slate-200 text-slate-500 font-semibold text-base opacity-0 translate-y-4 transition-all duration-700 ease-out will-change-transform" data-reveal data-delay="450">Umsetzung</span>
+                <h3 class="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-8 leading-tight opacity-0 translate-y-4 transition-all duration-700 ease-out will-change-transform" data-reveal data-delay="500">Was macht Peakmont?</h3>
+                <p class="text-xl md:text-2xl text-slate-600 mb-10 leading-relaxed opacity-0 translate-y-4 transition-all duration-700 ease-out will-change-transform" data-reveal data-delay="550">Wir entwickeln datengetriebene Werbe-Strategien: von Google & Meta Ads über Conversion-Tracking bis zu ROI-Optimierung und Performance-Skalierung.</p>
+                
+                <div class="space-y-8 mb-10">
+                  <!-- Feature 1 -->
+                  <div class="group flex gap-6 items-start cursor-pointer opacity-0 translate-y-4 transition-all duration-700 ease-out will-change-transform" data-reveal data-delay="600">
+                    <div class="flex-shrink-0 w-12 h-12 bg-white rounded-2xl border-2 border-blue-200 flex items-center justify-center shadow-lg transition-all duration-300 group-hover:border-blue-400 group-hover:bg-blue-50 group-hover:scale-110 group-hover:shadow-xl">
+                      <svg viewBox="0 0 24 24" class="h-6 w-6 transition-all duration-300" fill="currentColor">
+                        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                        <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                        <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                        <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-slate-900 text-xl mb-3 transition-colors duration-300 group-hover:text-blue-600">Google & Microsoft Ads</h4>
+                      <p class="text-slate-600 leading-relaxed text-lg">Search, Shopping, Display & YouTube Kampagnen mit Fokus auf Conversion-Rate und ROI.</p>
+                    </div>
+                  </div>
+                  
+                  <!-- Feature 2 -->
+                  <div class="group flex gap-6 items-start cursor-pointer opacity-0 translate-y-4 transition-all duration-700 ease-out will-change-transform" data-reveal data-delay="650">
+                    <div class="flex-shrink-0 w-12 h-12 bg-white rounded-2xl border-2 border-blue-200 flex items-center justify-center shadow-lg transition-all duration-300 group-hover:border-blue-400 group-hover:bg-blue-50 group-hover:scale-110 group-hover:shadow-xl">
+                      <svg viewBox="0 0 24 24" class="h-6 w-6 text-blue-600 transition-all duration-300 group-hover:text-blue-700" fill="currentColor">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-slate-900 text-xl mb-3 transition-colors duration-300 group-hover:text-blue-600">Meta & LinkedIn Ads</h4>
+                      <p class="text-slate-600 leading-relaxed text-lg">Lead-Generation, Retargeting und Conversion-Kampagnen auf Social-Media-Plattformen.</p>
+                    </div>
+                  </div>
+                  
+                  <!-- Feature 3 -->
+                  <div class="group flex gap-6 items-start cursor-pointer opacity-0 translate-y-4 transition-all duration-700 ease-out will-change-transform" data-reveal data-delay="700">
+                    <div class="flex-shrink-0 w-12 h-12 bg-white rounded-2xl border-2 border-blue-200 flex items-center justify-center shadow-lg transition-all duration-300 group-hover:border-blue-400 group-hover:bg-blue-50 group-hover:scale-110 group-hover:shadow-xl">
+                      <svg viewBox="0 0 24 24" class="h-6 w-6 text-blue-600 transition-all duration-300 group-hover:text-blue-700" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M3 3v18h18"/>
+                        <path d="M7 12l3-3 3 3 5-5"/>
+                        <circle cx="7" cy="12" r="1"/>
+                        <circle cx="10" cy="9" r="1"/>
+                        <circle cx="13" cy="12" r="1"/>
+                        <circle cx="18" cy="7" r="1"/>
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-slate-900 text-xl mb-3 transition-colors duration-300 group-hover:text-blue-600">Tracking & Analytics</h4>
+                      <p class="text-slate-600 leading-relaxed text-lg">Conversion-Tracking, ROAS-Optimierung und datenbasierte Performance-Skalierung.</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="flex gap-3 sm:gap-4 items-start">
-              <span class="mt-1 flex-shrink-0 inline-flex h-6 w-6 sm:h-7 sm:w-7 items-center justify-center rounded-full bg-blue-600 text-white aspect-square">
-                <svg viewBox="0 0 24 24" class="h-3 w-3 sm:h-4 sm:w-4" fill="none" stroke="currentColor" stroke-width="3">
-                  <path d="M5 13l4 4L19 7"/>
-                </svg>
-              </span>
-              <div class="min-w-0 flex-1">
-                <h4 class="font-bold text-slate-900 text-sm sm:text-base md:text-lg mb-1 sm:mb-2 break-words">Meta & LinkedIn Ads</h4>
-                <p class="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed">Lead‑Gen, Conversion & Retargeting auf Social‑Plattformen.</p>
+            
+            <!-- Performance Erfolg Box - Rechts -->
+            <div class="lg:col-span-1">
+              <div class="group bg-slate-50 rounded-3xl p-10 h-full flex flex-col min-h-[550px] border border-slate-200 shadow-xl transition-all duration-700 ease-out hover:shadow-lg hover:border-blue-300 cursor-pointer opacity-0 translate-y-8 will-change-transform" data-reveal data-delay="1000">
+                <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-blue-500 to-sky-400 rounded-3xl flex items-center justify-center shadow-lg transition-all duration-500 group-hover:shadow-2xl group-hover:scale-110">
+                  <svg viewBox="0 0 24 24" class="h-10 w-10 text-white transition-all duration-500" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 3v18h18"/>
+                    <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/>
+                  </svg>
+                </div>
+                <h4 class="text-2xl font-bold text-slate-800 mb-3 text-center transition-colors duration-300 group-hover:text-blue-600">Performance Erfolg</h4>
+                <p class="text-slate-600 leading-relaxed mb-6 text-center text-sm transition-colors duration-300 group-hover:text-slate-700">Durchschnittliche Verbesserungen unserer Kunden nach 3 Monaten strategischem Performance Marketing.</p>
+                
+                <div class="grid grid-cols-2 gap-4 w-full">
+                  <div class="bg-white rounded-2xl p-4 text-center border border-slate-200 shadow-md transition-all duration-300 ease-out hover:shadow-lg hover:border-slate-300 hover:scale-105 opacity-0 translate-y-4 will-change-transform" data-reveal data-delay="1200">
+                    <div class="text-xs text-emerald-600 font-bold mb-1">↑ 420%</div>
+                    <div class="text-2xl font-bold text-blue-600 mb-1">4.8x</div>
+                    <div class="text-xs text-slate-600 font-medium tracking-wide">ROAS VERBESSERUNG</div>
+                  </div>
+                  <div class="bg-white rounded-2xl p-4 text-center border border-slate-200 shadow-md transition-all duration-300 ease-out hover:shadow-lg hover:border-slate-300 hover:scale-105 opacity-0 translate-y-4 will-change-transform" data-reveal data-delay="1350">
+                    <div class="text-xs text-emerald-600 font-bold mb-1">↓ 65%</div>
+                    <div class="text-2xl font-bold text-blue-600 mb-1">€12</div>
+                    <div class="text-xs text-slate-600 font-medium tracking-wide">COST PER<br>LEAD</div>
+                  </div>
+                  <div class="bg-white rounded-2xl p-4 text-center border border-slate-200 shadow-md transition-all duration-300 ease-out hover:shadow-lg hover:border-slate-300 hover:scale-105 opacity-0 translate-y-4 will-change-transform" data-reveal data-delay="1500">
+                    <div class="text-xs text-emerald-600 font-bold mb-1">↑ 280%</div>
+                    <div class="text-2xl font-bold text-blue-600 mb-1">8.3%</div>
+                    <div class="text-xs text-slate-600 font-medium tracking-wide">CONVERSION RATE</div>
+                  </div>
+                  <div class="bg-white rounded-2xl p-4 text-center border border-slate-200 shadow-md transition-all duration-300 ease-out hover:shadow-lg hover:border-slate-300 hover:scale-105 opacity-0 translate-y-4 will-change-transform" data-reveal data-delay="1650">
+                    <div class="text-xs text-emerald-600 font-bold mb-1">↑ 340%</div>
+                    <div class="text-2xl font-bold text-blue-600 mb-1">247</div>
+                    <div class="text-xs text-slate-600 font-medium tracking-wide">QUALIFIED LEADS</div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="flex gap-3 sm:gap-4 items-start">
-              <span class="mt-1 flex-shrink-0 inline-flex h-6 w-6 sm:h-7 sm:w-7 items-center justify-center rounded-full bg-blue-600 text-white aspect-square">
-                <svg viewBox="0 0 24 24" class="h-3 w-3 sm:h-4 sm:w-4" fill="none" stroke="currentColor" stroke-width="3">
-                  <path d="M5 13l4 4L19 7"/>
-                </svg>
-              </span>
-              <div class="min-w-0 flex-1">
-                <h4 class="font-bold text-slate-900 text-sm sm:text-base md:text-lg mb-1 sm:mb-2 break-words">Tracking & Analytics</h4>
-                <p class="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed">GA4, GTM, Conversion‑APIs für saubere Attribution.</p>
-              </div>
-            </div>
-          </div>
-          
-          <div class="bg-slate-50 border-l-4 border-blue-600 p-3 sm:p-4 rounded-r-lg mx-0">
-            <p class="text-slate-700 font-bold text-sm sm:text-base md:text-lg leading-relaxed break-words">Starke Creatives + sauberes Tracking + striktes Management = nachhaltige Skalierung.</p>
           </div>
         </div>
-      </div>
-
-      <!-- Row 2: rechts Text, links Bild -->
-      
-
-      <!-- CTA (ohne Boxen) -->
-      
-    </div>
-  </section>
-
-  <!-- Performance Zahlen Section -->
-  <section class="bg-slate-100 pt-0 md:pt-0 pb-20 md:pb-24">
-    <div class="mx-auto max-w-7xl px-6">
-  <h2 class="text-center text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 mb-4 opacity-0 translate-y-4 transition-all duration-700 ease-out" data-reveal data-delay="0">Erfolg in Zahlen</h2>
-      <p class="text-center text-xl md:text-2xl text-slate-600 max-w-4xl mx-auto mb-8 opacity-0 translate-y-4 transition-all duration-700 ease-out" data-reveal data-delay="150">Durchschnittliche Resultate unserer Kunden nach 3 Monaten strategischer Performance-Marketing Optimierung.</p>
-      <div class="mb-8">
-        <!-- KPI Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 items-stretch mb-12">
-          <div class="group relative text-center p-7 bg-white rounded-2xl border border-blue-100 shadow-sm h-full transition-all opacity-0 translate-y-2 blur-sm [transform:scale(0.98)] duration-1000 ease-out will-change-transform transform-gpu hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-500/10 hover:border-blue-200 hover:duration-300" data-reveal data-delay="300">
-            <span class="absolute top-5 right-5 inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold">↑ 142%</span>
-            <div class="text-5xl md:text-6xl font-extrabold tracking-tight text-blue-600 mb-2 transition-transform duration-300 ease-out transform-gpu group-hover:scale-[1.03]">4.2x</div>
-            <div class="text-base uppercase tracking-wide text-slate-700 font-semibold">Return on Ad Spend</div>
-            <div class="text-sm text-slate-500 mt-2">Durchschnittlicher ROAS</div>
-          </div>
-          <div class="group relative text-center p-7 bg-white rounded-2xl border border-blue-100 shadow-sm h-full transition-all opacity-0 translate-y-2 blur-sm [transform:scale(0.98)] duration-1000 ease-out will-change-transform transform-gpu hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-500/10 hover:border-blue-200 hover:duration-300" data-reveal data-delay="450">
-            <span class="absolute top-5 right-5 inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold">↓ 68%</span>
-            <div class="text-5xl md:text-6xl font-extrabold tracking-tight text-blue-600 mb-2 transition-transform duration-300 ease-out transform-gpu group-hover:scale-[1.03]">€24</div>
-            <div class="text-base uppercase tracking-wide text-slate-700 font-semibold">Cost per Lead</div>
-            <div class="text-sm text-slate-500 mt-2">Durchschnittliche Kosten</div>
-          </div>
-          <div class="group relative text-center p-7 bg-white rounded-2xl border border-blue-100 shadow-sm h-full transition-all opacity-0 translate-y-2 blur-sm [transform:scale(0.98)] duration-1000 ease-out will-change-transform transform-gpu hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-500/10 hover:border-blue-200 hover:duration-300" data-reveal data-delay="600">
-            <span class="absolute top-5 right-5 inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold">↑ 165%</span>
-            <div class="text-5xl md:text-6xl font-extrabold tracking-tight text-blue-600 mb-2 transition-transform duration-300 ease-out transform-gpu group-hover:scale-[1.03]">8.3%</div>
-            <div class="text-base uppercase tracking-wide text-slate-700 font-semibold">Conversion Rate</div>
-            <div class="text-sm text-slate-500 mt-2">Website zu Lead</div>
-          </div>
-          <div class="group relative text-center p-7 bg-white rounded-2xl border border-blue-100 shadow-sm h-full transition-all opacity-0 translate-y-2 blur-sm [transform:scale(0.98)] duration-1000 ease-out will-change-transform transform-gpu hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-500/10 hover:border-blue-200 hover:duration-300" data-reveal data-delay="750">
-            <span class="absolute top-5 right-5 inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold">↑ 320%</span>
-            <div class="text-5xl md:text-6xl font-extrabold tracking-tight text-blue-600 mb-2 transition-transform duration-300 ease-out transform-gpu group-hover:scale-[1.03]">247</div>
-            <div class="text-base uppercase tracking-wide text-slate-700 font-semibold">Qualifizierte Leads</div>
-            <div class="text-sm text-slate-500 mt-2">Pro Monat generiert</div>
-          </div>
-        </div>
+        
       </div>
     </div>
   </section>
 
   <!-- Social Media Management Deep-Dive -->
-  <section id="social-media" class="relative hero-bg noise text-slate-100 pt-20 md:pt-28 pb-12 md:pb-16">
-    <div class="mx-auto max-w-7xl px-6">
-      <div class="text-center mb-16">
-        <span class="inline-block mb-4 px-5 py-1.5 rounded-full bg-blue-500/15 text-blue-100 font-semibold text-base ring-1 ring-inset ring-blue-400/25 opacity-0 translate-y-4 transition-all duration-700 ease-out" data-reveal data-delay="0">Social Media</span>
-  <h2 class="mt-6 text-6xl md:text-7xl font-extrabold tracking-tight text-white opacity-0 translate-y-4 transition-all duration-700 ease-out" data-reveal data-delay="150">Mehr als nur Posten</h2>
-        <p class="mt-5 text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto opacity-0 translate-y-4 transition-all duration-700 ease-out" data-reveal data-delay="300">Strategisch statt zufällig: Content-Strategie mit System für messbare Reichweite, Engagement und Leadgenerierung.</p>
-        <div class="mt-6 h-1 w-20 mx-auto rounded-full bg-gradient-to-r from-blue-600 to-sky-500 opacity-0 scale-x-0 transition-all duration-700 ease-out" data-reveal data-delay="450"></div>
-      </div>
+  <section id="social-media" class="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white pt-20 md:pt-28 pb-32 md:pb-32">
+    <!-- Subtle background pattern -->
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(59,130,246,0.1)_0%,transparent_50%)]"></div>
+    
+    <div class="mx-auto max-w-7xl px-6 relative">
 
-      <!-- Row 1: links Text, rechts Bild -->
-      <div class="grid gap-8 md:gap-16 lg:gap-24 lg:grid-cols-2 items-start mb-8 relative">
-        <!-- Vertical divider -->
-        <div class="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-blue-300/30 to-transparent transform -translate-x-1/2 opacity-0 transition-all duration-700 ease-out" data-reveal data-delay="600"></div>
+      <!-- Content Layout - Zwei Boxen wie andere Sektionen -->
+      <div class="space-y-32">
         
-        <div id="was-ist-social" class="px-4 sm:px-0 lg:pr-8 opacity-0 translate-x-8 transition-all duration-700 ease-out" data-reveal data-delay="700">
-          <span class="inline-block mb-4 px-4 sm:px-5 py-1.5 rounded-full bg-blue-500/15 text-blue-100 font-semibold text-sm sm:text-base ring-1 ring-inset ring-blue-400/25">Konzept</span>
-          <h3 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 leading-tight break-words">Was ist Social Media Management?</h3>
-          <p class="text-base sm:text-lg md:text-xl text-slate-300 mb-4 sm:mb-6 leading-relaxed">Content-Planung und Community-Building mit klaren Zielen. Content, der Reichweite generiert, Engagement aufbaut und Leads qualifiziert.</p>
-          
-          <div class="space-y-3 sm:space-y-4 mb-4 sm:mb-6">
-            <div class="flex gap-3 sm:gap-4 items-start">
-              <span class="mt-1 flex-shrink-0 inline-flex h-6 w-6 sm:h-7 sm:w-7 items-center justify-center rounded-full bg-blue-600 text-white aspect-square">
-                <svg viewBox="0 0 24 24" class="h-3 w-3 sm:h-4 sm:w-4" fill="none" stroke="currentColor" stroke-width="3">
-                  <path d="M5 13l4 4L19 7"/>
-                </svg>
-              </span>
-              <div class="min-w-0 flex-1">
-                <h4 class="font-bold text-white text-sm sm:text-base md:text-lg mb-1 sm:mb-2 break-words">Strategisch & zielgerichtet</h4>
-                <p class="text-slate-300 text-xs sm:text-sm md:text-base leading-relaxed">Content-Pläne basierend auf Zielgruppen-Insights und Performance-Daten.</p>
+        <!-- Konzept Sektion - Mittig und freistehend -->
+        <div class="opacity-0 translate-y-8 transition-all duration-700 ease-out will-change-transform" data-reveal data-delay="600">
+          <div class="max-w-7xl mx-auto text-center mb-16 md:mb-32">
+            <h3 class="text-5xl md:text-6xl lg:text-7xl mobile-title-large font-bold text-white mb-8 leading-tight opacity-0 translate-y-4 transition-all duration-700 ease-out will-change-transform" data-reveal data-delay="700">Social Media <span class="text-blue-400">Management</span></h3>
+            <p class="text-xl md:text-2xl text-slate-200 mb-8 md:mb-16 leading-relaxed max-w-4xl mx-auto opacity-0 translate-y-4 transition-all duration-700 ease-out will-change-transform hidden md:block" data-reveal data-delay="800">Strategische Planung und Betreuung von Inhalten auf sozialen Plattformen für nachhaltigen Online-Erfolg. Es umfasst:</p>           
+            <div class="grid md:grid-cols-3 gap-10 hidden md:grid">
+              <!-- Icon 1: Content-Planung -->
+              <div class="group flex items-center justify-center gap-4 cursor-pointer opacity-0 translate-y-4 transition-all duration-700 ease-out will-change-transform" data-reveal data-delay="900">
+                <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-500 to-sky-400 rounded-lg flex items-center justify-center shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl">
+                  <svg viewBox="0 0 24 24" class="h-6 w-6 text-white transition-all duration-300" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                    <line x1="16" y1="2" x2="16" y2="6"/>
+                    <line x1="8" y1="2" x2="8" y2="6"/>
+                    <line x1="3" y1="10" x2="21" y2="10"/>
+                    <path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01M16 18h.01"/>
+                  </svg>
+                </div>
+                <h4 class="font-bold text-white text-xl whitespace-nowrap transition-colors duration-300 group-hover:text-blue-300">Content-Planung</h4>
+              </div>
+              
+              <!-- Icon 2: Content-Produktion -->
+              <div class="group flex items-center justify-center gap-4 cursor-pointer opacity-0 translate-y-4 transition-all duration-700 ease-out will-change-transform" data-reveal data-delay="1000">
+                <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-500 to-sky-400 rounded-lg flex items-center justify-center shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl">
+                  <svg viewBox="0 0 24 24" class="h-6 w-6 text-white transition-all duration-300" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                    <circle cx="8.5" cy="8.5" r="1.5"/>
+                    <path d="M21 15l-5-5L5 21"/>
+                  </svg>
+                </div>
+                <h4 class="font-bold text-white text-xl whitespace-nowrap transition-colors duration-300 group-hover:text-blue-300">Content-Produktion</h4>
+              </div>
+              
+              <!-- Icon 3: Community-Management -->
+              <div class="group flex items-center justify-center gap-4 cursor-pointer opacity-0 translate-y-4 transition-all duration-700 ease-out will-change-transform" data-reveal data-delay="1100">
+                <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-500 to-sky-400 rounded-lg flex items-center justify-center shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl">
+                  <svg viewBox="0 0 24 24" class="h-6 w-6 text-white transition-all duration-300" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                    <circle cx="9" cy="7" r="4"/>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87m-4-12a4 4 0 0 1 0 7.75"/>
+                  </svg>
+                </div>
+                <h4 class="font-bold text-white text-xl whitespace-nowrap transition-colors duration-300 group-hover:text-blue-300">Community-Management</h4>
               </div>
             </div>
-            <div class="flex gap-3 sm:gap-4 items-start">
-              <span class="mt-1 flex-shrink-0 inline-flex h-6 w-6 sm:h-7 sm:w-7 items-center justify-center rounded-full bg-blue-600 text-white aspect-square">
-                <svg viewBox="0 0 24 24" class="h-3 w-3 sm:h-4 sm:w-4" fill="none" stroke="currentColor" stroke-width="3">
-                  <path d="M5 13l4 4L19 7"/>
-                </svg>
-              </span>
-              <div class="min-w-0 flex-1">
-                <h4 class="font-bold text-white text-sm sm:text-base md:text-lg mb-1 sm:mb-2 break-words">Content mit System</h4>
-                <p class="text-slate-300 text-xs sm:text-sm md:text-base leading-relaxed">Redaktionspläne, Formate und Posting-Rhythmen für kontinuierliche Präsenz.</p>
-              </div>
-            </div>
-            <div class="flex gap-3 sm:gap-4 items-start">
-              <span class="mt-1 flex-shrink-0 inline-flex h-6 w-6 sm:h-7 sm:w-7 items-center justify-center rounded-full bg-blue-600 text-white aspect-square">
-                <svg viewBox="0 0 24 24" class="h-3 w-3 sm:h-4 sm:w-4" fill="none" stroke="currentColor" stroke-width="3">
-                  <path d="M5 13l4 4L19 7"/>
-                </svg>
-              </span>
-              <div class="min-w-0 flex-1">
-                <h4 class="font-bold text-white text-sm sm:text-base md:text-lg mb-1 sm:mb-2 break-words">Messbar & optimiert</h4>
-                <p class="text-slate-300 text-xs sm:text-sm md:text-base leading-relaxed">Performance-Tracking und Content-Optimierung basierend auf Engagement-Daten.</p>
-              </div>
-            </div>
-          </div>
-          
-          <div class="bg-white/5 border-l-4 border-blue-400/60 p-3 sm:p-4 rounded-r-lg mx-0">
-            <p class="text-slate-200 font-bold text-sm sm:text-base md:text-lg leading-relaxed break-words">Kurz: Planen, produzieren, posten — mit Fokus auf Reichweite, Engagement und Leads.</p>
           </div>
         </div>
         
-        <div id="leistungen-social" class="px-4 sm:px-0 lg:pl-8 opacity-0 -translate-x-8 transition-all duration-700 ease-out" data-reveal data-delay="850">
-          <span class="inline-block mb-4 px-4 sm:px-5 py-1.5 rounded-full bg-blue-500/15 text-blue-100 font-semibold text-sm sm:text-base ring-1 ring-inset ring-blue-400/25">Umsetzung</span>
-          <h3 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 leading-tight break-words">Was macht Peakmont?</h3>
-          <p class="text-base sm:text-lg md:text-xl text-slate-300 mb-4 sm:mb-6 leading-relaxed">Wir übernehmen die komplette Social-Media-Kette: von Content-Strategie über Produktion bis zur Community-Betreuung und Performance-Analyse.</p>
-          
-          <div class="space-y-3 sm:space-y-4 mb-4 sm:mb-6">
-            <div class="flex gap-3 sm:gap-4 items-start">
-              <span class="mt-1 flex-shrink-0 inline-flex h-6 w-6 sm:h-7 sm:w-7 items-center justify-center rounded-full bg-blue-600 text-white aspect-square">
-                <svg viewBox="0 0 24 24" class="h-3 w-3 sm:h-4 sm:w-4" fill="none" stroke="currentColor" stroke-width="3">
-                  <path d="M5 13l4 4L19 7"/>
-                </svg>
-              </span>
-              <div class="min-w-0 flex-1">
-                <h4 class="font-bold text-white text-sm sm:text-base md:text-lg mb-1 sm:mb-2 break-words">Content-Strategie & Planung</h4>
-                <p class="text-slate-300 text-xs sm:text-sm md:text-base leading-relaxed">Redaktionspläne, Formate (Feed, Stories, Reels) und Content-Kalender.</p>
+        <!-- Umsetzung Sektion - Links Text, rechts Box -->
+        <div class="opacity-0 translate-y-8 transition-all duration-700 ease-out will-change-transform" data-reveal data-delay="850">
+          <div class="grid lg:grid-cols-3 gap-12 items-center">
+            <!-- Text Content - Links -->
+            <div class="lg:col-span-2">
+              <div class="max-w-3xl">
+                <span class="inline-block mb-4 px-5 py-1.5 rounded-full bg-white/10 text-blue-200 font-semibold text-base opacity-0 translate-y-4 transition-all duration-700 ease-out will-change-transform" data-reveal data-delay="750">Umsetzung</span>
+                <h3 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight opacity-0 translate-y-4 transition-all duration-700 ease-out will-change-transform" data-reveal data-delay="850">Was macht Peakmont?</h3>
+                <p class="text-xl md:text-2xl text-slate-200 mb-10 leading-relaxed opacity-0 translate-y-4 transition-all duration-700 ease-out will-change-transform" data-reveal data-delay="950">Wir übernehmen die komplette Social-Media-Kette: von Content-Strategie über Produktion bis zur Community-Betreuung und Performance-Analyse.</p>
+                
+                <div class="space-y-8 mb-10">
+                  <div class="group flex gap-6 items-start cursor-pointer opacity-0 translate-y-4 transition-all duration-700 ease-out will-change-transform" data-reveal data-delay="600">
+                    <div class="flex-shrink-0 w-12 h-12 bg-slate-800/80 rounded-2xl border-2 border-blue-400/30 flex items-center justify-center backdrop-blur-sm transition-all duration-300 group-hover:border-blue-300 group-hover:bg-slate-700/80 group-hover:scale-110 group-hover:shadow-xl">
+                      <svg viewBox="0 0 24 24" class="h-6 w-6 text-blue-300 transition-all duration-300 group-hover:text-blue-200" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+                        <path d="M18.5 2.5a2.12 2.12 0 0 1 3 3L12 15l-4 1 1-4Z"/>
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-white text-xl mb-3 transition-colors duration-300 group-hover:text-blue-300">Content-Strategie & Planung</h4>
+                      <p class="text-slate-300 leading-relaxed text-lg">Redaktionspläne, Formate (Feed, Stories, Reels) und Content-Kalender.</p>
+                    </div>
+                  </div>
+                  
+                  <div class="group flex gap-6 items-start cursor-pointer opacity-0 translate-y-4 transition-all duration-700 ease-out will-change-transform" data-reveal data-delay="650">
+                    <div class="flex-shrink-0 w-12 h-12 bg-slate-800/80 rounded-2xl border-2 border-blue-400/30 flex items-center justify-center backdrop-blur-sm transition-all duration-300 group-hover:border-blue-300 group-hover:bg-slate-700/80 group-hover:scale-110 group-hover:shadow-xl">
+                      <svg viewBox="0 0 24 24" class="h-6 w-6 text-blue-300 transition-all duration-300 group-hover:text-blue-200" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-white text-xl mb-3 transition-colors duration-300 group-hover:text-blue-300">Produktion & Posting</h4>
+                      <p class="text-slate-300 leading-relaxed text-lg">Content-Erstellung, Grafiken, Videos und automatisiertes Publishing.</p>
+                    </div>
+                  </div>
+                  
+                  <div class="group flex gap-6 items-start cursor-pointer opacity-0 translate-y-4 transition-all duration-700 ease-out will-change-transform" data-reveal data-delay="700">
+                    <div class="flex-shrink-0 w-12 h-12 bg-slate-800/80 rounded-2xl border-2 border-blue-400/30 flex items-center justify-center backdrop-blur-sm transition-all duration-300 group-hover:border-blue-300 group-hover:bg-slate-700/80 group-hover:scale-110 group-hover:shadow-xl">
+                      <svg viewBox="0 0 24 24" class="h-6 w-6 text-blue-300 transition-all duration-300 group-hover:text-blue-200" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-white text-xl mb-3">Community & Analytics</h4>
+                      <p class="text-slate-300 leading-relaxed text-lg">Community-Management, Engagement-Optimierung und Performance-Reporting.</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="flex gap-3 sm:gap-4 items-start">
-              <span class="mt-1 flex-shrink-0 inline-flex h-6 w-6 sm:h-7 sm:w-7 items-center justify-center rounded-full bg-blue-600 text-white aspect-square">
-                <svg viewBox="0 0 24 24" class="h-3 w-3 sm:h-4 sm:w-4" fill="none" stroke="currentColor" stroke-width="3">
-                  <path d="M5 13l4 4L19 7"/>
-                </svg>
-              </span>
-              <div class="min-w-0 flex-1">
-                <h4 class="font-bold text-white text-sm sm:text-base md:text-lg mb-1 sm:mb-2 break-words">Produktion & Posting</h4>
-                <p class="text-slate-300 text-xs sm:text-sm md:text-base leading-relaxed">Content-Erstellung, Grafiken, Videos und automatisiertes Publishing.</p>
+            
+            <!-- Community Building Box - Rechts -->
+            <div class="lg:col-span-1">
+              <div class="group bg-gray-100 rounded-3xl p-10 h-full flex flex-col min-h-[550px] border border-gray-200 shadow-xl transition-all duration-700 ease-out hover:shadow-2xl hover:border-blue-300 cursor-pointer opacity-0 translate-y-8 will-change-transform" data-reveal data-delay="1000">
+                <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-blue-500 to-sky-400 rounded-3xl flex items-center justify-center shadow-lg transition-all duration-500 group-hover:shadow-2xl group-hover:scale-110">
+                  <svg viewBox="0 0 24 24" class="h-10 w-10 text-white transition-all duration-500" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 3v18h18"/>
+                    <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/>
+                  </svg>
+                </div>
+                <h4 class="text-2xl font-bold text-gray-800 mb-3 text-center transition-colors duration-300 group-hover:text-blue-600">Social Media Erfolg</h4>
+                <p class="text-gray-600 leading-relaxed mb-6 text-center text-sm transition-colors duration-300 group-hover:text-gray-700">Durchschnittliche Resultate unserer Kunden nach 3 Monaten strategischem Social Media Management.</p>
+                
+                <div class="grid grid-cols-2 gap-4 w-full">
+                  <div class="bg-white rounded-2xl p-4 text-center border border-gray-200 shadow-md transition-all duration-300 ease-out hover:shadow-lg hover:border-gray-300 hover:scale-105 opacity-0 translate-y-4 will-change-transform" data-reveal data-delay="1200">
+                    <div class="text-xs text-emerald-600 font-bold mb-1">↑ 285%</div>
+                    <div class="text-2xl font-bold text-blue-600 mb-1">47K</div>
+                    <div class="text-xs text-gray-600 font-medium tracking-wide">FOLLOWER WACHSTUM</div>
+                  </div>
+                  <div class="bg-white rounded-2xl p-4 text-center border border-gray-200 shadow-md transition-all duration-300 ease-out hover:shadow-lg hover:border-gray-300 hover:scale-105 opacity-0 translate-y-4 will-change-transform" data-reveal data-delay="1350">
+                    <div class="text-xs text-emerald-600 font-bold mb-1">↑ 340%</div>
+                    <div class="text-2xl font-bold text-blue-600 mb-1">12.8%</div>
+                    <div class="text-xs text-gray-600 font-medium tracking-wide">ENGAGEMENT RATE</div>
+                  </div>
+                  <div class="bg-white rounded-2xl p-4 text-center border border-gray-200 shadow-md transition-all duration-300 ease-out hover:shadow-lg hover:border-gray-300 hover:scale-105 opacity-0 translate-y-4 will-change-transform" data-reveal data-delay="1500">
+                    <div class="text-xs text-emerald-600 font-bold mb-1">↑ 180%</div>
+                    <div class="text-2xl font-bold text-blue-600 mb-1">2.1M</div>
+                    <div class="text-xs text-gray-600 font-medium tracking-wide">MONTHLY IMPRESSIONS</div>
+                  </div>
+                  <div class="bg-white rounded-2xl p-4 text-center border border-gray-200 shadow-md transition-all duration-300 ease-out hover:shadow-lg hover:border-gray-300 hover:scale-105 opacity-0 translate-y-4 will-change-transform" data-reveal data-delay="1650">
+                    <div class="text-xs text-emerald-600 font-bold mb-1">↑ 420%</div>
+                    <div class="text-2xl font-bold text-blue-600 mb-1">94</div>
+                    <div class="text-xs text-gray-600 font-medium tracking-wide">SOCIAL MEDIA LEADS</div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="flex gap-3 sm:gap-4 items-start">
-              <span class="mt-1 flex-shrink-0 inline-flex h-6 w-6 sm:h-7 sm:w-7 items-center justify-center rounded-full bg-blue-600 text-white aspect-square">
-                <svg viewBox="0 0 24 24" class="h-3 w-3 sm:h-4 sm:w-4" fill="none" stroke="currentColor" stroke-width="3">
-                  <path d="M5 13l4 4L19 7"/>
-                </svg>
-              </span>
-              <div class="min-w-0 flex-1">
-                <h4 class="font-bold text-white text-sm sm:text-base md:text-lg mb-1 sm:mb-2 break-words">Community & Analytics</h4>
-                <p class="text-slate-300 text-xs sm:text-sm md:text-base leading-relaxed">Community-Management, Engagement-Optimierung und Performance-Reporting.</p>
-              </div>
-            </div>
-          </div>
-          
-          <div class="bg-white/5 border-l-4 border-blue-400/60 p-3 sm:p-4 rounded-r-lg mx-0">
-            <p class="text-slate-200 font-bold text-sm sm:text-base md:text-lg leading-relaxed break-words">Starke Inhalte + konsistente Präsenz + aktive Community = nachhaltige Reichweite.</p>
           </div>
         </div>
-      </div>
-
-      <!-- Row 2: rechts Text, links Bild -->
-      
-
-      <!-- CTA (ohne Boxen) -->
-      
-    </div>
-    <!-- Social Media Erfolg KPIs direkt ans Ende der Section anhängen -->
-    <div class="mx-auto max-w-7xl px-6 pt-0">
-      <h2 class="text-center text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-4 opacity-0 translate-y-4 transition-all duration-700 ease-out" data-reveal data-delay="0">Social Media Erfolg</h2>
-      <p class="text-center text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto mb-8 opacity-0 translate-y-4 transition-all duration-700 ease-out" data-reveal data-delay="150">Durchschnittliche Resultate unserer Kunden nach 3 Monaten strategischem Social Media Management.</p>
-      <div class="mb-8">
-        <!-- KPI Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 items-stretch mb-12">
-
-          <div class="group relative rounded-2xl border border-white/10 bg-white/5 p-8 md:p-10 text-center transition-all opacity-0 translate-y-2 blur-sm [transform:scale(0.98)] duration-1000 ease-out will-change-transform transform-gpu hover:-translate-y-1 hover:scale-[1.02] hover:bg-white/10 hover:border-white/30 hover:shadow-lg hover:shadow-blue-500/10 hover:duration-300" data-reveal data-delay="300">
-            <span class="absolute top-6 right-6 inline-block px-3 py-1 rounded-full bg-blue-500/15 text-blue-100 text-xs font-semibold ring-1 ring-inset ring-blue-400/25">↑ 285%</span>
-            <div class="text-4xl md:text-5xl font-extrabold tracking-tight transition-transform duration-300 ease-out transform-gpu group-hover:scale-[1.03]">47K</div>
-            <div class="text-base uppercase tracking-wide text-blue-100 font-semibold mt-2 whitespace-nowrap">Follower&nbsp;Wachstum</div>
-            <div class="text-sm text-slate-300 mt-2">Organisches Wachstum</div>
-          </div>
-          <div class="group relative rounded-2xl border border-white/10 bg-white/5 p-8 md:p-10 text-center transition-all opacity-0 translate-y-2 blur-sm [transform:scale(0.98)] duration-1000 ease-out will-change-transform transform-gpu hover:-translate-y-1 hover:scale-[1.02] hover:bg-white/10 hover:border-white/30 hover:shadow-lg hover:shadow-blue-500/10 hover:duration-300" data-reveal data-delay="450">
-            <span class="absolute top-6 right-6 inline-block px-3 py-1 rounded-full bg-blue-500/15 text-blue-100 text-xs font-semibold ring-1 ring-inset ring-blue-400/25">↑ 340%</span>
-            <div class="text-4xl md:text-5xl font-extrabold tracking-tight transition-transform duration-300 ease-out transform-gpu group-hover:scale-[1.03]">12.8%</div>
-            <div class="text-base uppercase tracking-wide text-blue-100 font-semibold mt-2 whitespace-nowrap">Engagement&nbsp;Rate</div>
-            <div class="text-sm text-slate-300 mt-2">Durchschnittliche Rate</div>
-          </div>
-          <div class="group relative rounded-2xl border border-white/10 bg-white/5 p-8 md:p-10 text-center transition-all opacity-0 translate-y-2 blur-sm [transform:scale(0.98)] duration-1000 ease-out will-change-transform transform-gpu hover:-translate-y-1 hover:scale-[1.02] hover:bg-white/10 hover:border-white/30 hover:shadow-lg hover:shadow-blue-500/10 hover:duration-300" data-reveal data-delay="600">
-            <span class="absolute top-6 right-6 inline-block px-3 py-1 rounded-full bg-blue-500/15 text-blue-100 text-xs font-semibold ring-1 ring-inset ring-blue-400/25">↑ 180%</span>
-            <div class="text-4xl md:text-5xl font-extrabold tracking-tight transition-transform duration-300 ease-out transform-gpu group-hover:scale-[1.03]">2.1M</div>
-            <div class="text-base uppercase tracking-wide text-blue-100 font-semibold mt-2 whitespace-nowrap">Impressions</div>
-            <div class="text-sm text-slate-300 mt-2">Monatliche Reichweite</div>
-          </div>
-          <div class="group relative rounded-2xl border border-white/10 bg-white/5 p-8 md:p-10 text-center transition-all opacity-0 translate-y-2 blur-sm [transform:scale(0.98)] duration-1000 ease-out will-change-transform transform-gpu hover:-translate-y-1 hover:scale-[1.02] hover:bg-white/10 hover:border-white/30 hover:shadow-lg hover:shadow-blue-500/10 hover:duration-300" data-reveal data-delay="750">
-            <span class="absolute top-6 right-6 inline-block px-3 py-1 rounded-full bg-blue-500/15 text-blue-100 text-xs font-semibold ring-1 ring-inset ring-blue-400/25">↑ 420%</span>
-            <div class="text-4xl md:text-5xl font-extrabold tracking-tight transition-transform duration-300 ease-out transform-gpu group-hover:scale-[1.03]">94</div>
-            <div class="text-base uppercase tracking-wide text-blue-100 font-semibold mt-2 whitespace-nowrap">Social&nbsp;Media&nbsp;Leads</div>
-            <div class="text-sm text-slate-300 mt-2">Pro Monat generiert</div>
-          </div>
-        </div>
+        
       </div>
     </div>
   </section>
 
   <!-- Automation & Strategie Deep-Dive Section -->
-  <section id="automation-strategie" class="bg-slate-100 pt-20 md:pt-28 pb-12 md:pb-16">
-    <div class="mx-auto max-w-7xl px-6">
-      <div class="text-center mb-16">
-        <span class="inline-block mb-4 px-5 py-1.5 rounded-full bg-slate-200 text-slate-500 font-semibold text-base opacity-0 translate-y-8 transition-all duration-700 ease-out" data-reveal data-delay="0">Automation & Strategie</span>
-        <h2 class="mt-6 text-6xl md:text-7xl font-extrabold tracking-tight text-slate-900 opacity-0 translate-y-8 transition-all duration-700 ease-out" data-reveal data-delay="150">Prozesse die skalieren</h2>
-        <p class="mt-5 text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto opacity-0 translate-y-8 transition-all duration-700 ease-out" data-reveal data-delay="300">Intelligente Workflows und datenbasierte Strategien für nachhaltiges Wachstum ohne manuellen Aufwand.</p>
-        <div class="mt-16 h-1 w-20 mx-auto rounded-full bg-gradient-to-r from-blue-600 to-sky-500 opacity-0 scale-x-0 transition-all duration-700 ease-out" data-reveal data-delay="450"></div>
-      </div>
+  <section id="automation-strategie" class="bg-white pt-20 md:pt-28 pb-32 md:pb-32">
+    <!-- Subtle background pattern -->
+    
+    
+    <div class="mx-auto max-w-7xl px-6 relative">
 
-      <!-- Row 1: links Text, rechts Bild -->
-      <div class="grid gap-8 md:gap-16 lg:gap-24 lg:grid-cols-2 items-start mb-8 relative">
-        <!-- Vertical divider -->
-        <div class="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-slate-300 to-transparent transform -translate-x-1/2 opacity-0 transition-all duration-700 ease-out" data-reveal data-delay="600"></div>
+      <!-- Content Layout - Zwei Boxen wie Social Media -->
+      <div class="space-y-32">
         
-        <div class="px-4 sm:px-0 lg:pr-8 opacity-0 translate-x-8 transition-all duration-700 ease-out" data-reveal data-delay="700">
-          <span class="inline-block mb-4 px-4 sm:px-5 py-1.5 rounded-full bg-slate-200 text-slate-500 font-semibold text-sm sm:text-base">Konzept</span>
-          <h3 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4 sm:mb-6 leading-tight break-words">Was ist Automation & Strategie?</h3>
-          <p class="text-base sm:text-lg md:text-xl text-slate-600 mb-4 sm:mb-6 leading-relaxed">Intelligente Workflows und strategische Prozesse, die Leads automatisch qualifizieren, nurturing betreiben und den gesamten Funnel optimieren. Fokus auf Skalierung ohne proportionalen Mehraufwand.</p>
-          
-          <div class="space-y-3 sm:space-y-4 mb-4 sm:mb-6">
-            <div class="flex gap-3 sm:gap-4 items-start">
-              <span class="mt-1 flex-shrink-0 inline-flex h-6 w-6 sm:h-7 sm:w-7 items-center justify-center rounded-full bg-blue-600 text-white aspect-square">
-                <svg viewBox="0 0 24 24" class="h-3 w-3 sm:h-4 sm:w-4" fill="none" stroke="currentColor" stroke-width="3">
-                  <path d="M5 13l4 4L19 7"/>
-                </svg>
-              </span>
-              <div class="min-w-0 flex-1">
-                <h4 class="font-bold text-slate-900 text-sm sm:text-base md:text-lg mb-1 sm:mb-2 break-words">Automatisierte Workflows</h4>
-                <p class="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed">CRM-Integration, Lead-Scoring und intelligente Nachfass-Sequenzen.</p>
+        <!-- Konzept Sektion - Titel zentriert, Icons darunter -->
+        <div class="opacity-0 translate-y-8 transition-all duration-700 ease-out" data-reveal data-delay="600">
+          <div class="max-w-5xl mx-auto mb-16 md:mb-32">
+            <div class="text-center mb-16">
+              <h3 class="text-5xl md:text-6xl lg:text-7xl mobile-title-large font-bold text-slate-900 mb-8 leading-tight opacity-0 translate-y-4 transition-all duration-700 ease-out" data-reveal data-delay="700">Automation <span class="text-blue-600">& Strategie</span></h3>
+              <p class="text-xl md:text-2xl text-slate-600 leading-relaxed max-w-3xl mx-auto mb-8 md:mb-16 opacity-0 translate-y-4 transition-all duration-700 ease-out hidden md:block" data-reveal data-delay="800">Intelligente Workflows und datenbasierte Strategien für nachhaltiges Wachstum ohne manuellen Aufwand. Es umfasst:</p>
+            </div>
+            
+            <!-- Drei Icons für Automation Bereiche -->
+            <div class="grid md:grid-cols-3 gap-10 hidden md:grid">
+              <!-- Icon 1: Automatisierte Workflows -->
+              <div class="group flex items-center justify-center gap-4 cursor-pointer opacity-0 translate-y-4 transition-all duration-700 ease-out" data-reveal data-delay="900">
+                <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-500 to-sky-400 rounded-lg flex items-center justify-center shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl">
+                  <svg viewBox="0 0 24 24" class="h-6 w-6 text-white transition-all duration-300" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"/>
+                  </svg>
+                </div>
+                <h4 class="font-bold text-slate-900 text-xl whitespace-nowrap transition-colors duration-300 group-hover:text-blue-600">Automatisierte Workflows</h4>
+              </div>
+              
+              <!-- Icon 2: Datenbasierte Strategien -->
+              <div class="group flex items-center justify-center gap-4 cursor-pointer opacity-0 translate-y-4 transition-all duration-700 ease-out" data-reveal data-delay="1000">
+                <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-500 to-sky-400 rounded-lg flex items-center justify-center shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl">
+                  <svg viewBox="0 0 24 24" class="h-6 w-6 text-white transition-all duration-300" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M3 3v18h18"/>
+                    <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/>
+                  </svg>
+                </div>
+                <h4 class="font-bold text-slate-900 text-xl whitespace-nowrap transition-colors duration-300 group-hover:text-blue-600">Datenbasierte Strategien</h4>
+              </div>
+              
+              <!-- Icon 3: Skalierbare Prozesse -->
+              <div class="group flex items-center justify-center gap-4 cursor-pointer opacity-0 translate-y-4 transition-all duration-700 ease-out" data-reveal data-delay="1100">
+                <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-500 to-sky-400 rounded-lg flex items-center justify-center shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl">
+                  <svg viewBox="0 0 24 24" class="h-6 w-6 text-white transition-all duration-300" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                  </svg>
+                </div>
+                <h4 class="font-bold text-slate-900 text-xl whitespace-nowrap transition-colors duration-300 group-hover:text-blue-600">Skalierbare Prozesse</h4>
               </div>
             </div>
-            <div class="flex gap-3 sm:gap-4 items-start">
-              <span class="mt-1 flex-shrink-0 inline-flex h-6 w-6 sm:h-7 sm:w-7 items-center justify-center rounded-full bg-blue-600 text-white aspect-square">
-                <svg viewBox="0 0 24 24" class="h-3 w-3 sm:h-4 sm:w-4" fill="none" stroke="currentColor" stroke-width="3">
-                  <path d="M5 13l4 4L19 7"/>
-                </svg>
-              </span>
-              <div class="min-w-0 flex-1">
-                <h4 class="font-bold text-slate-900 text-sm sm:text-base md:text-lg mb-1 sm:mb-2 break-words">Datenbasierte Strategien</h4>
-                <p class="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed">Funnel-Analyse, Attribution und strategische Optimierung auf Basis echter Zahlen.</p>
-              </div>
-            </div>
-            <div class="flex gap-3 sm:gap-4 items-start">
-              <span class="mt-1 flex-shrink-0 inline-flex h-6 w-6 sm:h-7 sm:w-7 items-center justify-center rounded-full bg-blue-600 text-white aspect-square">
-                <svg viewBox="0 0 24 24" class="h-3 w-3 sm:h-4 sm:w-4" fill="none" stroke="currentColor" stroke-width="3">
-                  <path d="M5 13l4 4L19 7"/>
-                </svg>
-              </span>
-              <div class="min-w-0 flex-1">
-                <h4 class="font-bold text-slate-900 text-sm sm:text-base md:text-lg mb-1 sm:mb-2 break-words">Skalierbare Prozesse</h4>
-                <p class="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed">Workflows, die ohne manuellen Aufwand wachsen können.</p>
-              </div>
-            </div>
-          </div>
-          
-          <div class="bg-slate-50 border-l-4 border-blue-600 p-3 sm:p-4 rounded-r-lg mx-0">
-            <p class="text-slate-700 font-bold text-sm sm:text-base md:text-lg leading-relaxed break-words">Kurz: Einmal aufsetzen, kontinuierlich optimieren — Systeme, die für Sie arbeiten.</p>
           </div>
         </div>
         
-        <div class="px-4 sm:px-0 lg:pl-8 opacity-0 translate-x-8 transition-all duration-700 ease-out" data-reveal data-delay="850">
-          <span class="inline-block mb-4 px-4 sm:px-5 py-1.5 rounded-full bg-slate-200 text-slate-500 font-semibold text-sm sm:text-base">Umsetzung</span>
-          <h3 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4 sm:mb-6 leading-tight break-words">Was macht Peakmont?</h3>
-          <p class="text-base sm:text-lg md:text-xl text-slate-600 mb-4 sm:mb-6 leading-relaxed">Wir entwickeln und implementieren maßgeschneiderte Automatisierungen und strategische Frameworks für nachhaltiges, skalierbares Wachstum.</p>
-          
-          <div class="space-y-3 sm:space-y-4 mb-4 sm:mb-6">
-            <div class="flex gap-3 sm:gap-4 items-start">
-              <span class="mt-1 flex-shrink-0 inline-flex h-6 w-6 sm:h-7 sm:w-7 items-center justify-center rounded-full bg-blue-600 text-white aspect-square">
-                <svg viewBox="0 0 24 24" class="h-3 w-3 sm:h-4 sm:w-4" fill="none" stroke="currentColor" stroke-width="3">
-                  <path d="M5 13l4 4L19 7"/>
-                </svg>
-              </span>
-              <div class="min-w-0 flex-1">
-                <h4 class="font-bold text-slate-900 text-sm sm:text-base md:text-lg mb-1 sm:mb-2 break-words">CRM & Lead-Nurturing</h4>
-                <p class="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed">Automatisierte E-Mail-Sequenzen, Lead-Scoring und Qualifizierungs-Workflows.</p>
+        <!-- Umsetzung Sektion - Links Text, rechts Box -->
+        <div class="opacity-0 translate-y-8 transition-all duration-700 ease-out" data-reveal data-delay="850">
+          <div class="grid lg:grid-cols-3 gap-12 items-center">
+            <!-- Text Content - Links -->
+            <div class="lg:col-span-2">
+              <div class="max-w-3xl">
+                <span class="inline-block mb-4 px-5 py-1.5 rounded-full bg-slate-200 text-slate-500 font-semibold text-base opacity-0 translate-y-4 transition-all duration-700 ease-out will-change-transform" data-reveal data-delay="750">Umsetzung</span>
+                <h3 class="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-8 leading-tight opacity-0 translate-y-4 transition-all duration-700 ease-out will-change-transform" data-reveal data-delay="850">Was macht Peakmont?</h3>
+                <p class="text-xl md:text-2xl text-slate-600 mb-10 leading-relaxed opacity-0 translate-y-4 transition-all duration-700 ease-out will-change-transform" data-reveal data-delay="950">Wir entwickeln intelligente Automations-Strategien: von CRM-Integration über Lead-Scoring bis zu personalisierten Customer Journeys und Performance-Optimierung.</p>
+                
+                <div class="space-y-8 mb-10">
+                  <!-- Feature 1 -->
+                  <div class="group flex gap-6 items-start cursor-pointer opacity-0 translate-y-4 transition-all duration-700 ease-out will-change-transform" data-reveal data-delay="600">
+                    <div class="flex-shrink-0 w-12 h-12 bg-white rounded-2xl border-2 border-blue-200 flex items-center justify-center shadow-lg transition-all duration-300 group-hover:border-blue-400 group-hover:bg-blue-50 group-hover:scale-110 group-hover:shadow-xl">
+                      <svg viewBox="0 0 24 24" class="h-6 w-6 text-blue-600 transition-all duration-300 group-hover:text-blue-700" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-slate-900 text-xl mb-3 transition-colors duration-300 group-hover:text-blue-600">CRM & Lead Management</h4>
+                      <p class="text-slate-600 leading-relaxed text-lg">Automatisierte Lead-Qualifizierung, Scoring-Systeme und intelligente Vertriebsunterstützung.</p>
+                    </div>
+                  </div>
+                  
+                  <!-- Feature 2 -->
+                  <div class="group flex gap-6 items-start cursor-pointer opacity-0 translate-y-4 transition-all duration-700 ease-out will-change-transform" data-reveal data-delay="650">
+                    <div class="flex-shrink-0 w-12 h-12 bg-white rounded-2xl border-2 border-blue-200 flex items-center justify-center shadow-lg transition-all duration-300 group-hover:border-blue-400 group-hover:bg-blue-50 group-hover:scale-110 group-hover:shadow-xl">
+                      <svg viewBox="0 0 24 24" class="h-6 w-6 text-blue-600 transition-all duration-300 group-hover:text-blue-700" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                        <polyline points="22,6 12,13 2,6"/>
+                        <path d="M8 10l4 3 4-3"/>
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-slate-900 text-xl mb-3 transition-colors duration-300 group-hover:text-blue-600">Marketing Automation</h4>
+                      <p class="text-slate-600 leading-relaxed text-lg">E-Mail-Sequenzen, Nurturing-Kampagnen und personalisierte Customer Journeys.</p>
+                    </div>
+                  </div>
+                  
+                  <!-- Feature 3 -->
+                  <div class="group flex gap-6 items-start cursor-pointer opacity-0 translate-y-4 transition-all duration-700 ease-out will-change-transform" data-reveal data-delay="700">
+                    <div class="flex-shrink-0 w-12 h-12 bg-white rounded-2xl border-2 border-blue-200 flex items-center justify-center shadow-lg transition-all duration-300 group-hover:border-blue-400 group-hover:bg-blue-50 group-hover:scale-110 group-hover:shadow-xl">
+                      <svg viewBox="0 0 24 24" class="h-6 w-6 text-blue-600 transition-all duration-300 group-hover:text-blue-700" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M3 3v18h18"/>
+                        <path d="M7 12l3-3 3 3 5-5"/>
+                        <circle cx="7" cy="12" r="1"/>
+                        <circle cx="10" cy="9" r="1"/>
+                        <circle cx="13" cy="12" r="1"/>
+                        <circle cx="18" cy="7" r="1"/>
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-slate-900 text-xl mb-3 transition-colors duration-300 group-hover:text-blue-600">Performance & Analytics</h4>
+                      <p class="text-slate-600 leading-relaxed text-lg">Conversion-Tracking, ROI-Optimierung und datenbasierte Strategieanpassungen.</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="flex gap-3 sm:gap-4 items-start">
-              <span class="mt-1 flex-shrink-0 inline-flex h-6 w-6 sm:h-7 sm:w-7 items-center justify-center rounded-full bg-blue-600 text-white aspect-square">
-                <svg viewBox="0 0 24 24" class="h-3 w-3 sm:h-4 sm:w-4" fill="none" stroke="currentColor" stroke-width="3">
-                  <path d="M5 13l4 4L19 7"/>
-                </svg>
-              </span>
-              <div class="min-w-0 flex-1">
-                <h4 class="font-bold text-slate-900 text-sm sm:text-base md:text-lg mb-1 sm:mb-2 break-words">Zapier & Make Automationen</h4>
-                <p class="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed">Tool-Integration und Daten-Synchronisation zwischen Systemen.</p>
+            
+            <!-- Automation Erfolg Box - Rechts -->
+            <div class="lg:col-span-1">
+              <div class="group bg-slate-50 rounded-3xl p-10 h-full flex flex-col min-h-[550px] border border-slate-200 shadow-xl transition-all duration-700 ease-out hover:shadow-lg hover:border-blue-300 cursor-pointer opacity-0 translate-y-8 will-change-transform" data-reveal data-delay="1000">
+                <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-blue-500 to-sky-400 rounded-3xl flex items-center justify-center shadow-lg transition-all duration-500 group-hover:shadow-2xl group-hover:scale-110">
+                  <svg viewBox="0 0 24 24" class="h-10 w-10 text-white transition-all duration-500" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                  </svg>
+                </div>
+                <h4 class="text-2xl font-bold text-slate-800 mb-3 text-center transition-colors duration-300 group-hover:text-blue-600">Automation Erfolg</h4>
+                <p class="text-slate-600 leading-relaxed mb-6 text-center text-sm transition-colors duration-300 group-hover:text-slate-700">Durchschnittliche Verbesserungen unserer Kunden nach 3 Monaten intelligenter Automatisierung.</p>
+                
+                <div class="grid grid-cols-2 gap-4 w-full">
+                  <div class="bg-white rounded-2xl p-4 text-center border border-slate-200 shadow-md transition-all duration-300 ease-out hover:shadow-lg hover:border-slate-300 hover:scale-105 opacity-0 translate-y-4 will-change-transform" data-reveal data-delay="1200">
+                    <div class="text-xs text-emerald-600 font-bold mb-1">↑ 340%</div>
+                    <div class="text-2xl font-bold text-blue-600 mb-1">78%</div>
+                    <div class="text-xs text-slate-600 font-medium tracking-wide">LEAD QUALIFICATION</div>
+                  </div>
+                  <div class="bg-white rounded-2xl p-4 text-center border border-slate-200 shadow-md transition-all duration-300 ease-out hover:shadow-lg hover:border-slate-300 hover:scale-105 opacity-0 translate-y-4 will-change-transform" data-reveal data-delay="1350">
+                    <div class="text-xs text-emerald-600 font-bold mb-1">↑ 280%</div>
+                    <div class="text-2xl font-bold text-blue-600 mb-1">65%</div>
+                    <div class="text-xs text-slate-600 font-medium tracking-wide">CONVERSION RATE</div>
+                  </div>
+                  <div class="bg-white rounded-2xl p-4 text-center border border-slate-200 shadow-md transition-all duration-300 ease-out hover:shadow-lg hover:border-slate-300 hover:scale-105 opacity-0 translate-y-4 will-change-transform" data-reveal data-delay="1500">
+                    <div class="text-xs text-emerald-600 font-bold mb-1">↓ 85%</div>
+                    <div class="text-2xl font-bold text-blue-600 mb-1">2.3h</div>
+                    <div class="text-xs text-slate-600 font-medium tracking-wide">MANUELLER AUFWAND</div>
+                  </div>
+                  <div class="bg-white rounded-2xl p-4 text-center border border-slate-200 shadow-md transition-all duration-300 ease-out hover:shadow-lg hover:border-slate-300 hover:scale-105 opacity-0 translate-y-4 will-change-transform" data-reveal data-delay="1650">
+                    <div class="text-xs text-emerald-600 font-bold mb-1">↑ 420%</div>
+                    <div class="text-2xl font-bold text-blue-600 mb-1">187</div>
+                    <div class="text-xs text-slate-600 font-medium tracking-wide">QUALIFIED LEADS</div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="flex gap-3 sm:gap-4 items-start">
-              <span class="mt-1 flex-shrink-0 inline-flex h-6 w-6 sm:h-7 sm:w-7 items-center justify-center rounded-full bg-blue-600 text-white aspect-square">
-                <svg viewBox="0 0 24 24" class="h-3 w-3 sm:h-4 sm:w-4" fill="none" stroke="currentColor" stroke-width="3">
-                  <path d="M5 13l4 4L19 7"/>
-                </svg>
-              </span>
-              <div class="min-w-0 flex-1">
-                <h4 class="font-bold text-slate-900 text-sm sm:text-base md:text-lg mb-1 sm:mb-2 break-words">Attribution & Funnel-Analyse</h4>
-                <p class="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed">Tracking-Setup, Datenanalyse und strategische Optimierung.</p>
-              </div>
-            </div>
-          </div>
-          
-          <div class="bg-slate-50 border-l-4 border-blue-600 p-3 sm:p-4 rounded-r-lg mx-0">
-            <p class="text-slate-700 font-bold text-sm sm:text-base md:text-lg leading-relaxed break-words">Intelligente Systeme + strategische Analyse + kontinuierliche Optimierung = nachhaltiges Wachstum.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Erfolg in Zahlen Section (Kopie) -->
-  <section class="bg-slate-100 pt-0 md:pt-0 pb-20 md:pb-24">
-    <div class="mx-auto max-w-7xl px-6">
-      <h2 class="text-center text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 mb-4">Erfolg in Zahlen</h2>
-      <p class="text-center text-xl md:text-2xl text-slate-600 max-w-4xl mx-auto mb-8">Durchschnittliche Resultate unserer Kunden nach 3 Monaten strategischer Performance-Marketing Optimierung.</p>
-      <div class="mb-8">
-        <!-- KPI Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 items-stretch mb-12">
-          <div class="group relative text-center p-7 bg-white rounded-2xl border border-blue-100 shadow-sm h-full transition-all opacity-0 translate-y-2 blur-sm [transform:scale(0.98)] duration-1000 ease-out will-change-transform transform-gpu hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-500/10 hover:border-blue-200 hover:duration-300" data-reveal data-delay="300">
-            <span class="absolute top-5 right-5 inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold">↑ 142%</span>
-            <div class="text-5xl md:text-6xl font-extrabold tracking-tight text-blue-600 mb-2 transition-transform duration-300 ease-out transform-gpu group-hover:scale-[1.03]">4.2x</div>
-            <div class="text-base uppercase tracking-wide text-slate-700 font-semibold">Return on Ad Spend</div>
-            <div class="text-sm text-slate-500 mt-2">Durchschnittlicher ROAS</div>
-          </div>
-          <div class="group relative text-center p-7 bg-white rounded-2xl border border-blue-100 shadow-sm h-full transition-all opacity-0 translate-y-2 blur-sm [transform:scale(0.98)] duration-1000 ease-out will-change-transform transform-gpu hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-500/10 hover:border-blue-200 hover:duration-300" data-reveal data-delay="450">
-            <span class="absolute top-5 right-5 inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold">↓ 68%</span>
-            <div class="text-5xl md:text-6xl font-extrabold tracking-tight text-blue-600 mb-2 transition-transform duration-300 ease-out transform-gpu group-hover:scale-[1.03]">€24</div>
-            <div class="text-base uppercase tracking-wide text-slate-700 font-semibold">Cost per Lead</div>
-            <div class="text-sm text-slate-500 mt-2">Durchschnittliche Kosten</div>
-          </div>
-          <div class="group relative text-center p-7 bg-white rounded-2xl border border-blue-100 shadow-sm h-full transition-all opacity-0 translate-y-2 blur-sm [transform:scale(0.98)] duration-1000 ease-out will-change-transform transform-gpu hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-500/10 hover:border-blue-200 hover:duration-300" data-reveal data-delay="600">
-            <span class="absolute top-5 right-5 inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold">↑ 165%</span>
-            <div class="text-5xl md:text-6xl font-extrabold tracking-tight text-blue-600 mb-2 transition-transform duration-300 ease-out transform-gpu group-hover:scale-[1.03]">8.3%</div>
-            <div class="text-base uppercase tracking-wide text-slate-700 font-semibold">Conversion Rate</div>
-            <div class="text-sm text-slate-500 mt-2">Website zu Lead</div>
-          </div>
-          <div class="group relative text-center p-7 bg-white rounded-2xl border border-blue-100 shadow-sm h-full transition-all opacity-0 translate-y-2 blur-sm [transform:scale(0.98)] duration-1000 ease-out will-change-transform transform-gpu hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-500/10 hover:border-blue-200 hover:duration-300" data-reveal data-delay="750">
-            <span class="absolute top-5 right-5 inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold">↑ 320%</span>
-            <div class="text-5xl md:text-6xl font-extrabold tracking-tight text-blue-600 mb-2 transition-transform duration-300 ease-out transform-gpu group-hover:scale-[1.03]">247</div>
-            <div class="text-base uppercase tracking-wide text-slate-700 font-semibold">Qualifizierte Leads</div>
-            <div class="text-sm text-slate-500 mt-2">Pro Monat generiert</div>
           </div>
         </div>
       </div>
@@ -690,7 +720,7 @@
             <li class="inline-flex items-center gap-2"><span class="material-symbols-outlined text-blue-600 text-xl">security</span><span>Unverbindlich</span></li>
           </ul>
           <div class="mt-8">
-            <a href="gespraech.html" class="group cta-breath relative inline-flex items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-blue-600 via-blue-600 to-sky-500 px-8 py-3.5 text-white text-base md:text-lg font-semibold shadow-md ring-1 ring-blue-300/20 transform-gpu transition-all duration-300 ease-out hover:scale-[1.02] hover:from-blue-600 hover:via-blue-500 hover:to-sky-400 hover:ring-blue-200/40 opacity-0 translate-y-2 blur-sm transition-opacity will-change-transform" data-reveal data-delay="380">
+            <a href="gespraech" class="group cta-breath relative inline-flex items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-blue-600 via-blue-600 to-sky-500 px-8 py-3.5 text-white text-base md:text-lg font-semibold shadow-md ring-1 ring-blue-300/20 transform-gpu transition-all duration-300 ease-out hover:scale-[1.02] hover:from-blue-600 hover:via-blue-500 hover:to-sky-400 hover:ring-blue-200/40 opacity-0 translate-y-2 blur-sm transition-opacity will-change-transform" data-reveal data-delay="380">
               <span class="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true">
                 <span class="absolute inset-0 bg-[radial-gradient(140px_70px_at_10%_50%,rgba(255,255,255,0.18),transparent_60%),radial-gradient(140px_70px_at_90%_50%,rgba(255,255,255,0.14),transparent_60%)]"></span>
               </span>
@@ -715,14 +745,14 @@
     <div class="mx-auto max-w-7xl px-6 pt-20 pb-6 md:pt-24 md:pb-6">
       <div class="grid gap-14 lg:grid-cols-5 lg:gap-20">
         <div class="lg:col-span-2">
-          <a href="index.html" class="inline-flex items-center gap-4 mb-7 group">
+          <a href="/" class="inline-flex items-center gap-4 mb-7 group">
             <span class="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 shadow-sm group-hover:bg-blue-700 transition-colors">
               <svg viewBox="0 0 24 24" class="h-8 w-8 text-white" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 4h7a5 5 0 1 1 0 10H9v6H6V4z"/></svg>
             </span>
             <span class="text-2xl md:text-3xl font-bold tracking-tight text-slate-900">Peakmont</span>
           </a>
           <p class="text-slate-600 leading-relaxed mb-8 max-w-sm text-base md:text-lg">Performance‑Marketing für messbare Ergebnisse und nachhaltiges Wachstum.</p>
-          <a href="gespraech.html" class="footer-cta-breath group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-xl bg-gradient-to-r from-blue-600 via-blue-600 to-sky-500 px-6 text-white text-base md:text-lg font-semibold shadow-md shadow-blue-900/30 ring-1 ring-blue-300/20 transition-all duration-300 ease-out hover:scale-105 hover:from-blue-600 hover:via-blue-500 hover:to-sky-400 hover:ring-blue-200/40">
+          <a href="gespraech" class="footer-cta-breath group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-xl bg-gradient-to-r from-blue-600 via-blue-600 to-sky-500 px-6 text-white text-base md:text-lg font-semibold shadow-md shadow-blue-900/30 ring-1 ring-blue-300/20 transition-all duration-300 ease-out hover:scale-105 hover:from-blue-600 hover:via-blue-500 hover:to-sky-400 hover:ring-blue-200/40">
             <span class="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true">
               <span class="absolute inset-0 bg-[radial-gradient(140px_70px_at_10%_50%,rgba(255,255,255,0.18),transparent_60%),radial-gradient(140px_70px_at_90%_50%,rgba(255,255,255,0.14),transparent_60%)]"></span>
             </span>
@@ -739,32 +769,49 @@
           <div>
             <h3 class="font-semibold text-slate-900 mb-5 text-lg md:text-xl">Leistungen</h3>
             <ul class="space-y-3">
-              <li><a class="text-slate-600 hover:text-slate-900 transition-colors" href="leistungen.html">Performance Marketing</a></li>
-              <li><a class="text-slate-600 hover:text-slate-900 transition-colors" href="leistungen.html">Social Media</a></li>
-              <li><a class="text-slate-600 hover:text-slate-900 transition-colors" href="leistungen.html">Automation</a></li>
+              <li><a class="text-slate-600 hover:text-slate-900 transition-colors text-base md:text-lg" href="leistungen#performance-ads">Performance Marketing</a></li>
+              <li><a class="text-slate-600 hover:text-slate-900 transition-colors text-base md:text-lg" href="leistungen#social-media">Social Media</a></li>
+              <li><a class="text-slate-600 hover:text-slate-900 transition-colors text-base md:text-lg" href="leistungen#automation-strategie">Automation</a></li>
             </ul>
           </div>
           <div>
             <h3 class="font-semibold text-slate-900 mb-5 text-lg md:text-xl">Menü</h3>
             <ul class="space-y-3">
-              <li><a class="text-slate-600 hover:text-slate-900 transition-colors" href="index.html">Home</a></li>
-              <li><a class="text-slate-600 hover:text-slate-900 transition-colors" href="leistungen.html">Leistungen</a></li>
-              <li><a class="text-slate-600 hover:text-slate-900 transition-colors" href="ueber-mich.html">Über mich</a></li>
-              <li><a class="text-slate-600 hover:text-slate-900 transition-colors" href="kontakt.html">Kontakt</a></li>
+              <li><a class="text-slate-600 hover:text-slate-900 transition-colors text-base md:text-lg" href="/">Home</a></li>
+              <li><a class="text-slate-600 hover:text-slate-900 transition-colors text-base md:text-lg" href="leistungen">Leistungen</a></li>
+              <li><a class="text-slate-600 hover:text-slate-900 transition-colors text-base md:text-lg" href="ueber-mich">Über mich</a></li>
+              <li><a class="text-slate-600 hover:text-slate-900 transition-colors text-base md:text-lg" href="kontakt">Kontakt</a></li>
             </ul>
           </div>
           <div>
-            <h3 class="font-semibold text-slate-900 mb-5 text-lg md:text-xl">Kontakt</h3>
+            <h3 class="font-semibold text-slate-900 mb-5 text-lg md:text-xl">Rechtliches</h3>
             <ul class="space-y-3">
-              <li><a class="text-slate-600 hover:text-slate-900 transition-colors" href="mailto:hello@peakmont.de">hello@peakmont.de</a></li>
-              <li><a class="text-slate-600 hover:text-slate-900 transition-colors" href="#impressum">Impressum</a></li>
-              <li><a class="text-slate-600 hover:text-slate-900 transition-colors" href="#datenschutz">Datenschutz</a></li>
+              <li><a class="text-slate-600 hover:text-slate-900 transition-colors text-base md:text-lg" href="mailto:hello@peakmont.de">hello@peakmont.de</a></li>
+              <li><a class="text-slate-600 hover:text-slate-900 transition-colors text-base md:text-lg" href="impressum">Impressum</a></li>
+              <li><a class="text-slate-600 hover:text-slate-900 transition-colors text-base md:text-lg" href="datenschutz">Datenschutz</a></li>
             </ul>
           </div>
         </div>
       </div>
-      <div class="mt-10 pt-4 border-t border-slate-200 text-center pb-0">
+
+      <!-- Bottom Copyright -->
+      <div class="mt-10 pt-4 border-t border-slate-200 flex flex-col sm:flex-row justify-between items-center gap-6 pb-0 opacity-0 translate-y-2 blur-sm transition-all duration-700 ease-out will-change-transform transform-gpu" data-reveal data-delay="400">
         <p class="text-slate-500 text-sm md:text-base">© 2025 Peakmont. Alle Rechte vorbehalten.</p>
+        
+        <!-- VereinsWeb Credit Button -->
+        <div class="sm:mr-8">
+          <a href="https://vereins-web.de" target="_blank" class="group relative inline-flex h-8 items-center justify-center overflow-hidden rounded-lg bg-gradient-to-r from-slate-600 via-slate-600 to-slate-500 px-3 text-white text-xs font-medium shadow-sm shadow-slate-900/20 ring-1 ring-slate-300/20 transition-all duration-300 ease-out hover:shadow-md hover:from-slate-600 hover:via-slate-600 hover:to-slate-500 hover:ring-slate-200/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-300/60">
+            <!-- subtle inner glow on hover -->
+            <span class="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true">
+              <span class="absolute inset-0 bg-[radial-gradient(80px_40px_at_10%_50%,rgba(255,255,255,0.15),transparent_60%),radial-gradient(80px_40px_at_90%_50%,rgba(255,255,255,0.12),transparent_60%)]"></span>
+            </span>
+
+            <span class="relative z-10 inline-flex items-center gap-1.5">
+              erstellt von <span class="text-white transition-transform duration-300 group-hover:scale-110 origin-center">Vereins<span class="text-blue-500">Web</span></span>
+              <svg viewBox="0 0 24 24" class="h-3 w-3 transition-transform duration-300 group-hover:translate-x-0.5" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </span>
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -836,12 +883,14 @@
     }, { threshold: 0.12 });
     els.forEach((el) => io.observe(el));
   })();
+  </script>
 
-  // Mobile Menu Script
+  <script>
+  // Mobile Menu Script - gleich wie index.html
   document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
-    const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+    const mobileMenuLinks = mobileMenu ? mobileMenu.querySelectorAll('a') : [];
     
     let isMenuOpen = false;
     
@@ -853,6 +902,7 @@
         mobileMenu.classList.add('opacity-100', 'visible');
         document.body.style.overflow = 'hidden';
         
+        // Change hamburger to X
         mobileMenuBtn.innerHTML = `
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
@@ -863,6 +913,7 @@
         mobileMenu.classList.remove('opacity-100', 'visible');
         document.body.style.overflow = '';
         
+        // Change X back to hamburger
         mobileMenuBtn.innerHTML = `
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -884,6 +935,23 @@
         toggleMenu();
       }
     });
+  });
+
+  // Smooth scrolling zu Anker-Elementen beim Laden der Seite
+  document.addEventListener('DOMContentLoaded', function() {
+    // Check if there's a hash in the URL
+    if (window.location.hash) {
+      // Small delay to ensure page is fully loaded
+      setTimeout(() => {
+        const targetElement = document.querySelector(window.location.hash);
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      }, 100);
+    }
   });
   </script>
 </body>
