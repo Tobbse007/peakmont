@@ -605,6 +605,12 @@
         linear-gradient(180deg, #0A0E1A 0%, #0A1120 45%, #080C18 100%);
     }
     
+    /* Hero Section - nur unten abschneiden */
+    .hero-bottom-clip {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      padding-bottom: 0 !important;
+    }
+    
     /* Timeline-Balken Animation */
     @keyframes timeline-draw {
       0% {
@@ -707,7 +713,14 @@
 
     <!-- HERO -->
     <section class="relative">
-      <div class="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24 lg:pt-20 lg:pb-28">
+      <!-- Hero Hintergrund Container für blur-Punkte -->
+      <div class="absolute inset-0 overflow-hidden">
+        <!-- Extra blurred dots in the background for depth - nur für Hero Section -->
+        <div class="pointer-events-none absolute -top-24 left-[-6rem] h-80 w-80 rounded-full bg-blue-400/20 blur-3xl z-0"></div>
+        <div class="pointer-events-none absolute bottom-0 right-[-4rem] h-72 w-72 rounded-full bg-sky-500/20 blur-3xl z-0"></div>
+      </div>
+      
+      <div class="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24 lg:pt-20 lg:pb-28 relative z-10">
         <div class="grid gap-12 lg:gap-16 items-center lg:grid-cols-12">
           <!-- Left: Text -->
           <div class="lg:col-span-5 relative z-10">
@@ -757,10 +770,6 @@
         </div>
         
       </div>
-
-      <!-- Extra blurred dots in the background for depth - nur für Hero Section -->
-      <div class="pointer-events-none absolute -top-24 left-[-6rem] h-80 w-80 rounded-full bg-blue-400/20 blur-3xl z-0"></div>
-      <div class="pointer-events-none absolute top-1/2 right-[-4rem] h-72 w-72 rounded-full bg-sky-500/20 blur-3xl z-0"></div>
     </section>
   </div>
 
